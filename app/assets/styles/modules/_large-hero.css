@@ -1,0 +1,13 @@
+.large-hero {
+	position: relative;
+	text-align: center;
+	&__text {
+		margin: auto;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		transform: translateY(-50%);
+		text-align: center;
+	}
+}   
