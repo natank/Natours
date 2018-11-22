@@ -15,6 +15,10 @@ gulp.task('styles', function(){
 	// cssnano, css import, mixin
 	return gulp.src('app/assets/styles/**/*.css')
 		.pipe(postcss([cssimport, vars({variables: colors}) ,mixins, autoprefixer, nested]))
+		.on('error', function(errorInfo){
+			console.log(errorInfo.toString())
+			this.emit('end');
+		})
 		.pipe(gulp.dest('dist'))
 		.pipe(browserSync.reload({ stream: true}));
 })
