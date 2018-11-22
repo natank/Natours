@@ -11,6 +11,7 @@ gulp.task('cssInject', ['styles'],function(){
 gulp.task('watch', ['styles', 'html'], function() {
 	
 	browserSync.init({
+		notify: false,
 		server: "./dist"
 	})
 
