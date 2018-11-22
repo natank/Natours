@@ -2,6 +2,7 @@
 	position: relative;
 	text-align: center;
 	&__text {
+		background-color: none;
 		margin: auto;
 		position: absolute;
 		top: 50%;
@@ -12,14 +13,14 @@
 	}
 	&__title {
 		font-weight: 300;
-		color: #2a4b69;
-		font-size: 4.8rem;
-		margin: 0;
+		color: $mainBlue;
+		font-size:  4.8rem;
+		margin: 0; 
 
 	}
 	&__sub-title {
 		font-weight: 300;
-		color: #2a4b69;
+		color: $mainBlue;
 		font-size: 2.9rem;
 		margin: 0;
 	}

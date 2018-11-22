@@ -1,3 +1,5 @@
+
+
 let gulp = require('gulp'),
 	nested = require('postcss-nested'),
 	postcss = require('gulp-postcss'),
@@ -5,13 +7,17 @@ let gulp = require('gulp'),
 	vars = require('postcss-simple-vars'),
 	cssnano = require('cssnano'),
 	mixins = require('postcss-mixins'),
-	cssimport = require('postcss-import');
+	cssimport = require('postcss-import'),
+	colors = require('./config/colors'),
+	browserSync  = require('./browserSync');
 
 
-gulp.task('styles',['clean'], function(){
+gulp.task('styles', function(){
 	// postcss, autoprefixer, nested css, css vars
 	// cssnano, css import, mixin
 	return gulp.src('app/assets/styles/**/*.css')
-		.pipe(postcss([cssimport, vars, mixins, autoprefixer, nested]))
+		.pipe(postcss([cssimport, vars({variables: colors}) ,mixins, autoprefixer, nested]))
 		.pipe(gulp.dest('dist'))
+		.pipe(browserSync.reload({ stream: true}));
 })
+
