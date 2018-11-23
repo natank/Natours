@@ -11,10 +11,15 @@ let gulp = require('gulp'),
 
 
 gulp.task('styles', function(){
-	// postcss, autoprefixer, nested css, css vars
-	// cssnano, css import, mixin
+	let postcssPlugins = 
+					[cssimport
+					,vars({variables: colors}) 
+					,mixins
+					,autoprefixer
+					,nested]
+					
 	return gulp.src('app/assets/styles/**/*.css')
-		.pipe(postcss([cssimport, vars({variables: colors}) ,mixins, autoprefixer, nested]))
+		.pipe(postcss(postcssPlugins))
 		.on('error', function(errorInfo){
 			console.log(errorInfo.toString())
 			this.emit('end');
