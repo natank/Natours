@@ -15,11 +15,11 @@ gulp.task('watch', ['styles', 'html'], function() {
 		server: "./dist"
 	})
 
-	gulp.watch('./app/**/*.html', function() {
+	gulp.watch('app/**/*.html', function() {
 		gulp.start('html');
 		browserSync.reload();
 	});
 
-	gulp.watch('./app/assets/styles/**/*.css', ['styles']);
+	gulp.watch('app/assets/styles/**/*.css', ['styles']);
 })
 

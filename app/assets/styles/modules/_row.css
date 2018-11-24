@@ -1,0 +1,16 @@
+.row {
+	display: flex;
+	flex-direction: column;
+	&--gutters > div {
+		padding-right: 5rem;
+	}
+	@mixin atMedium {
+		flex-direction: row;
+		&__medium-4 {	
+			width: 33.33%;
+		}
+		&__medium-8 {
+			width: 66.66%; 
+		}	
+	} 
+}
