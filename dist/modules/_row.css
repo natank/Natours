@@ -2,12 +2,20 @@
 	display: flex;
 	flex-direction: column; 
 }
-	.row--gutters > div {
-		padding-right: 5rem;
+	
+	.row__b-margin-until-medium {
+		margin-bottom: 1rem;
 	}
+	
 	@media (min-width: 800px) {.row {
 		flex-direction: row 
 }
+		.row__b-margin-until-medium {
+			margin-bottom: 0rem;
+		}
+		.row--gutters > div {
+			padding-right: 5rem;
+		}
 		.row__medium-4 {	
 			width: 33.33%;
 		}
