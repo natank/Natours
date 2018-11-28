@@ -6,6 +6,9 @@
 	.section-title strong {
 		font-weight: 500;
 	}
+	.section-title--blue {
+		color: #2a4b6a;
+	}
 	.section-title__icon {
 		display: block;
 		margin-left: auto;
@@ -17,7 +20,9 @@
 			margin-right: 0.5rem;
 			margin-left: 0;
 			display: inline-block;
-			margin-bottom: 0 
+			margin-bottom: 0;
+			position: relative;
+			top: 8px 
 	}
 	}
 	@media (min-width: 530px) {.section-title {

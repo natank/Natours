@@ -8,3 +8,13 @@
 		background-color: #2a4b6a;
 		color: #fff;
 	}
+	.page-section--testimonials {
+		background-color: #CBD9E6;
+		padding: 0;
+	}
+	@media (min-width: 1010px) {
+	.page-section--testimonials {
+			background: url("assets/images/testimonials-bg.jpg") top center no-repeat;
+			background-size: cover;
+			padding: 4.5rem 0
+	}}
