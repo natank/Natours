@@ -16,4 +16,8 @@
 			font-size: 1.25rem;	
 		}
  	}
+
+ 	&--thin {
+ 		padding: 0.5rem 2rem;
+ 	}
 } 

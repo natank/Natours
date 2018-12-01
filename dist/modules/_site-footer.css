@@ -1,0 +1,20 @@
+.site-footer {
+	background-color: #2a4b6a;
+	color: #FFF;
+	text-align: center;
+	line-height: 1.5rem;
+	padding: 2rem 0;
+}
+
+	.site-footer__copy {
+		display: block;
+		margin-bottom: 1rem;
+		font-weight: 200;
+	}
+
+	@media (min-width: 800px) {
+
+	.site-footer__copy {
+			display: inline-block;
+			margin-right: 2rem
+	}}
