@@ -10,4 +10,10 @@ img {
 
 a {
 	color: #cf8836;
+} 
+
+.clearfix::after {
+	display:table;
+	content:"";
+	clear:both;
 }

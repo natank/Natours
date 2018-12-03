@@ -1,0 +1,16 @@
+.site-header {
+	width: 100%;
+	position: absolute;
+	top: 0; 
+	z-index: 5;
+	background-color: rgb(42, 75, 106, 0.5);
+
+
+	&__logo {
+		position: absolute;
+		top:0;
+
+		transform: scale(1.2);
+		transform-origin: 0 0;
+	}
+}

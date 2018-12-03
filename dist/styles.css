@@ -363,6 +363,12 @@ a {
 	color: #cf8836;
 }
 
+.clearfix::after {
+	display:table;
+	content:"";
+	clear:both;
+}
+
 .large-hero {
 	position: relative;
 	text-align: center;
@@ -436,6 +442,8 @@ a {
 	display: inline-block;
 	text-decoration: none;
 	padding: .75rem 1.2rem;
+
+
 }
 
 .btn--orange {
@@ -454,7 +462,7 @@ a {
 	}
 
 .btn--thin {
- 		padding: 0.5rem 2rem;
+ 		padding: 0.5rem 1.5rem;
  	}
 
 .wrapper {
@@ -462,7 +470,8 @@ a {
 	padding-right: 18px;
 	max-width: 1236px; 
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto; 
+	position: relative;
 }
 
 .wrapper--medium {
@@ -841,98 +850,91 @@ Istead edit gulp/templates/sprite */
 
 .icon {
 		display: inline-block;
-		background-image: url('/assets/images/sprites/sprite-c65996a1.svg');
+		background-image: url('/assets/images/sprites/sprite-12e2bd0d.svg');
 	}
 
 .icon--clear-view-escapes {
-		width: 142.4px;
-		height: 59.53px;
+		width: 170px;
+		height: 84.4px;
 		
 		background-position: 0 0;
-	}
-
-.icon--clear-view-escapes.svg.2018_12_01_20_13_37.0 {
-		width: 142.4px;
-		height: 59.53px;
-		
-		background-position: 0 35.76019703249835%;
 	}
 
 .icon--comment {
 		width: 64px;
 		height: 64px;
 		
-		background-position: 68.79227053140097% 0;
+		background-position: 55.65217391304348% 99.54887218045113%;
 	}
 
 .icon--facebook {
 		width: 21.23px;
 		height: 42.01px;
 		
-		background-position: 73.66777435240421% 64.71003858905375%;
+		background-position: 99.72137698427247% 68.4302213046003%;
 	}
 
 .icon--fire {
 		width: 56px;
 		height: 64px;
 		
-		background-position: 0 73.49382716049382%;
+		background-position: 71.42857142857143% 48.1203007518797%;
 	}
 
 .icon--globe {
 		width: 64px;
 		height: 64px;
 		
-		background-position: 27.053140096618357% 73.49382716049382%;
+		background-position: 0 99.54887218045113%;
 	}
 
 .icon--instagram {
 		width: 42.01px;
 		height: 42.01px;
 		
-		background-position: 0 99.49453774661666%;
+		background-position: 91.27346323266796% 68.4302213046003%;
 	}
 
 .icon--mail {
 		width: 64px;
 		height: 48px;
 		
-		background-position: 68.79227053140097% 35.95505617977528%;
+		background-position: 0 56.644295302013425%;
 	}
 
 .icon--rain {
 		width: 64px;
 		height: 64px;
 		
-		background-position: 57.971014492753625% 73.49382716049382%;
+		background-position: 100% 0;
 	}
 
 .icon--star {
 		width: 64px;
 		height: 64px;
 		
-		background-position: 99.71014492753623% 0;
+		background-position: 27.82608695652174% 99.54887218045113%;
 	}
 
 .icon--twitter {
 		width: 51.78px;
 		height: 42.06px;
 		
-		background-position: 94.15199343125627% 69.58790910079374%;
+		background-position: 94.95499958715217% 41.30631212082096%;
 	}
 
 .icon--wifi {
 		width: 60px;
 		height: 64px;
 		
-		background-position: 97.81990521327015% 39.50617283950617%;
+		background-position: 72.64957264957265% 0;
 	}
 
 .icon--youtube {
 		width: 34.75px;
 		height: 42px;
 		
-		background-position: 17.78201058201058% 99.48913043478261%;
+		background-position: 88.71745419479267% 95.52903225806452%;
 	}
 
 .site-footer {
@@ -956,5 +958,43 @@ Istead edit gulp/templates/sprite */
 			margin-right: 2rem
 	}}
 
+.site-header {
+	width: 100%;
+	position: absolute;
+	top: 0; 
+	z-index: 5;
+	background-color: rgb(42, 75, 106, 0.5);
+}
+
+.site-header__logo {
+		position: absolute;
+		top:0;
+
+		-webkit-transform: scale(1.2);
+
+		        transform: scale(1.2);
+		-webkit-transform-origin: 0 0;
+		        transform-origin: 0 0;
+	}
+
+.navbar {
+	float: right;
+
+}
+
+.navbar ul {
+		display: inline-block;
+	}
+
+.navbar li {
+		list-style: none;
+		display: inline-block;
+		margin-right: 1.5rem;
+	}
+
+.navbar li a {
+		text-decoration: none;
+		color: #fff;
+	} 
 
   

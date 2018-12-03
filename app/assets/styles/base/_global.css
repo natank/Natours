@@ -11,3 +11,9 @@ img {
 a {
 	color: $mainOrange;
 }
+
+.clearfix::after {
+	display:table;
+	content:"";
+	clear:both;
+}
