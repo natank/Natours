@@ -7,7 +7,8 @@ let gulp = require('gulp'),
 	mixins = require('postcss-mixins'),
 	cssimport = require('postcss-import'),
 	colors = require('./config/colors'),
-	browserSync  = require('./browserSync');
+	browserSync  = require('./browserSync'),
+	hexrgba = require('postcss-hexrgba');
 
 
 gulp.task('styles', function(){
@@ -15,6 +16,7 @@ gulp.task('styles', function(){
 					[cssimport
 					,vars({variables: colors}) 
 					,mixins
+					,hexrgba
 					,autoprefixer
 					,nested]
 					

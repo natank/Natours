@@ -389,6 +389,7 @@ a {
 		-webkit-transform: translateY(-50%);
 		        transform: translateY(-50%);
 		text-align: center;
+		padding-top: 60px;
 	}
 
 .large-hero__title {
@@ -963,7 +964,7 @@ Istead edit gulp/templates/sprite */
 	position: absolute;
 	top: 0; 
 	z-index: 5;
-	background-color: rgb(42, 75, 106, 0.5);
+	background-color: rgba(42,75,106, .3);
 }
 
 .site-header__logo {
@@ -976,6 +977,10 @@ Istead edit gulp/templates/sprite */
 		-webkit-transform-origin: 0 0;
 		        transform-origin: 0 0;
 	}
+
+.site-header__logo__graphic {
+			text-indent: -9999px;
+		}
 
 .navbar {
 	float: right;
@@ -995,6 +1000,7 @@ Istead edit gulp/templates/sprite */
 .navbar li a {
 		text-decoration: none;
 		color: #fff;
+		font-weight: 300;
 	} 
 
   

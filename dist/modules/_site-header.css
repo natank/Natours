@@ -3,7 +3,7 @@
 	position: absolute;
 	top: 0; 
 	z-index: 5;
-	background-color: rgb(42, 75, 106, 0.5);
+	background-color: rgba(42,75,106, .3);
 }
 
 
@@ -17,3 +17,8 @@
 		-webkit-transform-origin: 0 0;
 		        transform-origin: 0 0;
 	}
+
+
+	.site-header__logo__graphic {
+			text-indent: -9999px;
+		}
