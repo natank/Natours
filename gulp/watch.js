@@ -8,7 +8,8 @@ gulp.task('cssInject', ['styles'],function(){
 })
 
 
-gulp.task('watch', ['styles', 'html'], function() {
+
+gulp.task('watch', ['styles', 'html', 'scripts'], function() {
 	
 	browserSync.init({
 		notify: false,
@@ -21,5 +22,14 @@ gulp.task('watch', ['styles', 'html'], function() {
 	});
 
 	gulp.watch('app/assets/styles/**/*.css', ['styles']);
+
+	gulp.watch('./app/assets/scripts/**/*.js', function(){
+		gulp.start('scriptsRefresh');
+	});
+
+});
+
+gulp.task('scriptsRefresh', ['scripts'], function() {
+	browserSync.reload();
 })
 

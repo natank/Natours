@@ -18,7 +18,7 @@
 	}
 
 	.headline--small {
-		font-size: 1.2rem;
+		font-size: 1.7rem;
 	}
 
 	@media atSmall {
@@ -29,7 +29,7 @@
 		}
 
 	.headline--narrow{
-		max-width: 500px;
+		max-width: 400px;
 		margin-left: auto;
 		margin-right: auto;
 	}

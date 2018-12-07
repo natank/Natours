@@ -14,13 +14,24 @@
       <div class="site-header__logo">
         <span class="site-header__logo__graphic icon icon--clear-view-escapes">Clear view escapes</span>
       </div>
-      <nav class="navbar">
+      <div class= "site-header__menu-icon" id="nav-hamburger">
+        <div class="site-header__menu-icon__top"></div>
+        <div class="site-header__menu-icon__middle"></div>
+        <div class="site-header__menu-icon__bottom"></div>
+
+
+      </div>
+      <nav class="navbar" id="navbar">
+
         <ul> 
           <li><a href="#our-beginning">Our Beginning</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
+          
         </ul>
-        <a href="#" class="btn btn--thin">Get in Touch</a>
+        <div class="navbar__item--highlight"><a href="#" class="btn btn--thin">Get in Touch</a></div>
+
+        
       </nav>
     </div>
   </header>   
@@ -68,11 +79,14 @@
       <div class="row row--gutters">
         <div class="row__medium-4 row__medium-4--larger row__b-margin-until-medium">
           <picture>
-            <source sizes="404px" srcset="assets/images/our-start.jpg 404w, assets/images/our-start-hi-dpi.jpg 808" media="(min-width: 1020px)">
             <source sizes="260px" 
                 srcset="assets/images/our-start-portrait.jpg 382w,
                         assets/images/our-start-portrait-hi-dpi.jpg 764w" 
-                media="(min-width: 800px)">
+                media="(min-width: 800px)"> 
+
+            <source sizes="404px" srcset="assets/images/our-start.jpg 404w, assets/images/our-start-hi-dpi.jpg 808" media="(min-width: 1020px)"> 
+
+            
             <img srcset="assets/images/our-start-landscape.jpg 800w, assets/images/our-start-landscape-hi-dpi.jpg 1600w" alt="Our founder, Jane Doe">  
           </picture>  
         </div>
@@ -203,5 +217,6 @@
     </div>
     
   </footer>
+  <script type="module" src="/scripts/App.js"></script>
 </body>
 </html>
