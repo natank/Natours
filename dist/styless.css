@@ -942,31 +942,19 @@ Istead edit gulp/templates/sprite */
 	text-align: center;
 	line-height: 1.5rem;
 	padding: 2rem 0;
-	display: flex;
-	
-	flex-direction: column;
 }
 
-@media (min-width: 800px) {
-
-.site-footer {
-		flex-direction: row;
-		justify-content: center;
-		align-items: center
-}}
-
 .site-footer__copy {
+		display: block;
 		margin-bottom: 1rem;
 		font-weight: 200;
-		margin-top: 0;
 	}
 
 @media (min-width: 800px) {
 
 .site-footer__copy {
 			display: inline-block;
-			margin-top: 1rem;
-			margin-right: 1rem
+			margin-right: 2rem
 	}}
 
 .site-header {
@@ -1203,13 +1191,11 @@ Istead edit gulp/templates/sprite */
 
 .reveal-item {
 	opacity: 0;
-	transition: all 1.5s ease-out;
-	-webkit-transform: scale(1.15);
-	        transform: scale(1.15);
+	transition: opacity 1.5s ease-out;
 }
 
 .reveal-item--is-visible {
 		opacity:1;
-		-webkit-transform: scale(1);
-		        transform: scale(1); 
-	}   
+	}
+
+  

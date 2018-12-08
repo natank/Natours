@@ -5,6 +5,11 @@ require("@babel/register");
 // Webpack Configuration
 
 const config = {
+	mode: "development",
+	optimization: {
+		// We no not want to minimize our code.
+		minimize: false
+	},
 	// Entry
 	entry: "./app/assets/scripts/App.js",
 	output: {

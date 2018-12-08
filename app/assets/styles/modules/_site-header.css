@@ -4,27 +4,28 @@
 	top: 0; 
 	z-index: 5;
 
+	&__container {
+		display: flex;
+		justify-content: space-between;
+
+	}
 
 	@mixin atMedium {
 		background-color: rgba($mainBlue, .3);		
 	}
 
 	&__logo {
-		position: absolute;
-		top:0;
-		left: 50%;
 		z-index: 35;
-		transform: scale(.8) translateX(-50%);
+		transform: scale(.8);
 		transform-origin: 0 0;
 		&__graphic {
 			text-indent: -9999px;
 		} 
 
 		@mixin atMedium {
-			transform: scale(1.5);
+			transform: scale(1.5) translateX(0);
 			transform-origin: 0 0;
 			left: 0;
-			trasform: translateX(0);
 		}
 	}
 

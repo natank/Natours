@@ -15,5 +15,4 @@
 @import "./modules/_site-footer";
 @import "./modules/_site-header";
 @import "./modules/_navbar";
-
-  
+@import "./modules/_reveal-item";   
