@@ -63,12 +63,21 @@
 		}
 	}
 
-	li a {
+	&__link-item {
 		text-decoration: none;
-		color: #fff;
 		font-weight: 300;
-		text-align: center
+		text-align: center;
+		transition: all .5s ease-out ;
+		&--orange {
+			color: $mainOrange;
+		}
+
+		&--white {
+			color: #fff;
+		}
 	}
+
+
 
 	&__button1 {
 		display: block;

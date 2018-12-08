@@ -369,6 +369,10 @@ a {
 	clear:both;
 }
 
+.font-orange {
+	color: #cf8836;
+}
+
 .large-hero {
 	position: relative;
 	text-align: center;
@@ -971,7 +975,7 @@ Istead edit gulp/templates/sprite */
 
 .site-header {
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	top: 0; 
 	z-index: 5;
 }
@@ -985,8 +989,12 @@ Istead edit gulp/templates/sprite */
 @media (min-width: 800px) {
 
 .site-header {
-		background-color: rgba(42,75,106, .3)
-}}
+		background-color: rgba(42,75,106, .3);
+		transition: all .5s ease-out
+}
+		.site-header--darker {
+			background-color: rgba(1,39,75, .8);
+		}}
 
 .site-header__logo {
 		z-index: 35;
@@ -994,6 +1002,7 @@ Istead edit gulp/templates/sprite */
 		        transform: scale(.8);
 		-webkit-transform-origin: 0 0;
 		        transform-origin: 0 0;
+		transition: all 1.5s ease-out;
 	}
 
 .site-header__logo__graphic {
@@ -1009,6 +1018,11 @@ Istead edit gulp/templates/sprite */
 			        transform-origin: 0 0;
 			left: 0
 	}}
+
+.site-header__logo--small {
+			-webkit-transform: scale(1.124) translateX(0);
+			        transform: scale(1.124) translateX(0);
+		}
 
 .site-header__menu-icon {
  		position: absolute; 
@@ -1173,12 +1187,20 @@ Istead edit gulp/templates/sprite */
 			padding: auto
 	}}
 
-.navbar li a {
+.navbar__link-item {
 		text-decoration: none;
-		color: #fff;
 		font-weight: 300;
-		text-align: center
+		text-align: center;
+		transition: all .5s ease-out ;
 	}
+
+.navbar__link-item--orange {
+			color: #cf8836;
+		}
+
+.navbar__link-item--white {
+			color: #fff;
+		}
 
 .navbar__button1 {
 		display: block;
@@ -1212,4 +1234,4 @@ Istead edit gulp/templates/sprite */
 		opacity:1;
 		-webkit-transform: scale(1);
 		        transform: scale(1); 
-	}   
+	}    

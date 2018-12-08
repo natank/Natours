@@ -1,6 +1,6 @@
 .site-header {
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	top: 0; 
 	z-index: 5;
 }
@@ -12,8 +12,12 @@
 	}
 
 	@media (min-width: 800px) {.site-header {
-		background-color: rgba(42,75,106, .3)
-}}
+		background-color: rgba(42,75,106, .3);
+		transition: all .5s ease-out
+}
+		.site-header--darker {
+			background-color: rgba(1,39,75, .8);
+		}}
 
 	.site-header__logo {
 		z-index: 35;
@@ -21,6 +25,7 @@
 		        transform: scale(.8);
 		-webkit-transform-origin: 0 0;
 		        transform-origin: 0 0;
+		transition: all 1.5s ease-out;
 	}
 
 	.site-header__logo__graphic {
@@ -36,6 +41,11 @@
 			        transform-origin: 0 0;
 			left: 0
 	}}
+
+	.site-header__logo--small {
+			-webkit-transform: scale(1.124) translateX(0);
+			        transform: scale(1.124) translateX(0);
+		}
 
 	.site-header__menu-icon {
  		position: absolute; 

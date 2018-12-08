@@ -16,4 +16,8 @@ a {
 	display:table;
 	content:"";
 	clear:both;
+} 
+
+.font-orange {
+	color: #cf8836;
 }

@@ -74,12 +74,18 @@
 			background: none;
 			padding: auto
 	}}
-	.navbar li a {
+	.navbar__link-item {
 		text-decoration: none;
-		color: #fff;
 		font-weight: 300;
-		text-align: center
+		text-align: center;
+		transition: all .5s ease-out ;
 	}
+	.navbar__link-item--orange {
+			color: #cf8836;
+		}
+	.navbar__link-item--white {
+			color: #fff;
+		}
 	.navbar__button1 {
 		display: block;
 	}

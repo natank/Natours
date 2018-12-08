@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import waypoints from 'waypoints/lib/noframework.waypoints'; 
 
 class RevealOnScroll {
@@ -17,10 +16,10 @@ class RevealOnScroll {
 				handler: function(direction) {
 					if(direction === 'down') {
 						item.classList.add("reveal-item--is-visible");	
-					}
+					}   
 					
 				},
-				offset: offset
+				offset: offset 
 			})
 		});
 

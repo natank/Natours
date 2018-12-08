@@ -17,3 +17,7 @@ a {
 	content:"";
 	clear:both;
 }
+
+.font-orange {
+	color: $mainOrange;
+}
