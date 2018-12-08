@@ -8,6 +8,10 @@
 	&--medium {
 		max-width: 800px; 
 	}
+	&--narrow {
+		max-width: 470px;
+	}
+
 	.wrapper {
 		padding-left: 0;
 		padding-right: 0;
@@ -38,4 +42,6 @@
 			padding-right: 18px;		
 		}		
 	}
+
+
 }   

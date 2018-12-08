@@ -5,9 +5,14 @@
 	margin-left: auto;
 	margin-right: auto; 
 	position: relative;
+
+
 } 
 	.wrapper--medium {
 		max-width: 800px; 
+	} 
+	.wrapper--narrow {
+		max-width: 470px;
 	} 
 	.wrapper .wrapper {
 		padding-left: 0;

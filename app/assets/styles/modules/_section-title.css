@@ -10,10 +10,16 @@
 		color: $mainBlue;
 	}
 
+	&--less-margin {
+		margin-bottom: 1.3rem;
+	}
+
 	&__icon {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+		display:block;
+		margin: auto;
 		@mixin atSmall {
 			margin-bottom: 1rem; 
 			margin-right: 0.5rem;
