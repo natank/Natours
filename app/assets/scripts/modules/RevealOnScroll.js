@@ -28,7 +28,7 @@ class RevealOnScroll {
 				element: item,
 				handler: function(direction) {
 					if(direction === 'up') {
-						item.classList.remove("reveal-item--is-visible");	
+						item.classList.remove("reveal-item--is-visible");	  
 					}
 					
 				},

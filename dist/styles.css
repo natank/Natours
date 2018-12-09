@@ -471,6 +471,7 @@ Istead edit gulp/templates/sprite */
 	display: inline-block;
 	text-decoration: none;
 	padding: .75rem 1.2rem;
+	cursor: pointer;
 }
 
 .btn--orange {
@@ -819,6 +820,7 @@ Istead edit gulp/templates/sprite */
 
 .section-title--less-margin {
 		margin-bottom: 1.3rem;
+		margin-top:0;
 	}
 
 .section-title__icon {
@@ -1015,15 +1017,13 @@ Istead edit gulp/templates/sprite */
 		-webkit-transform-origin: 0 0;
 		        transform-origin: 0 0;
 		transition: all 1.5s ease-out;
+		margin: auto;
 	}
-
-.site-header__logo__graphic {
-			text-indent: -9999px;
-		}
 
 @media (min-width: 800px) {
 
 .site-header__logo {
+			margin-left: 0;
 			-webkit-transform: scale(1.5) translateX(0);
 			        transform: scale(1.5) translateX(0);
 			-webkit-transform-origin: 0 0;
@@ -1031,10 +1031,17 @@ Istead edit gulp/templates/sprite */
 			left: 0
 	}}
 
-.site-header__logo--small {
-			-webkit-transform: scale(1.124) translateX(0);
-			        transform: scale(1.124) translateX(0);
+.site-header__logo__graphic {
+			text-indent: -9999px;
 		}
+
+@media (min-width: 800px) {
+
+.site-header__logo--small {
+				-webkit-transform: scale(1.124) translateX(0);
+				        transform: scale(1.124) translateX(0)
+
+		}}
 
 .site-header__menu-icon {
  		position: absolute; 
@@ -1256,7 +1263,32 @@ Istead edit gulp/templates/sprite */
 	bottom: 0;
 	left:0;
 	right:0;
+	-webkit-transform: scale(1.2);
+	        transform: scale(1.2);
+	transition: all 0.5s ease-out;
 }
+
+.modal--opened{
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+
+.modal--closed {
+		opacity: 0;
+		visibility: hidden;	 	
+	}
+
+.modal__container {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%)
+
+	}
 
 .modal__description {
 		text-align: center;
@@ -1265,6 +1297,24 @@ Istead edit gulp/templates/sprite */
 		line-height: 1.65;
 
 	}
+
+.modal__close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		font-size: 2rem;
+		-webkit-transform: scaleX(1.2);
+		        transform: scaleX(1.2);
+		-webkit-transform-origin: 100% 0;
+		        transform-origin: 100% 0;
+		color: #2a4b6a;
+		cursor: pointer;  
+	}
+
+.modal__close:hover{
+			color: #cf8836; 
+
+		}
 
 .social-icons {
 	text-align: center;

@@ -26,15 +26,13 @@
 		-webkit-transform-origin: 0 0;
 		        transform-origin: 0 0;
 		transition: all 1.5s ease-out;
+		margin: auto;
 	}
-
-	.site-header__logo__graphic {
-			text-indent: -9999px;
-		}
 
 	@media (min-width: 800px) {
 
 	.site-header__logo {
+			margin-left: 0;
 			-webkit-transform: scale(1.5) translateX(0);
 			        transform: scale(1.5) translateX(0);
 			-webkit-transform-origin: 0 0;
@@ -42,10 +40,17 @@
 			left: 0
 	}}
 
-	.site-header__logo--small {
-			-webkit-transform: scale(1.124) translateX(0);
-			        transform: scale(1.124) translateX(0);
+	.site-header__logo__graphic {
+			text-indent: -9999px;
 		}
+
+	@media (min-width: 800px) {
+
+	.site-header__logo--small {
+				-webkit-transform: scale(1.124) translateX(0);
+				        transform: scale(1.124) translateX(0)
+
+		}}
 
 	.site-header__menu-icon {
  		position: absolute; 

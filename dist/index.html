@@ -24,7 +24,7 @@
             <li><a class="navbar__link-item navbar__link-item--white" href="#features">Features</a></li>
             <li><a class="navbar__link-item navbar__link-item--white" href="#testimonials">Testimonials</a></li>
           </ul>
-          <div class="navbar__item--highlight"><a href="#" class="btn btn--thin">Get in Touch</a></div>
+          <div class="navbar__item--highlight"><span href="#modal" class="btn btn--thin">Get in Touch</span></div>
         </nav>
       </div>
     </div>
@@ -211,25 +211,28 @@
   <footer>
     <div class="site-footer">
         <p class="site-footer__copy">Copyright &copy; 2016 Clear View Escapes. All rights reserved.</p>  
-        <div><a class="btn btn--orange btn--thin" href="#">Get in Touch</a></div>
+        <div><span class="btn btn--orange btn--thin" href="#modal">Get in Touch</span></div>
     </div>
   </footer>
 
-  <div class="modal">
-    <h2 class="section-title section-title--blue section-title--less-margin">
-        <span class="icon icon--mail section-title__icon"></span>
-        Get in <strong>Touch</strong>
-    </h2>
-    <div class="wrapper wrapper--narrow">
-      <p class="modal__description">We will have an online order system in place soon. Until then, connect with us on any of the platforms bellow!</p>
-    </div>
+  <div class="modal modal--closed" id="modal">
+    <div class="modal__container">
+      <h2 class="section-title section-title--blue section-title--less-margin">
+          <span class="icon icon--mail section-title__icon"></span>
+          Get in <strong>Touch</strong>
+      </h2>
+      <div class="wrapper wrapper--narrow">
+        <p class="modal__description">We will have an online order system in place soon. Until then, connect with us on any of the platforms bellow!</p>
+      </div>
 
-    <div class="social-icons">
-      <a href="#" class="social-icons__icon"><span class="icon icon--facebook"></span></a>
-      <a href="#" class="social-icons__icon"><span class="icon icon--twitter"></span></a>
-      <a href="#" class="social-icons__icon"><span class="icon icon--instagram"></span></a>
-      <a href="#" class="social-icons__icon"><span class="icon icon--youtube"></span></a>
+      <div class="social-icons">
+        <a href="#" class="social-icons__icon"><span class="icon icon--facebook"></span></a>
+        <a href="#" class="social-icons__icon"><span class="icon icon--twitter"></span></a>
+        <a href="#" class="social-icons__icon"><span class="icon icon--instagram"></span></a>
+        <a href="#" class="social-icons__icon"><span class="icon icon--youtube"></span></a>
+      </div>
     </div>
+    <div class="modal__close">X</div>
 
 
   </div>
