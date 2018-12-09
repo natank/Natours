@@ -35,8 +35,6 @@ class RevealOnScroll {
 				offset: offset
 			})
 		})
-
-
 	}
 	hideInitially() {
 		this.itemsToReveal.forEach(function(item) {
