@@ -16,16 +16,11 @@ gulp.task('watch', ['styles', 'html', 'scripts'], function() {
 		server: "./dist"
 	})
 
-	gulp.watch('app/**/*.html', function() {
-		gulp.start('html');
-		browserSync.reload();
-	});
+	gulp.watch('app/**/*.html', ['html']);
 
 	gulp.watch('app/assets/styles/**/*.css', ['styles']);
 
-	gulp.watch('./app/assets/scripts/**/*.js', function(){
-		gulp.start('scriptsRefresh');
-	});
+	gulp.watch('./app/assets/scripts/**/*.js', ['scriptsRefresh']);
 
 });
 
