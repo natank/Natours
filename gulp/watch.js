@@ -1,14 +1,6 @@
 let gulp = require('gulp'),
 	browserSync = require('./browserSync');
 
-
-gulp.task('cssInject', ['styles'],function(){
-	return gulp.src("./dist/style.css")
-		 .pipe(browserSync.reload({ stream: true}));;
-})
-
-
-
 gulp.task('watch', ['styles', 'html', 'scripts'], function() {
 	
 	browserSync.init({
