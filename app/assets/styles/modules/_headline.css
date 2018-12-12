@@ -1,46 +1,51 @@
 .headline {
 	font-weight: 300;
 	font-size:  1.9rem;
-	color: $mainBlue;
+	color: #2a4b6a;
+}
 
-	@mixin atSmall {
-		font-size:  2.8rem;
+	@media (min-width: 530px) {.headline {
+		font-size:  2.8rem
+}
 	}
 
-	&--centered {
+	.headline--centered {
 		text-align: center;
 	}
 
-	&--orange {
-		color: $mainOrange;
-	} 
-
-	&--small {
-		font-size: 1.7rem;
-
-		@media atSmall {
-			font-size: 1.875rem;			
-		}
+	.headline--orange {
+		color: #cf8836;
 	}
 
-	&--narrow{
+	.headline--small {
+		font-size: 1.7rem;
+	}
+
+	@media atSmall {
+
+	.headline--small {
+			font-size: 1.875rem
+	}			
+		}
+
+	.headline--narrow{
 		max-width: 400px;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
-	&--light {
+	.headline--light {
 		font-weight: 100; 
 	}
-	&--b-margin-small {
+
+	.headline--b-margin-small {
 		margin-bottom: .5em;
 	}
 
-	&--b-margin-large {
+	.headline--b-margin-large {
 		margin-bottom: 1.6em;
 	}
 
-	&--no-t-margin {
+	.headline--no-t-margin {
 		margin-top: 0;
 	}
-}

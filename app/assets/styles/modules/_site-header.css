@@ -3,64 +3,75 @@
 	position: fixed;
 	top: 0; 
 	z-index: 5;
-	background-color: rgba($mainBlue, .3);
+	background-color: rgba(42,75,106, .3);
+}
 
-	&__container {
+	.site-header__container {
 		display: flex;
 		justify-content: space-between;
 
 
 	}
 
-	@mixin atMedium {
-		background-color: rgba($mainBlue, .3);
-		transition: all .5s ease-out;
-		&--darker {
-			background-color: rgba($darkBlue, .8);
-		}		
-	}
+	@media (min-width: 800px) {.site-header {
+		background-color: rgba(42,75,106, .3);
+		transition: all .5s ease-out
+}
+		.site-header--darker {
+			background-color: rgba(1,39,75, .8);
+		}}
 
-	&__logo {
+	.site-header__logo {
 		z-index: 35;
-		transform: scale(.8);
-		transform-origin: 50% 0;
+		-webkit-transform: scale(.8);
+		        transform: scale(.8);
+		-webkit-transform-origin: 50% 0;
+		        transform-origin: 50% 0;
 		transition: all 1.5s ease-out;
 		margin: auto;
-		@mixin atMedium {
-			margin-left: 0;
-			margin-top: 0;
-			transform: scale(1.5) translateX(0);
-			transform-origin: 0 0;
-			left: 0;
-			transform-origin: 0 0;
-		}
-
-		&__graphic {
-			text-indent: -9999px;
-		} 
-
-		&--small {
-			@mixin atMedium {
-				transform: scale(1.124) translateX(0);				
-			}
-
-		}
 	}
 
+	@media (min-width: 800px) {
 
+	.site-header__logo {
+			margin-left: 0;
+			margin-top: 0;
+			-webkit-transform: scale(1.5) translateX(0);
+			        transform: scale(1.5) translateX(0);
+			-webkit-transform-origin: 0 0;
+			        transform-origin: 0 0;
+			left: 0;
+			transform-origin: 0 0
+	}}
 
-	&__menu-icon {
+	.site-header__logo__graphic {
+			text-indent: -9999px;
+		}
+
+	@media (min-width: 800px) {
+
+	.site-header__logo--small {
+				-webkit-transform: scale(1.124) translateX(0);
+				        transform: scale(1.124) translateX(0)
+
+		}}
+
+	.site-header__menu-icon {
  		position: absolute; 
  		z-index: 20;
  		right: 10px;
  		top: 10px;
  		width: 19px;
  		height: 19px;
+ 	}
 
- 		@mixin atMedium {
- 			display: none;
- 		}
- 		&::before {
+	@media (min-width: 800px) {
+
+	.site-header__menu-icon {
+ 			display: none
+ 	}}
+
+	.site-header__menu-icon::before {
  			content:"";
  			position: absolute;
  			top: 0;
@@ -68,11 +79,15 @@
  			width: 20px;
  			height:  3px;
  			background-color: #fff;
- 			transform-origin: 0% 0%;
+ 			-webkit-transform-origin: 0% 0%;
+ 			        transform-origin: 0% 0%;
+ 			transition: -webkit-transform .3s ease-out;
  			transition: transform .3s ease-out;
+ 			transition: transform .3s ease-out, -webkit-transform .3s ease-out;
 
  		}
- 		&__middle {
+
+	.site-header__menu-icon__middle {
  			position: absolute;
  			top: 8px; 
  			left: 0;
@@ -80,9 +95,11 @@
  			height:  3px;
  			background-color: #fff;
  			transition: all .3s ease-out;
- 			transform-origin: 0 50%;
+ 			-webkit-transform-origin: 0 50%;
+ 			        transform-origin: 0 50%;
  		}
- 		&::after {
+
+	.site-header__menu-icon::after {
  			content: "";
  			position: absolute;
  			bottom: 0;
@@ -90,22 +107,25 @@
  			width: 20px;
  			height:  3px;
  			background-color: #fff;
- 			transform-origin: 0 100% ;
+ 			-webkit-transform-origin: 0 100% ;
+ 			        transform-origin: 0 100% ;
+ 			transition: -webkit-transform .3s ease-out;
  			transition: transform .3s ease-out;
+ 			transition: transform .3s ease-out, -webkit-transform .3s ease-out;
  		}
- 		&--close-x{
- 			&::before{
- 				transform: rotate(45deg) scaleX(1.25);
+
+	.site-header__menu-icon--close-x::before{
+ 				-webkit-transform: rotate(45deg) scaleX(1.25);
+ 				        transform: rotate(45deg) scaleX(1.25);
  			}
 
- 			.site-header__menu-icon__middle {
+	.site-header__menu-icon--close-x .site-header__menu-icon__middle {
  				opacity: 0;
- 				transform: scaleX(0);
+ 				-webkit-transform: scaleX(0);
+ 				        transform: scaleX(0);
  			}
 
- 			&::after {
- 				transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+	.site-header__menu-icon--close-x::after {
+ 				-webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+ 				        transform: rotate(-45deg) scaleX(1.25) translateY(1px);
  			}
- 		}
- 	}
-}

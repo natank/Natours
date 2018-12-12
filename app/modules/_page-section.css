@@ -1,0 +1,23 @@
+.page-section {
+	padding:1.2rem 0;
+}
+	@media (min-width: 800px) {.page-section {
+		padding: 1.5rem 0
+}}
+	.page-section--blue {
+		background-color: #2a4b6a;
+		color: #fff;
+	}
+	.page-section--testimonials {
+		background-color: #CBD9E6;
+		padding: 1.5rem 0;
+	}
+	@media (min-width: 1010px) {
+	.page-section--testimonials {
+			background-size: cover;
+			padding: 1.5rem 0
+	}
+
+			.page-section--testimonials.lazyloaded {
+				background: url("assets/images/testimonials-bg.jpg") top center no-repeat;
+			}}

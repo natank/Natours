@@ -1,30 +1,36 @@
 .feature-item {
 
 	margin-bottom: 2.55rem;
+}
 
-	&__icon {
+	.feature-item__icon {
 		text-align: center;
 		margin-bottom: 1rem;
-
-		@mixin atSmall {
-			margin-bottom: 0;
-		}
 	}
 
-	&__title {
+	@media (min-width: 530px) {
+
+	.feature-item__icon {
+			margin-bottom: 0
+	}
+	}
+
+	.feature-item__title {
 		margin-top: 0;
 		margin-bottom: 0.5rem;
 		font-size: 1.5rem;
 		font-weight: 500;
 		text-align: center;
-		@mixin atSmall {
-			text-align: left;
-			font-size: 1.875rem;
-
-		}
 	}
 
-	&__description {
+	@media (min-width: 530px) {
+
+	.feature-item__title {
+			text-align: left;
+			font-size: 1.875rem
+	}
+	}
+
+	.feature-item__description {
 		line-height: 1.5rem
 	}
-}

@@ -11,7 +11,7 @@ let gulp = require('gulp'),
 	hexrgba = require('postcss-hexrgba');
 
 
-gulp.task('styles', function(){
+gulp.task('styles', ['clean'], function(){
 	let postcssPlugins = 
 					[cssimport
 					,vars({variables: colors}) 
@@ -26,7 +26,8 @@ gulp.task('styles', function(){
 			console.log(errorInfo.toString())
 			this.emit('end');
 		})
-		.pipe(gulp.dest('dist'))
+		.pipe(gulp.dest('app/'))
+		.pipe(gulp.dest('app/temp'))
 		.pipe(browserSync.reload({ stream: true}));
 })
 

@@ -9,6 +9,8 @@
 *.vi
 *~
 *.sass-cache
+app/temp
+release
 node_modules/
 .tmp/
 

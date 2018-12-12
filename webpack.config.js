@@ -13,7 +13,7 @@ const config = {
 	// Entry
 	entry: "./app/assets/scripts/App.js",
 	output: {
-		path: path.resolve(__dirname, "dist/scripts"),
+		path: path.resolve(__dirname, "app/temp/assets/scripts"),
 		filename: "App.js"
 	},
 	 module: {
