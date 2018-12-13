@@ -8,7 +8,7 @@ gulp.task('clean', function(){
 		.pipe(clean());
 })
 
-gulp.task('clean-release', function(){
-	return gulp.src('release', {read:false})
+gulp.task('clean-release', ['icons'], function(){
+	return gulp.src('docs', {read:false})
 			.pipe(clean());
 }) 

@@ -11,7 +11,7 @@ var gulp 	 = require('gulp'),
 gulp.task('previewRelease', function(){
 	browserSync.init({
 		notify: false,
-		server: "./release"
+		server: "./docs"
 	})
 
 })
@@ -31,9 +31,9 @@ gulp.task('copyGeneralFiles', ['clean-release'], function() {
 		'!./app/temp/**'
 	]
 	return gulp.src(pathToCopy)
-		.pipe(gulp.dest("./release"))
+		.pipe(gulp.dest("./docs"))
 })
-gulp.task('optimizeImages',['clean-release', 'icons'], function() {
+gulp.task('optimizeImages',['clean-release'], function() {
 	return gulp.src(['./app/assets/images/**/*', 
 		'!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
 		.pipe(imagemin([
@@ -47,8 +47,13 @@ gulp.task('optimizeImages',['clean-release', 'icons'], function() {
 		        ]
 		    })
 		]))
-		.pipe(gulp.dest("./release/assets/images"));
+		.pipe(gulp.dest("./docs/assets/images"));
 })
+
+gulp.task('useminTrigger', ['clean-release'], function(){
+	gulp.start('usemin');
+})
+
 
 gulp.task('usemin',  ['clean-release','styles', 'scripts'], function() {
   return gulp.src('./app/*.html')
@@ -59,7 +64,7 @@ gulp.task('usemin',  ['clean-release','styles', 'scripts'], function() {
       inlinejs: [ uglify() ],
       inlinecss: [ cleanCss(), 'concat' ]
     }))
-    .pipe(gulp.dest('release/'));
+    .pipe(gulp.dest('docs/'));
 });
 
-gulp.task('build', ['clean-release', 'copyGeneralFiles', 'optimizeImages', 'usemin']);
+gulp.task('build', ['clean-release', 'copyGeneralFiles', 'optimizeImages', 'useminTrigger']);
