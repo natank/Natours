@@ -6,18 +6,18 @@ body {
 img {
 	max-width: 100%;
 	height: auto;
-} 
+}
 
 a {
-	color: #cf8836;
-} 
+	color: $mainOrange;
+}
 
 .clearfix::after {
 	display:table;
 	content:"";
 	clear:both;
-} 
+}
 
 .font-orange {
-	color: #cf8836;
+	color: $mainOrange;
 }

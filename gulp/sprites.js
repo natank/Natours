@@ -17,7 +17,7 @@ var config = {
 }
 
 gulp.task('beginClean', function(){
-	return del(['./app/assets/images/sprites', './app/assets/styles/modules/_sprite.css'])
+	return del(['./app/assets/images/sprites'])
 })
 
 gulp.task('createSprite', ['beginClean'], function() {
@@ -44,7 +44,7 @@ gulp.task('endClean', ['copySpriteCSS', 'copySpriteGraphic'], function() {
 	return del('./app/assets/images/sprites/css');
 })
 
-gulp.task('icons', ['beginClean', 'createSprite', 
+gulp.task('icons', ['createSprite', 
 			'copySpriteCSS','copySpriteGraphic', 
 			'endClean']);
 

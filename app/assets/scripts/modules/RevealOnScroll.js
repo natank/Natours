@@ -4,8 +4,9 @@ class RevealOnScroll {
 	constructor(itemsToReveal, offset) {
 		this.itemsToReveal = itemsToReveal;
 		this.offset = offset;
-		this.hideInitially(); 
 		this.createWaypoints();
+		this.hideInitially(); 
+	
 	}
 
 	createWaypoints() {

@@ -2,36 +2,37 @@
 	font-size: 2.55rem;
 	font-weight: 300;
 	text-align:center;
-}
-	.section-title strong {
+	strong {
 		font-weight: 500;
 	}
-	.section-title--blue {
-		color: #2a4b6a;
+
+	&--blue {
+		color: $mainBlue;
 	}
-	.section-title--less-margin {
+
+	&--less-margin {
 		margin-bottom: 1.3rem;
 		margin-top:0;
 	}
-	.section-title__icon {
+
+	&__icon {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 		display:block;
-		margin: auto; 
-	}
-	@media (min-width: 530px) {
-	.section-title__icon {
+		margin: auto;
+		@mixin atSmall {
 			margin-bottom: 1rem; 
 			margin-right: 0.5rem;
 			margin-left: 0;
 			display: inline-block;
 			margin-bottom: 0;
 			position: relative;
-			top: 8px 
+			top: 8px;
+		} 
 	}
+
+	@mixin atSmall {
+		font-size: 3.75rem;
 	}
-	@media (min-width: 530px) {.section-title {
-		font-size: 3.75rem
 }
-	}
