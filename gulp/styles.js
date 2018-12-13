@@ -26,7 +26,6 @@ gulp.task('styles', ['clean'], function(){
 			console.log(errorInfo.toString())
 			this.emit('end');
 		})
-		.pipe(gulp.dest('app/'))
 		.pipe(gulp.dest('app/temp'))
 		.pipe(browserSync.reload({ stream: true}));
 })

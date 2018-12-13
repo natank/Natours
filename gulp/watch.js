@@ -5,7 +5,7 @@ gulp.task('watch', ['styles', 'html', 'scripts'], function() {
 	
 	browserSync.init({
 		notify: false,
-		server: "./app/temp"
+		server: "./app"
 	})
 
 	gulp.watch('app/**/*.html', ['html']);

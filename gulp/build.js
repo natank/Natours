@@ -5,10 +5,35 @@ var gulp 	 = require('gulp'),
 	htmlmin  = require('gulp-htmlmin'),
 	cleanCss = require('gulp-clean-css'),
 	rev 	 = require('gulp-rev'),
-	cssnano	 = require('gulp-cssnano');
+	cssnano	 = require('gulp-cssnano'),
+	browserSync = require('./browserSync');
 
+gulp.task('previewRelease', function(){
+	browserSync.init({
+		notify: false,
+		server: "./release"
+	})
 
-gulp.task('optimizeImages',['clean-release'], function() {
+})
+gulp.task('copyGeneralFiles', ['clean-release'], function() {
+	let pathToCopy = [
+		'./app/**/*',
+		'!./app/*.html', 
+		'!./app/assets/images/**',
+		'!./app/assets/scripts/**',
+		'!./app/assets/scripts',
+		'!./app/assets/styles/**',
+		'!./app/assets/styles',
+		'!./app/base',
+		'!./app/base/**',
+		'!./app/modules',
+		'!./app/temp',
+		'!./app/temp/**'
+	]
+	return gulp.src(pathToCopy)
+		.pipe(gulp.dest("./release"))
+})
+gulp.task('optimizeImages',['clean-release', 'icons'], function() {
 	return gulp.src(['./app/assets/images/**/*', 
 		'!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
 		.pipe(imagemin([
@@ -25,18 +50,16 @@ gulp.task('optimizeImages',['clean-release'], function() {
 		.pipe(gulp.dest("./release/assets/images"));
 })
 
-gulp.task('usemin', ['clean-release'], function() {
-  return gulp.src('./app/temp/*.html')
+gulp.task('usemin',  ['clean-release','styles', 'scripts'], function() {
+  return gulp.src('./app/*.html')
     .pipe(usemin({
-      css: [rev(), cssnano()],
+      css: [cssnano(), rev()],
       html: [ htmlmin({ collapseWhitespace: true }) ],
-      js: [ uglify(), rev() ],
+      js: [rev()],
       inlinejs: [ uglify() ],
       inlinecss: [ cleanCss(), 'concat' ]
     }))
     .pipe(gulp.dest('release/'));
 });
 
-
-
-gulp.task('build', ['optimizeImages','usemin']);
+gulp.task('build', ['clean-release', 'copyGeneralFiles', 'optimizeImages', 'usemin']);
