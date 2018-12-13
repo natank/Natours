@@ -13,6 +13,8 @@ app/temp
 release
 node_modules/
 .tmp/
+./app/assets/images/sprites
+./app/assets/styles/modules/_sprite.css
 
 # OS or Editor folders
 .DS_Store

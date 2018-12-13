@@ -55,7 +55,7 @@ gulp.task('useminTrigger', ['clean-release'], function(){
 })
 
 
-gulp.task('usemin',  ['clean-release','styles', 'scripts'], function() {
+gulp.task('usemin',  ['styles', 'scripts'], function() {
   return gulp.src('./app/*.html')
     .pipe(usemin({
       css: [cssnano(), rev()],
