@@ -1,6 +1,6 @@
 let gulp = require("gulp"),
 	clean = require('gulp-clean');
-gulp.task('clean', function(){
+gulp.task('clean', ['icons'], function(){
 
 	gulp.src('app/temp/*.html',{read:false})
 		.pipe(clean());
