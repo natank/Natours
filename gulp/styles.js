@@ -10,23 +10,22 @@ let gulp = require('gulp'),
 	browserSync  = require('./browserSync'),
 	hexrgba = require('postcss-hexrgba');
 
-
-gulp.task('styles', ['clean'], function(){
+gulp.task('styles',['clean'], function(){
 	let postcssPlugins = 
 					[cssimport
 					,vars({variables: colors}) 
 					,mixins
 					,hexrgba
 					,autoprefixer
-					,nested]
-					
+					,nested];
+
 	return gulp.src('app/assets/styles/**/*.css')
 		.pipe(postcss(postcssPlugins))
 		.on('error', function(errorInfo){
 			console.log(errorInfo.toString())
 			this.emit('end');
 		})
-		.pipe(gulp.dest('app/temp'))
+		.pipe(gulp.dest('app/temp/'))
 		.pipe(browserSync.reload({ stream: true}));
 })
 
