@@ -8,7 +8,7 @@
 	width: 100%;
 
 	& * {
-		pointer-events: none;
+		pointer-events: none; 
 	}
 
 	@mixin atMedium {

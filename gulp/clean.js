@@ -2,9 +2,11 @@ let gulp = require("gulp"),
 	clean = require('gulp-clean');
 gulp.task('clean', /*['icons'],*/ function(){
 
-	gulp.src('app/temp/*.html',{read:false})
-		.pipe(clean());
-	return gulp.src('app/temp/**/*.css', {read: false})
+	let pathToClean = ['app/temp/**/*.css', 
+					 'app/temp/*.html',
+					 'app/styles.css'];
+					
+	return gulp.src(pathToClean,{read: false})
 		.pipe(clean());
 })
 

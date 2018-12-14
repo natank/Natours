@@ -1,0 +1,25 @@
+.social-icons {
+	text-align: center;
+}
+	.social-icons__icon {
+		background-color: #cf8836;
+		display: inline-block;
+		margin: 0 5px 5px 5px;
+		width: 33%;
+		height: 72px;
+		position: relative;
+	}
+	@media (min-width: 530px) {
+	.social-icons__icon {
+			width: 72px;
+					margin: 0 5px 
+	}
+	}
+	.social-icons__icon .icon {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			        transform: translate(-50%, -50%);
+		}
