@@ -21,7 +21,11 @@ class StickyHeader {
 
 		this.largeHeroTitle = Array.from(
 			document.getElementsByClassName("large-hero__title")
-			)[0]
+			)[0];
+
+		this.logoGraphic = Array.from(
+			document.getElementsByClassName("site-header__logo__graphic")
+			)[0];
 	
 		this.changeHeaderBgWaypoint();
 		this.changeMenuWaypoints();
@@ -36,11 +40,13 @@ class StickyHeader {
 				{
 					that.siteHeader.classList.add("site-header--darker");
 					that.logo.classList.add("site-header__logo--small");
+					that.logoGraphic.classList.add("site-header__logo--transparent");
 				}
 				else
 				{
 					that.siteHeader.classList.remove("site-header--darker");
 					that.logo.classList.remove("site-header__logo--small");
+					that.logoGraphic.classList.remove("site-header__logo--transparent");
 				}
 			}
 		})
