@@ -1,15 +1,11 @@
 @import "normalize.css";
 @import "./base/_global";
 @import "./base/_mixins";
-@import "./modules/_sprite";
 @import "./modules/_btn";
 @import "./modules/_wrapper";
 @import "./modules/_large-hero";
 @import "./modules/_page-section";
-@import "./modules/_headline";
 @import "./modules/_row.css";
-@import "./modules/_generic-content-container";
-@import "./modules/_section-title";
 @import "./modules/_feature-item";
 @import "./modules/_testimonial";
 @import "./modules/_site-footer";
@@ -17,4 +13,5 @@
 @import "./modules/_navbar";
 @import "./modules/_reveal-item";
 @import "./modules/_modal";
-@import "./modules/_social-icons" ;
+@import "./modules/_diagonal-cover";
+@import "./modules/_image-filter"; 

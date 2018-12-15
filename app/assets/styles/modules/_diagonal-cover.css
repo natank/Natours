@@ -1,0 +1,11 @@
+.diagonal-cover {
+	position: absolute;
+	left: 0;
+	bottom: 7px;
+	width: 200%;
+	height: 100%;
+	background-color: #fff;
+	transform: translateY(100%) rotate(-10deg);
+	z-index: 5;
+	transform-origin: 0% 0%;
+}

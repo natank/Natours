@@ -1,0 +1,26 @@
+.page-section {
+	padding:1.2rem 0;
+	overflow-x: hidden;
+	@mixin atMedium {
+		padding: 1.5rem 0;
+	}
+
+	&--blue {
+		background-color: $mainBlue;
+		color: #fff;
+	}
+
+
+	&--testimonials {
+		background-color: #CBD9E6;
+		padding: 1.5rem 0;
+		@mixin atLarge {
+			background-size: cover;
+			padding: 1.5rem 0;
+
+			&.lazyloaded {
+				background: url("assets/images/testimonials-bg.jpg") top center no-repeat;
+			}
+		}
+	}
+}

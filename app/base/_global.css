@@ -5,17 +5,14 @@ html {
 body {
 	font-family:'Roboto', 'sans-serif';
 	color: #333;
-} 
-
+}
 img {
 	max-width: 100%;
 	height: auto;
 }
-
 a {
-	color: $mainOrange;
+	color: #cf8836;
 }
-
 .clearfix::after {
 	display:table;
 	content:"";
