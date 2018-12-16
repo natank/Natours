@@ -8,7 +8,8 @@ let gulp = require('gulp'),
 	cssimport = require('postcss-import'),
 	colors = require('./config/colors'),
 	browserSync  = require('./browserSync'),
-	hexrgba = require('postcss-hexrgba');
+	hexrgba = require('postcss-hexrgba'),
+	easings = require('postcss-easings');
 
 gulp.task('styles',['clean'], function(){
 	let postcssPlugins = 
@@ -17,7 +18,8 @@ gulp.task('styles',['clean'], function(){
 					,mixins
 					,hexrgba
 					,autoprefixer
-					,nested];
+					,nested,
+					easings];
 
 	return gulp.src('app/assets/styles/**/*.css')
 		.pipe(postcss(postcssPlugins))

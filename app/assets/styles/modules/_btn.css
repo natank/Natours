@@ -3,6 +3,7 @@
 	color: $lightBlack;
 	display: inline-block;
 	text-decoration: none;
+	text-transform: uppercase;
 	padding: 1.75rem 4.75rem;
 	border-radius: 30px;
 	cursor: pointer;
@@ -22,5 +23,9 @@
 
  	&--thin {
  		padding: 0.5rem 2rem;
+ 	}
+
+ 	&::after{
+ 		background-color: inherit;
  	}
 } 

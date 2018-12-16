@@ -4,6 +4,9 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			background: rgba($lightGreen, .8);
+			background-image: linear-gradient(
+				to right bottom, 
+				   rgba($lightGreen, 0.8), 
+				   rgba($darkGreen, 0.8)); 
 			z-index: 4;
 		}

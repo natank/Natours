@@ -1,19 +1,12 @@
 .site-header {
-	width: 100%;
 	position: fixed;
-	top: 0; 
 	z-index: 5;
-	background-color: rgba($mainBlue, .3);
-
 	&__container {
 		display: flex;
 		justify-content: space-between;
-
-
 	}
 
 	@mixin atMedium {
-		background-color: rgba($mainBlue, .3);
 		transition: all .5s ease-out;
 		&--darker {
 			background-color: rgba($darkBlue, .8);
@@ -22,15 +15,12 @@
 
 	&__logo {
 		z-index: 35;
-		transform: scale(.8);
-		transform-origin: 50% 0;
 		transition: all 1.5s ease-out;
 		margin: auto;
+		width: 4.4rem;
 		@mixin atMedium {
-			margin-left: 0;
-			margin-top: 0;
-			transform: scale(1.5) translateX(0);
-			transform-origin: 0 0;
+			margin-left: 3.4rem;
+			margin-top: 3.4rem;
 			left: 0;
 			transform-origin: 0 0;
 		}

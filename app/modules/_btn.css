@@ -3,6 +3,7 @@
 	color: #b79d9d;
 	display: inline-block;
 	text-decoration: none;
+	text-transform: uppercase;
 	padding: 1.75rem 4.75rem;
 	border-radius: 30px;
 	cursor: pointer;
@@ -22,4 +23,7 @@
 	}
 	.btn--thin {
  		padding: 0.5rem 2rem;
+ 	}
+	.btn::after{
+ 		background-color: inherit;
  	} 
