@@ -1,0 +1,31 @@
+.btn {
+	background-color: $mainWhite;
+	color: $lightBlack;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 1.75rem 4.75rem;
+	border-radius: 30px;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 1.3rem;
+	&--orange {
+		background-color: $mainOrange;
+	}
+
+	&--large {
+		padding: 1.1rem 1.9rem;
+		
+		@mixin atSmall {
+			font-size: 1.25rem;	
+		}
+ 	}
+
+ 	&--thin {
+ 		padding: 0.5rem 2rem;
+ 	}
+
+ 	&::after{
+ 		background-color: inherit;
+ 	}
+} 

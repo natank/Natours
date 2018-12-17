@@ -1,0 +1,15 @@
+
+html {
+	// This Defines what what 1rem is
+	font-size: 10px;
+}
+
+body {
+	padding: 30px;
+} 
+
+.clearfix::after {
+	display:table;
+	content:"";
+	clear:both;
+}
