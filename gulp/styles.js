@@ -11,6 +11,7 @@ let gulp = require('gulp'),
 	hexrgba = require('postcss-hexrgba'),
 	easings = require('postcss-easings');
 
+
 gulp.task('styles',['clean'], function(){
 	let postcssPlugins = 
 					[cssimport
@@ -27,8 +28,13 @@ gulp.task('styles',['clean'], function(){
 			console.log(errorInfo.toString())
 			this.emit('end');
 		})
-		.pipe(gulp.dest('app/temp/'))
-		.pipe(gulp.dest('app'))
-		.pipe(browserSync.reload({ stream: true}));
+		.pipe(gulp.dest('app/temp'))
+		.on('finish', function(){
+			return gulp.src('app/temp/styles.css')
+			.pipe(gulp.dest('app'))
+			.pipe(browserSync.reload({ stream: true}));		
+		});
+
+	
 })
 

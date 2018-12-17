@@ -17,7 +17,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 		width: 562px;
-		color: $mainWhite;
+		color: $mainWhite; 
 		text-transform:uppercase;
 		z-index: 5;
 
@@ -34,7 +34,7 @@
 			font-size:  5.4rem;
 		} 
 	} 
-	&__sub-title {
+	&__sub-title { 
 		font-weight: 700;
 		display: block;
 		font-size: 1.5rem;
@@ -103,36 +103,3 @@
 	}
 }
 
-@keyframes slideInFromLeft {
-  0% {
-    transform: translate(-100px, 50px) scale(0);
-
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0,0) scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInFromRight {
-  0% {
-    transform: translate(100px, 50px) scale(0);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0,0) scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInFromBottom {
-  0% {
-    transform: translateY(100px) scale(0);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-}
