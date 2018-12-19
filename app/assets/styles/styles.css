@@ -5,10 +5,12 @@
 @import "./base/_animations";
 @import "./base/_base";
 @import "./components/_btn";
+@import "./components/_page-section";
+@import "./components/_image-filter";
 @import "./layout/_large-hero";
 @import "./layout/_site-header";
+@import "./layout/_site-container";
 @import "./modules/_wrapper";
-@import "./modules/_page-section";
 @import "./modules/_row.css";
 @import "./modules/_feature-item";
 @import "./modules/_testimonial";
@@ -16,5 +18,3 @@
 @import "./modules/_navbar";
 @import "./modules/_reveal-item";
 @import "./modules/_modal";
-@import "./modules/_diagonal-cover";
-@import "./modules/_image-filter";  

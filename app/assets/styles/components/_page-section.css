@@ -4,6 +4,17 @@
 	@mixin atMedium {
 		padding: 1.5rem 0;
 	}
+	&__title {
+		font-size: 3rem;
+		text-align: center;
+  		background: linear-gradient($lightGreen, $mainGreen);
+  		background-clip: text;
+  		color: rgba(0,0,0,0);
+	}
+
+	&--gray {
+		background-color: $lightGray;
+	}
 
 	&--blue {
 		background-color: $mainBlue;
