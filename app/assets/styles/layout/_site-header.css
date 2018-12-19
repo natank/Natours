@@ -1,5 +1,6 @@
 .site-header {
-	position: fixed;
+	position: absolute;
+	top:0;
 	z-index: 5;
 	&__container {
 		display: flex;
@@ -14,10 +15,18 @@
 	}
 
 	&__logo {
-		z-index: 35;
 		transition: all 1.5s ease-out;
+		position: absolute;
+		top: 0;
+		z-index: 5;
 		margin: auto;
 		width: 4.4rem;
+
+		img {
+			max-width: 10rem;
+			width: 4.4rem;
+		}
+
 		@mixin atMedium {
 			margin-left: 3.4rem;
 			margin-top: 3.4rem;
