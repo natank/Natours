@@ -363,21 +363,33 @@ a {
 	color: #cf8836;
 }
 
-.page-link {
-	color:#28b485;
-	font-weight: 500;
-	font-size: 1.7rem; 
-	border-bottom: 1px solid #7ed56f;
-	display: inline-block;
-	padding-bottom: .6rem;
-	text-decoration: none;
-	margin-top: 2rem;
-
-}
+.page-link:link,
+	.page-link:visited{
+		color:#55c57a;
+		font-weight: 500;
+		font-size: 1.7rem; 
+		border-bottom: 1px solid #55c57a;
+		display: inline-block;
+		padding: .6rem;
+		text-decoration: none;
+		margin-top: 2rem;	
+		transition: all .2s;
+	}
 
 .page-link:hover {
 		cursor: pointer;
+		color: #fff;
+		background-color: #55c57a;
 
+		box-shadow: 0 1rem 2rem rgba(183,157,157, .95);
+		-webkit-transform: translateY(-2px);
+		        transform: translateY(-2px);
+	}
+
+.page-link:active{
+		box-shadow: 0 .5rem 1rem rgba(183,157,157, .95); 
+		-webkit-transform: translateY(2px); 
+		        transform: translateY(2px);
 	}
 
 /* variables are defined in gulp/config library
@@ -479,6 +491,14 @@ body {
 	clear:both;
 }
 
+.u-margin-bottom-small:not(:last-child){
+		margin-bottom: 1.5rem;	
+	}
+
+.u-bg-color-gray {
+	background-color: #f7f7f7;
+}
+
 .btn {
 	background-color: #ffffff;
 	color: #b79d9d;
@@ -530,11 +550,14 @@ body {
 
 .page-section__title {
 		font-size: 3.8rem;
+		width: 100%;
+  		margin: auto;
 		text-align: center;
-  		background: linear-gradient(#7ed56f, #55c57a);
+  		background: linear-gradient(to right, #7ed56f, #28b485);
   		-webkit-background-clip: text;
   		        background-clip: text;
   		color: rgba(0,0,0,0);
+  		margin-top: 3rem;
   		margin-bottom: 7rem;
   		transition: all .3s ease-out;
 	}
@@ -558,7 +581,6 @@ body {
 		font-size: 1.6rem;
 		font-weight: 400;
 		line-height: 2.5rem;
-		margin-bottom: 2rem;
 	}
 
 .page-section--gray {
@@ -864,10 +886,6 @@ body {
  				        transform: rotate(-45deg) scaleX(1.25) translateY(1px);
  			}
 
-.site-container {
-	background-color: #f7f7f7;
-}
-
 .row {
 	background-color: #f7f7f7;
 	max-width: 114rem;
@@ -947,8 +965,15 @@ body {
 .about__image {
 		display:block;
 		box-shadow: 0px 24px 71px -19px rgba(74,74,74,1);
+		border-radius: 2px;
 		transition: all 0.3s ease-out;
+		width:55%;
 	}
+
+.about__image:not(:hover) {
+			-webkit-transform: scale(1);
+			        transform: scale(1);
+		}
 
 .about__image__1 {
 			position: relative;
@@ -959,7 +984,6 @@ body {
 
 .about__image__2 {
 			position: relative;
-			/*transform: translate(95%,-80%);*/
 			top: -16rem;
 			left: 24rem;
 			z-index: 2;
@@ -976,6 +1000,9 @@ body {
 			z-index: 10;
 			padding: 2rem;
 			border: 1.5rem solid #55c57a;
+			box-shadow: 0px 24px 71px -19px rgba(74,74,74,1);
+			-webkit-transform: scale(1.05);
+			        transform: scale(1.05);
 		}
 
 .wrapper {
