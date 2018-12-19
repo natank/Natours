@@ -16,7 +16,6 @@
 		top: 32vh;
 		left: 50%;
 		transform: translateX(-50%);
-		width: 562px;
 		color: $mainWhite; 
 		text-transform:uppercase;
 		z-index: 5;
@@ -26,8 +25,8 @@
 		font-weight: 400;
 		display: block;
 		width: 100%;
-		font-size:  3.0rem;
-		letter-spacing: 3.5rem;
+		font-size:  6.0rem;
+		letter-spacing: 3.6rem;
 		margin-bottom: 2rem;
 		@mixin atSmall {
 			animation: 2s easeOutBack 0s 1 slideInFromLeft;
@@ -39,7 +38,7 @@
 		display: block;
 		font-size: 1.5rem;
 		margin: 0;
-		letter-spacing: 1.51rem;
+		letter-spacing: 1.54rem;
 		width: 100%;
 		margin-bottom: 4rem;
 		@mixin atSmall {

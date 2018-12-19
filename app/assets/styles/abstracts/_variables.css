@@ -1,3 +1,3 @@
-// variables are defined in gulp/config library
-// it is imported using the postcss-simple-vars plugin
-// see "styles" task in gulp/styles.js
+/* variables are defined in gulp/config library
+ it is imported using the postcss-simple-vars plugin
+ see "styles" task in gulp/styles.js */
