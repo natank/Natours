@@ -9,6 +9,7 @@
 	&__image {
 		display:block;
 		box-shadow: 0px 24px 71px -19px rgba(74,74,74,1);
+		transition: all 0.3s ease-out;
 		&__1 {
 			position: relative;
 			top: -2rem;
@@ -27,7 +28,11 @@
 			z-index: 3;
 			top: -30rem;
 			left: 10rem;
-
+		}
+		&:hover {
+			z-index: 10;
+			padding: 2rem;
+			border: 1.5rem solid $mainGreen;
 		}
 	}
 }

@@ -371,12 +371,13 @@ a {
 	display: inline-block;
 	padding-bottom: .6rem;
 	text-decoration: none;
+	margin-top: 2rem;
 
 }
 
 .page-link:hover {
 		cursor: pointer;
-		
+
 	}
 
 /* variables are defined in gulp/config library
@@ -528,14 +529,22 @@ body {
 }}
 
 .page-section__title {
-		font-size: 3rem;
+		font-size: 3.8rem;
 		text-align: center;
   		background: linear-gradient(#7ed56f, #55c57a);
   		-webkit-background-clip: text;
   		        background-clip: text;
   		color: rgba(0,0,0,0);
   		margin-bottom: 7rem;
+  		transition: all .3s ease-out;
 	}
+
+.page-section__title:hover{
+  			-webkit-transform: skew(5deg, 5deg);
+  			        transform: skew(5deg, 5deg);
+  			text-shadow: 3px 3px 10px rgba(86,57,73,0.26);
+
+  		}
 
 .page-section__subtitle {
 		font-size: 1.6rem;
@@ -549,6 +558,7 @@ body {
 		font-size: 1.6rem;
 		font-weight: 400;
 		line-height: 2.5rem;
+		margin-bottom: 2rem;
 	}
 
 .page-section--gray {
@@ -937,6 +947,7 @@ body {
 .about__image {
 		display:block;
 		box-shadow: 0px 24px 71px -19px rgba(74,74,74,1);
+		transition: all 0.3s ease-out;
 	}
 
 .about__image__1 {
@@ -959,12 +970,17 @@ body {
 			z-index: 3;
 			top: -30rem;
 			left: 10rem;
+		}
 
+.about__image:hover {
+			z-index: 10;
+			padding: 2rem;
+			border: 1.5rem solid #55c57a;
 		}
 
 .wrapper {
-	padding-left: 4.5rem;
-	padding-right: 4.5rem;
+	padding-left: 0rem;
+	padding-right: 0rem;
 	max-width: 1100px; 
 	margin-left: auto;
 	margin-right: auto; 
