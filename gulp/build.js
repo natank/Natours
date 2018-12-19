@@ -19,7 +19,7 @@ gulp.task('copyGeneralFiles', ['clean-release'], function() {
 	let pathToCopy = [
 		'./app/**/*',
 		'!./app/*.html', 
-		'!./app/assets/images/**',
+		'!./app/assets/images',
 		'!./app/assets/scripts/**',
 		'!./app/assets/scripts',
 		'!./app/assets/styles/**',
