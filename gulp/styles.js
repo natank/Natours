@@ -6,7 +6,7 @@ let gulp = require('gulp'),
 	cssnano = require('cssnano'),
 	mixins = require('postcss-mixins'),
 	cssimport = require('postcss-import'),
-	colors = require('./config/colors'),
+	variables = require('./config/variables'),
 	browserSync  = require('./browserSync'),
 	hexrgba = require('postcss-hexrgba'),
 	easings = require('postcss-easings');
@@ -15,7 +15,7 @@ let gulp = require('gulp'),
 gulp.task('styles',['clean'], function(){
 	let postcssPlugins = 
 					[cssimport
-					,vars({variables: colors}) 
+					,vars({variables: variables}) 
 					,mixins
 					,hexrgba
 					,autoprefixer

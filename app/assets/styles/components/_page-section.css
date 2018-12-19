@@ -2,6 +2,7 @@
 	padding:1.2rem 0;
 	overflow-x: hidden;
 	margin-top: 5rem;
+	color: $darkGray;
 	@mixin atMedium {
 		padding: 1.5rem 0;
 	}
@@ -11,7 +12,23 @@
   		background: linear-gradient($lightGreen, $mainGreen);
   		background-clip: text;
   		color: rgba(0,0,0,0);
+  		margin-bottom: 7rem;
 	}
+
+	&__subtitle {
+		font-size: 1.6rem;
+		font-weight: 600;
+		margin-bottom: 2rem;
+		text-transform: uppercase;
+
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		font-weight: 400;
+		line-height: 2.5rem;
+	}
+
 
 	&--gray {
 		background-color: $lightGray;

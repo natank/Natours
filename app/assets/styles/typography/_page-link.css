@@ -1,0 +1,14 @@
+.page-link {
+	color:$darkGreen;
+	font-weight: 500;
+	font-size: 1.7rem; 
+	border-bottom: 1px solid $lightGreen;
+	display: inline-block;
+	padding-bottom: .6rem;
+	text-decoration: none;
+	&:hover {
+		cursor: pointer;
+		
+	}
+
+}
