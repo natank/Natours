@@ -1,0 +1,9 @@
+.u-margin-bottom-small{
+	&:not(:last-child){
+		margin-bottom: 1.5rem;	
+	}
+}
+
+.u-bg-color-gray {
+	background-color: $lightGray;
+}
