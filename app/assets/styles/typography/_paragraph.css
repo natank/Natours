@@ -1,0 +1,5 @@
+.paragraph {
+	&--centered {
+		text-align: center
+	}
+}

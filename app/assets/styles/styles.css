@@ -1,11 +1,13 @@
 @import "normalize.css";
 @import "./typography/_global";
 @import "./typography/_page-link";
+@import "./typography/_paragraph";
+@import "./typography/_icons";
+@import "./typography/_fonts";
 @import "./abstracts/_mixins";
 @import "./abstracts/_variables";
 @import "./base/_animations";
 @import "./base/_base";
-@import "./base/_utilities";
 @import "./components/_btn";
 @import "./components/_page-section";
 @import "./components/_image-filter";
@@ -13,6 +15,7 @@
 @import "./layout/_site-header";
 @import "./layout/_grid";
 @import "./layout/_about";
+@import "./layout/_services";
 @import "./modules/_wrapper";
 @import "./modules/_feature-item";
 @import "./modules/_testimonial";
@@ -20,3 +23,4 @@
 @import "./modules/_navbar";
 @import "./modules/_reveal-item";
 @import "./modules/_modal";
+@import "./base/_utilities";

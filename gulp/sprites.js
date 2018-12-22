@@ -21,9 +21,12 @@ gulp.task('beginClean', function(){
 })
 
 gulp.task('createSprite', ['beginClean'], function() {
-	return gulp.src("./app/assets/images/icons/**/*.svg")
-		.pipe(svgSprite(config))
-		.pipe(gulp.dest("./app/assets/images/sprites"));
+	// return gulp.src("./app/assets/images/icons/**/*.svg")
+	// 	.pipe(svgSprite(config))
+	// 	.pipe(gulp.dest("./app/assets/images/sprites"));
+	var spriteOutput = gulp.src("./app/");
+
+
 });
 
 gulp.task('copySpriteCSS', ['createSprite'], function() {
