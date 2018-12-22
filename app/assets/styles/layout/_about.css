@@ -8,6 +8,7 @@
 	}
 	&__image {
 		display:block;
+		position: absolute;
 		box-shadow: 0px 24px 71px -19px rgba(74,74,74,1);
 		border-radius: 2px;
 		transition: all 0.3s ease-out;
@@ -17,22 +18,20 @@
 		}
 		
 
+
 		&__1 {
-			position: relative;
 			top: -2rem;
 			left: 0rem;
 			z-index: 1;
 		}
 		&__2 {
-			position: relative;
-			top: -16rem;
+			top: 2rem;
 			left: 24rem;
 			z-index: 2;
 		}
 		&__3 {
-			position: relative;
 			z-index: 3;
-			top: -30rem;
+			top: 10rem;
 			left: 10rem;
 		}
 		&:hover {

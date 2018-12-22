@@ -31,7 +31,6 @@
 
 	.col-1-of-3 {
 		width: calc((100% - 2*$gutterHorizontal)/3);
-		background-color: $lightRed;
 		float: left;
 		&:not(:last-child){
 			margin-right: $gutterHorizontal;	

@@ -11,6 +11,8 @@
 @import "./components/_btn";
 @import "./components/_page-section";
 @import "./components/_image-filter";
+@import "./components/_service-item";
+@import "./components/_tour-item";
 @import "./layout/_large-hero";
 @import "./layout/_site-header";
 @import "./layout/_grid";

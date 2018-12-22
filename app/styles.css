@@ -1131,7 +1131,7 @@ body {
 	padding:1.2rem 0;
 	overflow-x: hidden;
 	margin-top: 5rem;
-	color: #8a8a8a;
+	color: #6f6f6f;
 }
 
 @media (min-width: 800px) {
@@ -1145,6 +1145,7 @@ body {
 		width: 100%;
   		margin: auto;
 		text-align: center;
+		text-transform: uppercase;
   		background: linear-gradient(to right, #7ed56f, #28b485);
   		-webkit-background-clip: text;
   		        background-clip: text;
@@ -1152,6 +1153,7 @@ body {
   		margin-top: 3rem;
   		margin-bottom: 7rem;
   		transition: all .3s ease-out;
+  		width: 75%;
 	}
 
 .page-section__title:hover{
@@ -1212,6 +1214,91 @@ body {
 				   rgba(40,180,133, 0.8)); 
 			z-index: 40;
 		}
+
+.service-item {
+
+	padding: 3.5rem 2.5rem;
+	border-radius: 3px;
+	transition: all .2s ease-in;
+	box-shadow: 0px 7px 29px -7px rgba(0,0,0,0.75);
+}
+
+.service-item__icon {
+		display: block;
+		text-align: center;
+		margin-bottom: 3rem;
+		color: #55c57a;
+		font-size: 6rem;
+		text-align: center;
+
+	}
+
+.service-item:hover {
+		-webkit-transform: translateY(-1.5rem) scale(1.05);
+		        transform: translateY(-1.5rem) scale(1.05);
+	}
+
+.tour-item {
+	background-color: #fff;
+	position: relative;
+}
+
+.tour-item__header {
+		position: relative;
+		padding-top: 22.6rem;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 95%);
+		        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 95%);
+	}
+
+.tour-item__title {
+		position: absolute;
+		color: #fff;
+		
+		font-size: 3rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-align: center;
+		padding:1rem;
+		right: 2.5rem;
+	}
+
+.tour-item__title--1 {
+			background: rgba(40,180,133, 0.9);
+			top: 8.5rem;
+		}
+
+.tour-item__title--2 {
+			background: rgba(85,197,122, 0.6);
+			top: 13rem;
+		}
+
+.tour-item__features {
+		text-align: center;
+		list-style: none;
+		margin:0;
+		padding: 0;
+	}
+
+.tour-item__features li {
+			font-size: 1.8rem;
+			padding: 1.4rem 0;
+			border-bottom: 1px solid #f7f7f7;
+			width: 65%;
+			margin: auto;
+			color: #6f6f6f;
+
+		}
+
+.tour-bg-1 {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba(126,213,111, 0.8), 
+				   rgba(40,180,133, 0.8)),
+				url(assets/images/nat-5.jpg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 0px -10px;
+}
 
 .large-hero {
 	position: relative;
@@ -1512,7 +1599,6 @@ body {
 
 .row .col-1-of-3 {
 		width: calc((100% - 2*6rem)/3);
-		background-color: #e43e3e;
 		float: left;	
 	}
 
@@ -1556,6 +1642,7 @@ body {
 
 .about__image {
 		display:block;
+		position: absolute;
 		box-shadow: 0px 24px 71px -19px rgba(74,74,74,1);
 		border-radius: 2px;
 		transition: all 0.3s ease-out;
@@ -1568,23 +1655,20 @@ body {
 		}
 
 .about__image__1 {
-			position: relative;
 			top: -2rem;
 			left: 0rem;
 			z-index: 1;
 		}
 
 .about__image__2 {
-			position: relative;
-			top: -16rem;
+			top: 2rem;
 			left: 24rem;
 			z-index: 2;
 		}
 
 .about__image__3 {
-			position: relative;
 			z-index: 3;
-			top: -30rem;
+			top: 10rem;
 			left: 10rem;
 		}
 
@@ -1598,48 +1682,17 @@ body {
 		}
 
 .services {
-	padding: 20rem 2rem;
-	margin-top: 11rem;
+	padding: 8rem 0;
 	position: relative;
 
 }
 
-.services__background {
-		position: relative;		
+.services__container {
+		width: 100%;
+		position: absolute;
+		top: 36%;
+		z-index: 50;
 	}
-
-.service-item {
-
-	padding: 3rem 0;
-	border-radius: 3px;
-	transition: all .2s ease-in;
-}
-
-.service-item__icon {
-		display: block;
-		text-align: center;
-		margin-bottom: 3rem;
-		color: #55c57a;
-	}
-
-.service-item__icon:before{
-			font-size: 6rem;
-			text-align: center;
-		}
-
-.service-item:hover {
-		-webkit-transform: translateY(-1.5rem) scale(1.05);
-		        transform: translateY(-1.5rem) scale(1.05);
-	}
-
-.service-items {
-
-	width: 100%;
-	position: absolute;
-	top: 36%;
-	z-index: 50;
-	
-}
 
 .wrapper {
 	padding-left: 1.8rem;
@@ -2079,6 +2132,6 @@ body {
 }
 
 .skewed-left {
-	-webkit-transform: skew(0deg,-8deg);
-	        transform: skew(0deg,-8deg);
+	-webkit-transform: skew(0deg,-6deg);
+	        transform: skew(0deg,-6deg);
 }

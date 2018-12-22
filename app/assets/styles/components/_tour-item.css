@@ -1,0 +1,57 @@
+.tour-item {
+	background-color: #fff;
+	position: relative;
+	&__header {
+		position: relative;
+		padding-top: 22.6rem;
+		clip-path: polygon(0 0, 100% 0, 100% 80%, 0 95%);
+	}
+	&__title {
+		position: absolute;
+		color: #fff;
+		
+		font-size: 3rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-align: center;
+		padding:1rem;
+		right: 2.5rem;
+ 
+
+		&--1 {
+			background: rgba($darkGreen, 0.9);
+			top: 8.5rem;
+		}
+		&--2 {
+			background: rgba($mainGreen, 0.6);
+			top: 13rem;
+		}
+	}
+
+	&__features {
+		text-align: center;
+		list-style: none;
+		margin:0;
+		padding: 0;
+		li {
+			font-size: 1.8rem;
+			padding: 1.4rem 0;
+			border-bottom: 1px solid $lightGray;
+			width: 65%;
+			margin: auto;
+			color: $darkGray;
+
+		}
+	}
+}
+
+.tour-bg-1 {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba($lightGreen, 0.8), 
+				   rgba($darkGreen, 0.8)),
+				url(assets/images/nat-5.jpg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 0px -10px;
+}
