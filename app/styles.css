@@ -1241,11 +1241,12 @@ body {
 .tour-item {
 	background-color: #fff;
 	position: relative;
+	height: 52rem;
 }
 
 .tour-item__header {
 		position: relative;
-		padding-top: 22.6rem;
+		padding-top: 26.6rem;
 		-webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 95%);
 		        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 95%);
 	}
@@ -1264,12 +1265,12 @@ body {
 
 .tour-item__title--1 {
 			background: rgba(40,180,133, 0.9);
-			top: 8.5rem;
+			top: 12rem;
 		}
 
 .tour-item__title--2 {
 			background: rgba(85,197,122, 0.6);
-			top: 13rem;
+			top: 16.5rem;
 		}
 
 .tour-item__features {
@@ -1280,7 +1281,7 @@ body {
 	}
 
 .tour-item__features li {
-			font-size: 1.8rem;
+			font-size: 1.5rem;
 			padding: 1.4rem 0;
 			border-bottom: 1px solid #f7f7f7;
 			width: 65%;
@@ -1295,9 +1296,15 @@ body {
 				   rgba(126,213,111, 0.8), 
 				   rgba(40,180,133, 0.8)),
 				url(assets/images/nat-5.jpg);
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: 0px -10px;
+		background-position: 0px 0px,
+							-5px 0px;
+}
+
+.tour-contact {
+	background-color: #7ed56f;
+	height: 52rem;
 }
 
 .large-hero {
