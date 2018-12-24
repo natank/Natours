@@ -1,4 +1,4 @@
 .tour-contact {
-	background-color: $lightGreen;
+	background: linear-gradient(to right, $lightGreen, $darkGreen);
 	height: 52rem;
 }

@@ -1,7 +1,6 @@
 .tour-item {
 	background-color: #fff;
-	position: relative;
-	height: 52rem;
+	
 	&__header {
 		position: relative;
 		padding-top: 26.6rem;
@@ -44,6 +43,27 @@
 			color: $darkGray;
 
 		}
+	}
+	&--contact {
+		background: linear-gradient(to right, $lightGreen, $darkGreen);
+		padding-top: 3px;
+
+		&__container {
+			position: absolute;
+			top: 27%;
+			color: #fff;
+			text-align: center;
+			width: 100%;
+		}
+		&__title {
+			margin: auto;
+			text-transform: uppercase;
+		}
+		&__price {
+			font-size: 5rem;
+			font-weight: 100;
+		}
+
 	}
 }
 

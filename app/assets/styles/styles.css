@@ -8,6 +8,7 @@
 @import "./abstracts/_variables";
 @import "./base/_animations";
 @import "./base/_base";
+@import "./base/_flip-card";
 @import "./components/_btn";
 @import "./components/_page-section";
 @import "./components/_image-filter";
