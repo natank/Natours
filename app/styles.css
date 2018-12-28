@@ -1095,6 +1095,9 @@ body {
   background-color: transparent;
   width: auto;
   height: 52rem;
+  overflow:hidden;
+  border-radius: 5px;
+
   border: 1px solid #f1f1f1;
   -webkit-perspective: 1000px;
           perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -1151,19 +1154,71 @@ body {
 		background-color: #ffb900;
 	}
 
+.btn--animated-start {
+		-webkit-animation: 1.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) .75s 1 slideInFromBottom backwards;
+		        animation: 1.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) .75s 1 slideInFromBottom backwards;
+	}
+
+.btn--animated {
+		text-align: center;
+	}
+
+.btn--animated a:link, .btn--animated a:visited{
+			transition: all .2s;
+			position: relative;
+		}
+
+.btn--animated a:hover{
+			-webkit-transform: translateY(-3px);
+			        transform: translateY(-3px);
+			box-shadow: 0px 10px 20px rgba(0,0,0,.2);
+		}
+
+.btn--animated a:active {
+			-webkit-transform: translateY(-1px);
+			        transform: translateY(-1px);
+			box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+		}
+
+.btn--animated a::after {
+			content:"";
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+			border-radius: inherit;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			transition: all .6s;
+		}
+
+.btn--animated a:hover::after {
+			-webkit-transform: scaleX(1.4) scaleY(1.6);
+			        transform: scaleX(1.4) scaleY(1.6);
+			opacity: 0;
+		}
+
 .btn--large {
-		padding: 1.1rem 1.9rem;
+		padding: 2rem 3.5rem;
+		font-size: 1.25rem;
+		color: #6f6f6f;
  	}
 
 @media (min-width: 530px) {
 
 .btn--large {
-			font-size: 1.25rem
+			font-size: 1.8rem
  	}
 	}
 
 .btn--thin {
  		padding: 0.5rem 2rem;
+ 	}
+
+.btn--green {
+ 		background-color: #55c57a;
+ 		color: #ffffff;
  	}
 
 .btn::after{
@@ -1207,7 +1262,7 @@ body {
   		}
 
 .page-section__subtitle {
-		font-size: 1.6rem;
+		font-size: 1.8rem;
 		font-weight: 600;
 		margin-bottom: 2rem;
 		text-transform: uppercase;
@@ -1215,7 +1270,7 @@ body {
 	}
 
 .page-section__text {
-		font-size: 1.6rem;
+		font-size: 1.8rem;
 		font-weight: 400;
 		line-height: 2.5rem;
 	}
@@ -1287,9 +1342,14 @@ body {
 
 .tour-item__header {
 		position: relative;
-		padding-top: 26.6rem;
+		height: 26.6rem;
 		-webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 95%);
 		        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 95%);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 0px 0px,
+							-5px 0px;
+		background-blend-mode: screen;
 	}
 
 .tour-item__title {
@@ -1324,12 +1384,14 @@ body {
 .tour-item__features li {
 			font-size: 1.5rem;
 			padding: 1.4rem 0;
-			border-bottom: 1px solid #f7f7f7;
 			width: 65%;
 			margin: auto;
 			color: #6f6f6f;
-
 		}
+
+.tour-item__features li:not(:last-child) {
+				border-bottom: 1px solid #f7f7f7;
+				}
 
 .tour-item--contact {
 		
@@ -1340,7 +1402,10 @@ body {
 
 .tour-item--contact__container {
 			position: absolute;
-			top: 27%;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			        transform: translate(-50%, -50%);
 			color: #fff;
 			text-align: center;
 			width: 100%;
@@ -1374,11 +1439,6 @@ body {
 				   rgba(255,185,0, 0.9), 
 				   rgba(255,185,0, 0.9)),
 				url(assets/images/nat-5.jpg);
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: 0px 0px,
-							-5px 0px;
-		background-blend-mode: color;
 }
 
 .tour-bg-2 {
@@ -1387,11 +1447,6 @@ body {
 				   rgba(126,213,111, 0.8), 
 				   rgba(40,180,133, 0.8)),
 				url(assets/images/nat-6.jpg);
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: 0px 0px,
-							-5px 0px;
-		background-blend-mode: color;
 }
 
 .tour-bg-3 {
@@ -1400,15 +1455,7 @@ body {
 				   rgba(94,177,255, 0.5), 
 				   rgba(94,177,255, 0.5)),
 				url(assets/images/nat-7.jpg);
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: 0px 0px,
-							-5px 0px;
-		background-blend-mode: color;
 }
-
-/*normal|multiply|screen|overlay|darken|lighten|
-color-dodge|saturation|color|luminosity;*/
 
 .tour-contact {
 	background: linear-gradient(to right, #7ed56f, #28b485);
@@ -1497,49 +1544,6 @@ color-dodge|saturation|color|luminosity;*/
 			font-size: 1.875rem
 	}
 	}
-
-.large-hero__button {
-		text-align: center;
-		-webkit-animation: 1.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) .75s 1 slideInFromBottom backwards;
-		        animation: 1.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) .75s 1 slideInFromBottom backwards;
-
-	}
-
-.large-hero__button a:link, .large-hero__button a:visited{
-			transition: all .2s;
-			position: relative;
-		}
-
-.large-hero__button a:hover{
-			-webkit-transform: translateY(-3px);
-			        transform: translateY(-3px);
-			box-shadow: 0px 10px 20px rgba(0,0,0,.2);
-		}
-
-.large-hero__button a:active {
-			-webkit-transform: translateY(-1px);
-			        transform: translateY(-1px);
-			box-shadow: 0px 5px 10px rgba(0,0,0,.2);
-		}
-
-.large-hero__button a::after {
-			content:"";
-			display: inline-block;
-			height: 100%;
-			width: 100%;
-			border-radius: inherit;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: -1;
-			transition: all .6s;
-		}
-
-.large-hero__button a:hover::after {
-			-webkit-transform: scaleX(1.4) scaleY(1.6);
-			        transform: scaleX(1.4) scaleY(1.6);
-			opacity: 0;
-		}
 
 .site-header {
 	position: absolute;
@@ -2282,4 +2286,8 @@ color-dodge|saturation|color|luminosity;*/
 
 .u-bg-DarkOrange-Transparent {
 	background: rgba(255,119,48, 0.6);
+}
+
+.u-margin-top-medium {
+	margin-top: 10rem;
 }

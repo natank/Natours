@@ -13,16 +13,63 @@
 		background-color: $mainOrange;
 	}
 
-	&--large {
-		padding: 1.1rem 1.9rem;
+	&--animated-start {
+		animation: 1.25s easeOutBack .75s 1 slideInFromBottom backwards;
+	}
+
+	&--animated {
+		text-align: center;
 		
+		a:link, a:visited{
+			transition: all .2s;
+			position: relative;
+		}
+
+		a:hover{
+			transform: translateY(-3px);
+			box-shadow: 0px 10px 20px rgba(0,0,0,.2);
+		}
+
+		a:active {
+			transform: translateY(-1px);
+			box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+		}
+
+		a::after {
+			content:"";
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+			border-radius: inherit;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			transition: all .6s;
+		}
+
+		a:hover::after {
+			transform: scaleX(1.4) scaleY(1.6);
+			opacity: 0;
+		}
+	}
+
+	&--large {
+		padding: 2rem 3.5rem;
+		font-size: 1.25rem;
+		color: $darkGray;
 		@mixin atSmall {
-			font-size: 1.25rem;	
+			font-size: 1.8rem;	
 		}
  	}
 
  	&--thin {
  		padding: 0.5rem 2rem;
+ 	}
+
+ 	&--green {
+ 		background-color: $mainGreen;
+ 		color: $mainWhite;
  	}
 
  	&::after{
