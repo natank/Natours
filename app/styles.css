@@ -360,7 +360,7 @@ img {
 }
 
 a {
-	color: #cf8836;
+	color: #ffb900;
 }
 
 .page-link:link,
@@ -1104,17 +1104,19 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: center;
+  
   transition: -webkit-transform 0.8s;
+  
   transition: transform 0.8s;
+  
   transition: transform 0.8s, -webkit-transform 0.8s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
 }
 
 .flip-card-front, .flip-card-back {
@@ -1146,7 +1148,7 @@ body {
 }
 
 .btn--orange {
-		background-color: #cf8836;
+		background-color: #ffb900;
 	}
 
 .btn--large {
@@ -1292,24 +1294,24 @@ body {
 
 .tour-item__title {
 		position: absolute;
+		display: inline-block;
 		color: #fff;
-		
+		width: 75%;
+		text-align: right;
 		font-size: 3rem;
 		font-weight: 300;
 		text-transform: uppercase;
-		text-align: center;
-		padding:1rem;
 		right: 2.5rem;
+		top: 12rem;
 	}
 
-.tour-item__title--1 {
-			background: rgba(40,180,133, 0.9);
-			top: 12rem;
-		}
-
-.tour-item__title--2 {
-			background: rgba(85,197,122, 0.6);
-			top: 16.5rem;
+.tour-item__title__text {
+			-webkit-box-decoration-break: clone;
+			        box-decoration-break: clone;
+			text-align: right;
+			padding: 0.5rem 1.5rem;
+			margin-top: 3rem;
+			line-height: 4rem;
 		}
 
 .tour-item__features {
@@ -1330,8 +1332,9 @@ body {
 		}
 
 .tour-item--contact {
-		background: linear-gradient(to right, #7ed56f, #28b485);
+		
 		padding-top: 3px;
+
 
 	}
 
@@ -1353,17 +1356,59 @@ body {
 			font-weight: 100;
 		}
 
+.tour-item--contact--green {
+			background: linear-gradient(to right, #7ed56f, #28b485);	
+		}
+
+.tour-item--contact--orange {
+			background: linear-gradient(to right, #ffd051, #ff7730);	
+		}
+
+.tour-item--contact--blue {
+			background: linear-gradient(to right, #5eb1ff, #01274b);	
+		}
+
 .tour-bg-1 {
 	background-image: linear-gradient(
 				to right bottom, 
-				   rgba(126,213,111, 0.8), 
-				   rgba(40,180,133, 0.8)),
+				   rgba(255,185,0, 0.9), 
+				   rgba(255,185,0, 0.9)),
 				url(assets/images/nat-5.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: 0px 0px,
 							-5px 0px;
+		background-blend-mode: color;
 }
+
+.tour-bg-2 {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba(126,213,111, 0.8), 
+				   rgba(40,180,133, 0.8)),
+				url(assets/images/nat-6.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 0px 0px,
+							-5px 0px;
+		background-blend-mode: color;
+}
+
+.tour-bg-3 {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba(94,177,255, 0.5), 
+				   rgba(94,177,255, 0.5)),
+				url(assets/images/nat-7.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 0px 0px,
+							-5px 0px;
+		background-blend-mode: color;
+}
+
+/*normal|multiply|screen|overlay|darken|lighten|
+color-dodge|saturation|color|luminosity;*/
 
 .tour-contact {
 	background: linear-gradient(to right, #7ed56f, #28b485);
@@ -1699,6 +1744,10 @@ body {
 		clear:both;
 	}
 
+.about {
+	padding-bottom: 10rem;
+}
+
 .about__photos {
 		position: relative;
 	}
@@ -1921,7 +1970,7 @@ body {
 
 .testimonial__subtitle {
 		text-align: center;
-		color: #cf8836;
+		color: #ffb900;
 		font-size: .75rem;
 		margin: 0.5rem auto 0.1rem auto;
 		line-height: 0.8rem;
@@ -2064,7 +2113,7 @@ body {
 	}
 
 .navbar__link-item--orange {
-			color: #cf8836;
+			color: #ffb900;
 		}
 
 .navbar__link-item--white {
@@ -2172,7 +2221,7 @@ body {
 	}
 
 .modal__close:hover{
-			color: #cf8836; 
+			color: #ffb900; 
 
 		}
 
@@ -2204,4 +2253,33 @@ body {
 .skewed-left {
 	-webkit-transform: skew(0deg,-6deg);
 	        transform: skew(0deg,-6deg);
+}
+
+.u-bg-DarkGreen-Transparent {
+	background: rgba(40,180,133, 0.6);
+}
+
+.u-bg-MainGreen-Transparent {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba(85,197,122, 0.9), 
+				   rgba(85,197,122, 0.9));
+}
+
+.u-bg-DarkBlue-Transparent {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba(42,75,106, 0.9), 
+				   rgba(1,39,75, 0.9));
+}
+
+.u-bg-MainOrange-Transparent {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba(255,185,0, 0.9), 
+				   rgba(255,185,0, 0.9));
+}
+
+.u-bg-DarkOrange-Transparent {
+	background: rgba(255,119,48, 0.6);
 }

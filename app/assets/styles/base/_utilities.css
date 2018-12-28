@@ -27,3 +27,32 @@
 .skewed-left {
 	transform: skew(0deg,-6deg);
 }
+
+.u-bg-DarkGreen-Transparent {
+	background: rgba($darkGreen, 0.6);
+}
+
+.u-bg-MainGreen-Transparent {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba($mainGreen, 0.9), 
+				   rgba($mainGreen, 0.9));
+}
+
+.u-bg-DarkBlue-Transparent {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba($mainBlue, 0.9), 
+				   rgba($darkBlue, 0.9));
+}
+
+.u-bg-MainOrange-Transparent {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba($mainOrange, 0.9), 
+				   rgba($mainOrange, 0.9));
+}
+
+.u-bg-DarkOrange-Transparent {
+	background: rgba($darkOrange, 0.6);
+}

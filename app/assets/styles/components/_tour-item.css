@@ -8,23 +8,22 @@
 	}
 	&__title {
 		position: absolute;
+		display: inline-block;
 		color: #fff;
-		
+		width: 75%;
+		text-align: right;
 		font-size: 3rem;
 		font-weight: 300;
 		text-transform: uppercase;
-		text-align: center;
-		padding:1rem;
 		right: 2.5rem;
- 
+		top: 12rem;
 
-		&--1 {
-			background: rgba($darkGreen, 0.9);
-			top: 12rem;
-		}
-		&--2 {
-			background: rgba($mainGreen, 0.6);
-			top: 16.5rem;
+		&__text {
+			box-decoration-break: clone;
+			text-align: right;
+			padding: 0.5rem 1.5rem;
+			margin-top: 3rem;
+			line-height: 4rem;
 		}
 	}
 
@@ -45,7 +44,7 @@
 		}
 	}
 	&--contact {
-		background: linear-gradient(to right, $lightGreen, $darkGreen);
+		
 		padding-top: 3px;
 
 		&__container {
@@ -63,6 +62,16 @@
 			font-size: 5rem;
 			font-weight: 100;
 		}
+		&--green {
+			background: linear-gradient(to right, $lightGreen, $darkGreen);	
+		}
+		&--orange {
+			background: linear-gradient(to right, $lightOrange, $darkOrange);	
+		}
+		&--blue {
+			background: linear-gradient(to right, $lightBlue, $darkBlue);	
+		}
+
 
 	}
 }
@@ -70,11 +79,41 @@
 .tour-bg-1 {
 	background-image: linear-gradient(
 				to right bottom, 
-				   rgba($lightGreen, 0.8), 
-				   rgba($darkGreen, 0.8)),
+				   rgba($mainOrange, 0.9), 
+				   rgba($mainOrange, 0.9)),
 				url(assets/images/nat-5.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: 0px 0px,
 							-5px 0px;
+		background-blend-mode: color;
 }
+
+.tour-bg-2 {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba($lightGreen, 0.8), 
+				   rgba($darkGreen, 0.8)),
+				url(assets/images/nat-6.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 0px 0px,
+							-5px 0px;
+		background-blend-mode: color;
+}
+
+.tour-bg-3 {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba($lightBlue, 0.5), 
+				   rgba($lightBlue, 0.5)),
+				url(assets/images/nat-7.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 0px 0px,
+							-5px 0px;
+		background-blend-mode: color;
+}
+
+/*normal|multiply|screen|overlay|darken|lighten|
+color-dodge|saturation|color|luminosity;*/
