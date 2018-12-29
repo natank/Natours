@@ -4,9 +4,22 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			background-image: linear-gradient(
+			z-index: 40;
+			&--green {
+				background-image: linear-gradient(
 				to right bottom, 
 				   rgba($lightGreen, 0.8), 
-				   rgba($darkGreen, 0.8)); 
-			z-index: 40;
+				   rgba($darkGreen, 0.8)); 	
+			}
+
+			&--gray {
+				background-image: linear-gradient(
+				to right bottom, 
+				   rgba($lightGray, 0.8), 
+				   rgba($lightGray, 0.8)); 	
+			}
+			
+
+
+
 		}

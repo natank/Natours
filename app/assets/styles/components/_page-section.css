@@ -22,7 +22,7 @@
 
 
   		&:hover{
-  			transform: skew(5deg, 5deg);
+  			transform: skew(3deg, 3deg);
   			text-shadow: 3px 3px 10px rgba(86,57,73,0.26);
 
   		}

@@ -14,12 +14,14 @@
 @import "./components/_image-filter";
 @import "./components/_service-item";
 @import "./components/_tour-item";
+@import "./components/_story-item";
 @import "./components/_tour-contact";
 @import "./layout/_large-hero";
 @import "./layout/_site-header";
 @import "./layout/_grid";
 @import "./layout/_about";
 @import "./layout/_services";
+@import "./layout/_stories";
 @import "./modules/_wrapper";
 @import "./modules/_feature-item";
 @import "./modules/_testimonial";
