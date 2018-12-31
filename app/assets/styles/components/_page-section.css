@@ -19,8 +19,12 @@
   		margin-top: 3rem;
   		margin-bottom: 7rem;
   		transition: all .3s ease-out;
-  		width: 75%;
-
+  		width: 100%;
+  		letter-spacing: 0.5rem;
+  		&--left {
+  			margin-left: 0;
+  			text-align: left;
+  		}
 
   		&:hover{
   			transform: skew(3deg, 3deg);

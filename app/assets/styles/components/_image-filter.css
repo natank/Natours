@@ -18,6 +18,10 @@
 				   rgba($lightGray, 0.8), 
 				   rgba($lightGray, 0.8)); 	
 			}
+
+			&--clipped {
+				clip-path: polygon(0 0, 55% 0%, 47% 100%, 0% 100%);
+			}
 			
 
 

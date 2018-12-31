@@ -1,8 +1,12 @@
 .booking-form {
+	position: relative;
+	z-index: 200;
 	width: 100%;
+	padding: 0rem;
 	&__text-input {
-		width: 100%;
+		width: 87%;
 		height: 5rem;
+		border-radius: 3px;
 		margin-bottom: 5rem;
 	}
 }
