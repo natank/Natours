@@ -1,4 +1,5 @@
 .page-section {
+	position: relative;
 	padding:1.2rem 0;
 	overflow-x: hidden;
 	margin-top: 5rem;
@@ -7,7 +8,7 @@
 		padding: 1.5rem 0;
 	}
 	&__title {
-		font-size: 3.8rem;
+		font-size: 3.7rem;
 		width: 100%;
   		margin: auto;
 		text-align: center;
