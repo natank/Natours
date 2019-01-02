@@ -17,6 +17,8 @@
 @import "./components/_story-item";
 @import "./components/_tour-contact";
 @import "./components/_booking-form";
+@import "./components/_radio-animated";
+@import "./components/_text-input";
 @import "./layout/_large-hero";
 @import "./layout/_site-header";
 @import "./layout/_grid";

@@ -136,7 +136,7 @@
   most popular tours
 </h1>
 
-<div class="row u-no-bg">
+<div class="row">
    <div class="col-1-of-3">
      <div class="flip-card">
       <div class="flip-card-inner">
@@ -337,28 +337,45 @@
 
   </section>
 
-  <section class="booking page-section">
-   <div class="booking__container">
-        <div class="image-filter 
-                    image-filter--gray 
-                    image-filter--clipped">
-        </div>
-       <div class="row row--no-bg">
-
-        
+  <section class="booking page-section u-no-margin-top">
+       <div class="row row--no-bg booking__row-1">
         <div class="col-1-of-2">
-           <div class="booking-form">
+           <form class="booking-form">
               <h1 class="page-section__title
                          page-section__title--left">
                      start booking now
               </h1>
-              <input type="text" class="booking-form__text-input" name="full-name">
-              <input type="text" class="booking-form__text-input" name="email">
-           </div>
-        </div>
-       </div>
-   </div>
-   
+              <div class="text-input">
+                 <input class="effect-2" type="text" placeholder="Full name" autocomplete="on" required>
+                 <span class="focus-border"></span>
+              </div>
+              <div class="text-input">
+                 <input class="effect-2" type="email" placeholder="Email address" autocomplete="on" required>
+                 <span class="focus-border"></span>
+              </div>
+              
+              <div class="radio-animated">
+                <label class="container">
+                    <span class="container__label-text">
+                        Small tour groups
+                    </span>
+                    <input type="radio" checked="checked" name="group" value="small">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">
+                    <span class="container__label-text">
+                        Large tour groups
+                    </span>
+                  <input type="radio" name="group" value="large">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <a class="btn btn--animated btn--green u-margin-top-smaller" href="#">
+                next step&#8594 
+              </a>
+              
+          </form>
+      </div>
   </section>
 </div>
 </body>

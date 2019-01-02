@@ -4,9 +4,7 @@
 	overflow-x: hidden;
 	margin-top: 5rem;
 	color: $darkGray;
-	@mixin atMedium {
-		padding: 1.5rem 0;
-	}
+
 	&__title {
 		font-size: 3.7rem;
 		width: 100%;
@@ -17,10 +15,10 @@
   		background-clip: text;
   		color: rgba(0,0,0,0);
   		margin-top: 3rem;
-  		margin-bottom: 7rem;
+  		margin-bottom: 6rem;
   		transition: all .3s ease-out;
   		width: 100%;
-  		letter-spacing: 0.5rem;
+  		letter-spacing: 0.2rem;
   		&--left {
   			margin-left: 0;
   			text-align: left;

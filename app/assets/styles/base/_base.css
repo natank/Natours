@@ -1,7 +1,11 @@
+* {
+	box-sizing: border-box;
+}
+
 
 html {
 	/* This Defines what what 1rem is*/
-	font-size: 10px;
+	font-size: 62.5%;
 }
 
 body {

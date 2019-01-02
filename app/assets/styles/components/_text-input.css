@@ -1,0 +1,43 @@
+.text-input {
+	/* necessary to give position: relative to parent. */
+	position: relative;
+	width: 85%; 
+	margin-bottom: 2rem;
+	input[type="text"], input[type="email"]{
+		font: 15px/24px 'Muli', sans-serif; 
+		color: inherit;
+		box-sizing: border-box; 
+		letter-spacing: 1px;
+		width: 100%;
+		padding: 1.5rem;
+		&::placeholder{
+			color: $mediumGray; 
+		}
+
+	}
+
+	:focus{
+		outline: none;
+		box-shadow: 0 1rem 2rem rgba(#000, .1);
+	}	
+}
+
+.effect-2 {
+	border: 0; 
+	padding: 7px 0; 
+	border-bottom: 1px solid $mainGray;
+
+}
+             
+.effect-2 ~ .focus-border{
+	position: absolute; 
+	bottom: 0; left: 50%; width: 0; 
+	height: 3px; background-color: $darkOrange; 
+	transition: 0.4s;
+}
+.effect-2:focus ~ .focus-border {
+	width: 100%; 
+	transition: 0.4s; 
+	left: 0;
+}
+

@@ -5,6 +5,7 @@
 	padding: 0rem;
 	&__text-input {
 		width: 87%;
+		font-family: inherit;
 		height: 5rem;
 		border-radius: 3px;
 		margin-bottom: 5rem;
