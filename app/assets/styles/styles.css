@@ -26,6 +26,7 @@
 @import "./layout/_services";
 @import "./layout/_stories";
 @import "./layout/_booking";
+@import "./layout/_footer";
 @import "./modules/_wrapper";
 @import "./modules/_feature-item";
 @import "./modules/_testimonial";
