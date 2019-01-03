@@ -2050,7 +2050,7 @@ body {
 
 .row [class^="col-"] {
 		padding: 10px 0;
-		background-color: #e43e3e;
+		/*background-color: $lightRed;*/
 		float: left;
 	}
 

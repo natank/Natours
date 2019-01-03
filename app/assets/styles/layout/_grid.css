@@ -13,7 +13,7 @@
 
 	[class^="col-"] {
 		padding: 10px 0;
-		background-color: $lightRed;
+		/*background-color: $lightRed;*/
 		float: left;
 		&:not(:last-child){
 			margin-right: $gutterHorizontal;	
