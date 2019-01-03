@@ -2,7 +2,7 @@
 	/* necessary to give position: relative to parent. */
 	position: relative;
 	width: 85%; 
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 	input[type="text"], input[type="email"]{
 		font: 15px/24px 'Muli', sans-serif; 
 		color: inherit;
@@ -13,31 +13,67 @@
 		&::placeholder{
 			color: $mediumGray; 
 		}
+		 + label {
+			position: absolute;
+			top:150%; left: 0;
+			transform: translateY(-150%) translateX(1.5rem);
+			font-size: 1.6rem;
+			transition: all 0.3s ease-out;
+		 }
 
+		&:placeholder-shown + label{
+			position: absolute;
+			top:50%; left: 0;
+			transform: translateY(-50%) translateX(1.5rem);
+			opacity: 0;
+			visibility: hidden;
+		}
+
+
+		&.effect-2 {
+			border: 0; 
+			border-bottom: 1px solid $mainGray;
+
+		}
+	             
+		&.effect-2 ~ .focus-border{
+			position: absolute; 
+			bottom: 0; left: 50%; width: 0; 
+			height: 3px; 
+			transition: 0.4s;
+		}
+		&.effect-2:focus ~ .focus-border {
+			width: 100%; 
+			transition: 0.4s; 
+			left: 0;
+		}
+
+		/* Change the line color according to input validity*/
+		&:invalid.effect-2 ~ .focus-border {
+			background-color: $darkOrange; 
+		}
+
+		&:valid.effect-2 ~ .focus-border {
+			background-color: $mainGreen; 
+		}
 	}
 
 	:focus{
 		outline: none;
 		box-shadow: 0 1rem 2rem rgba(#000, .1);
-	}	
+	}
+
+	
+
+
+
+
+
+
+
 }
 
-.effect-2 {
-	border: 0; 
-	padding: 7px 0; 
-	border-bottom: 1px solid $mainGray;
 
-}
-             
-.effect-2 ~ .focus-border{
-	position: absolute; 
-	bottom: 0; left: 50%; width: 0; 
-	height: 3px; background-color: $darkOrange; 
-	transition: 0.4s;
-}
-.effect-2:focus ~ .focus-border {
-	width: 100%; 
-	transition: 0.4s; 
-	left: 0;
-}
+
+
 
