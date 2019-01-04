@@ -1809,6 +1809,84 @@ body {
 		box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
 	}
 
+.responsive-menu__input, .responsive-menu__button {
+		position: fixed;
+		right: 7rem;
+		top:7rem;
+		width: 72px;
+		height: 72px;
+		z-index:20;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+.responsive-menu__input {
+		z-index: 21;
+		opacity: 0;
+	}
+
+.responsive-menu__input ~ .responsive-menu__button {
+		background-color: #fff;
+		
+
+	}
+
+.responsive-menu__input ~ .responsive-menu__button > .responsive-menu__line{
+		width: 45%;
+		position:absolute;
+		top:50%;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		        transform: translateX(-50%);
+		border: 1px solid #000000;
+		content: "";
+		transition: all .1s ease-out;
+	}
+
+.responsive-menu__input ~ .responsive-menu__button > .responsive-menu__line:nth-child(1) {
+			-webkit-transform-origin: 50% 0;
+			        transform-origin: 50% 0;
+			-webkit-transform: translateX(-50%) translateY(-1rem);
+			        transform: translateX(-50%) translateY(-1rem);
+		}
+
+.responsive-menu__input ~ .responsive-menu__button > .responsive-menu__line:nth-child(3) {
+			-webkit-transform-origin: 50% 0;
+			        transform-origin: 50% 0;
+			-webkit-transform: translateX(-50%) translateY(1rem);
+			        transform: translateX(-50%) translateY(1rem);
+		}
+
+.responsive-menu__input:checked ~ .responsive-menu__button .responsive-menu__line:nth-child(1) {
+			
+			/*transform: translateX(-32%) translateY(-1.1rem) rotate(45deg);*/
+			-webkit-transform: translateX(-50%) translateY(0rem) rotate(135deg);
+			        transform: translateX(-50%) translateY(0rem) rotate(135deg);
+		}
+
+.responsive-menu__input:checked ~ .responsive-menu__button .responsive-menu__line:nth-child(2) {
+			-webkit-transform: scale(0);
+			        transform: scale(0);
+			-webkit-transform-origin: 50% 0;
+			        transform-origin: 50% 0;
+		}
+
+.responsive-menu__input:checked ~ .responsive-menu__button .responsive-menu__line:nth-child(3) {
+			/*transform: translateX(-36%) translateY(1.1rem) rotate(-45deg);*/
+			-webkit-transform: translateX(-53%) translateY(-0.0rem) rotate(-135deg);
+			        transform: translateX(-53%) translateY(-0.0rem) rotate(-135deg);
+		}
+
+.responsive-menu:hover .responsive-menu__line:nth-child(1) {
+				-webkit-transform: translateX(-50%) translateY(-1.2rem);
+				        transform: translateX(-50%) translateY(-1.2rem);
+			}
+
+.responsive-menu:hover .responsive-menu__line:nth-child(3) {
+				-webkit-transform: translateX(-50%) translateY(1.2rem);
+				        transform: translateX(-50%) translateY(1.2rem);
+			}
+
 .large-hero {
 	position: relative;
 	overflow: hidden;
