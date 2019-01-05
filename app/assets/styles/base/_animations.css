@@ -46,13 +46,19 @@
 @keyframes slideRightLeft {
   0% {
     transform: translateX(0%);
-    opacity: 0;
+    
   }
   80% {
     transform: translateX(5%);
   }
-  100% {
+
+  95% {
     transform: translateX(-5%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 0;
   }
 }
 
@@ -63,9 +69,14 @@
   }
   80% {
     transform: translateX(-5%);
+
+  }
+  95% {
+    transform: translateX(5%);
   }
   100% {
-    transform: translateX(5%);
+    transform: translateX(0%);
+    opacity:1;
   }
 }
 

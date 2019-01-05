@@ -1,4 +1,7 @@
 .responsive-menu {
+	h1 {
+		opacity: 0;
+	}
 	&__input, &__button {
 		position: fixed;
 		right: 7rem;
@@ -123,22 +126,17 @@
 	/* Animate links when modal form is closed */
 	&__input:checked ~ .responsive-menu__links h1 {
 
-		animation: slideRightLeft 1s ;
+		animation: slideRightLeft 1s forwards;
 	}
 
 
 	/* Animate links when modal form is opened */
 	&__input:not(:checked) ~ .responsive-menu__links h1 {
 
-		animation: slideLeftRight 1s 1s;
+		animation: slideLeftRight 1s forwards;
 	}
 	/* Animate the whole modal menu */
 	&__input:checked ~ .responsive-menu__links {
 		animation: hideEffect 1s ease-out 1s forwards;
 	}
-
-	&__input:not(:checked) ~ .responsive-menu__links {
-		animation: showEffect 1s ease-out 1s forwards;
-	}
-	
 }

@@ -1102,15 +1102,22 @@ img {
   0% {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
-    opacity: 0;
+    
   }
   80% {
     -webkit-transform: translateX(5%);
             transform: translateX(5%);
   }
-  100% {
+
+  95% {
     -webkit-transform: translateX(-5%);
             transform: translateX(-5%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 0;
   }
 }
 
@@ -1118,15 +1125,22 @@ img {
   0% {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
-    opacity: 0;
+    
   }
   80% {
     -webkit-transform: translateX(5%);
             transform: translateX(5%);
   }
-  100% {
+
+  95% {
     -webkit-transform: translateX(-5%);
             transform: translateX(-5%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 0;
   }
 }
 
@@ -1139,10 +1153,16 @@ img {
   80% {
     -webkit-transform: translateX(-5%);
             transform: translateX(-5%);
+
   }
-  100% {
+  95% {
     -webkit-transform: translateX(5%);
             transform: translateX(5%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity:1;
   }
 }
 
@@ -1155,10 +1175,16 @@ img {
   80% {
     -webkit-transform: translateX(-5%);
             transform: translateX(-5%);
+
   }
-  100% {
+  95% {
     -webkit-transform: translateX(5%);
             transform: translateX(5%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity:1;
   }
 }
 
@@ -1893,6 +1919,15 @@ body {
 		box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
 	}
 
+.responsive-menu {
+
+	/* Close modal menu animations */
+}
+
+.responsive-menu h1 {
+		opacity: 0;
+	}
+
 .responsive-menu__input, .responsive-menu__button {
 		position: fixed;
 		right: 7rem;
@@ -2035,18 +2070,18 @@ body {
 
 .responsive-menu__input:checked ~ .responsive-menu__links h1 {
 
-		-webkit-animation: slideRightLeft 1s ;
+		-webkit-animation: slideRightLeft 1s forwards;
 
-		        animation: slideRightLeft 1s ;
+		        animation: slideRightLeft 1s forwards;
 	}
 
 /* Animate links when modal form is opened */
 
 .responsive-menu__input:not(:checked) ~ .responsive-menu__links h1 {
 
-		-webkit-animation: slideLeftRight 1s 1s;
+		-webkit-animation: slideLeftRight 1s forwards;
 
-		        animation: slideLeftRight 1s 1s;
+		        animation: slideLeftRight 1s forwards;
 	}
 
 /* Animate the whole modal menu */
@@ -2054,13 +2089,6 @@ body {
 .responsive-menu__input:checked ~ .responsive-menu__links {
 		-webkit-animation: hideEffect 1s ease-out 1s forwards;
 		        animation: hideEffect 1s ease-out 1s forwards;
-	}
-
-/* Close modal menu animations */
-
-.responsive-menu__input:not(:checked) ~ .responsive-menu__links {
-		-webkit-animation: showEffect 1s ease-out 1s forwards;
-		        animation: showEffect 1s ease-out 1s forwards;
 	}
 
 .large-hero {
