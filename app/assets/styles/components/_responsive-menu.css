@@ -119,16 +119,26 @@
 	}
 
 	/* Close modal menu animations */
-	/* Animate links */
-
+	
+	/* Animate links when modal form is closed */
 	&__input:checked ~ .responsive-menu__links h1 {
-		color: red;
-		animation: slideRightLeft 2s infinite;
+
+		animation: slideRightLeft 1s ;
 	}
 
 
+	/* Animate links when modal form is opened */
+	&__input:not(:checked) ~ .responsive-menu__links h1 {
+
+		animation: slideLeftRight 1s 1s;
+	}
 	/* Animate the whole modal menu */
 	&__input:checked ~ .responsive-menu__links {
+		animation: hideEffect 1s ease-out 1s forwards;
+	}
+
+	&__input:not(:checked) ~ .responsive-menu__links {
+		animation: showEffect 1s ease-out 1s forwards;
 	}
 	
 }

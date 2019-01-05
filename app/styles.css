@@ -1104,13 +1104,13 @@ img {
             transform: translateX(0%);
     opacity: 0;
   }
-  50% {
-    -webkit-transform: translateX(20%);
-            transform: translateX(20%);
+  80% {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
   }
   100% {
-    -webkit-transform: translateX(-20%);
-            transform: translateX(-20%);
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
   }
 }
 
@@ -1120,14 +1120,66 @@ img {
             transform: translateX(0%);
     opacity: 0;
   }
-  50% {
-    -webkit-transform: translateX(20%);
-            transform: translateX(20%);
+  80% {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
   }
   100% {
-    -webkit-transform: translateX(-20%);
-            transform: translateX(-20%);
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
   }
+}
+
+@-webkit-keyframes slideLeftRight {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+  100% {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+  }
+}
+
+@keyframes slideLeftRight {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+  100% {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+  }
+}
+
+@-webkit-keyframes showEffect {
+    0% { display: none; visibility: hidden; opacity: 0;}
+    100% { display: block; visibility: visible;  opacity: 1;}
+}
+
+@keyframes showEffect {
+    0% { display: none; visibility: hidden; opacity: 0;}
+    100% { display: block; visibility: visible;  opacity: 1;}
+}
+
+@-webkit-keyframes hideEffect {
+    0% {  opacity: 1}
+    100% {   opacity: 0}
+}
+
+@keyframes hideEffect {
+    0% {  opacity: 1}
+    100% {   opacity: 0}
 }
 
 * {
@@ -1841,12 +1893,6 @@ body {
 		box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
 	}
 
-.responsive-menu {
-
-	/* Close modal menu animations */
-	
-}
-
 .responsive-menu__input, .responsive-menu__button {
 		position: fixed;
 		right: 7rem;
@@ -1985,17 +2031,36 @@ body {
 					color: #55c57a;
 				}
 
-/* Animate links */
+/* Animate links when modal form is closed */
 
 .responsive-menu__input:checked ~ .responsive-menu__links h1 {
-		color: red;
-		-webkit-animation: slideRightLeft 2s infinite;
-		        animation: slideRightLeft 2s infinite;
+
+		-webkit-animation: slideRightLeft 1s ;
+
+		        animation: slideRightLeft 1s ;
+	}
+
+/* Animate links when modal form is opened */
+
+.responsive-menu__input:not(:checked) ~ .responsive-menu__links h1 {
+
+		-webkit-animation: slideLeftRight 1s 1s;
+
+		        animation: slideLeftRight 1s 1s;
 	}
 
 /* Animate the whole modal menu */
 
 .responsive-menu__input:checked ~ .responsive-menu__links {
+		-webkit-animation: hideEffect 1s ease-out 1s forwards;
+		        animation: hideEffect 1s ease-out 1s forwards;
+	}
+
+/* Close modal menu animations */
+
+.responsive-menu__input:not(:checked) ~ .responsive-menu__links {
+		-webkit-animation: showEffect 1s ease-out 1s forwards;
+		        animation: showEffect 1s ease-out 1s forwards;
 	}
 
 .large-hero {

@@ -48,10 +48,35 @@
     transform: translateX(0%);
     opacity: 0;
   }
-  50% {
-    transform: translateX(20%);
+  80% {
+    transform: translateX(5%);
   }
   100% {
-    transform: translateX(-20%);
+    transform: translateX(-5%);
   }
 }
+
+@keyframes slideLeftRight {
+  0% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(5%);
+  }
+}
+
+
+@keyframes showEffect {
+    0% { display: none; visibility: hidden; opacity: 0;}
+    100% { display: block; visibility: visible;  opacity: 1;}
+}
+
+@keyframes hideEffect {
+    0% {  opacity: 1}
+    100% {   opacity: 0}
+}
+
