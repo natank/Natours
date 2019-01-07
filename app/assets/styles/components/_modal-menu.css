@@ -1,0 +1,159 @@
+.modal-menu {
+
+	/* Layering the elements */
+
+	&__input {z-index: 2100;}
+	&__button {z-index: 2000;}
+	&__links {z-index: 1900;}
+	&__content {z-index: 1800;}
+
+	&__input, &__button {
+		position: fixed;
+		right: 7rem;
+		top:7rem;
+		width: $menuButtonRadious;
+		height: $menuButtonRadious;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+	&__input {
+		opacity: 0;
+	}
+
+	&__button {
+		background-color: #fff;
+	}
+/*Animate the modal-menu__line*/
+	&__input ~ &__button &__line{
+		width: 45%;
+		position:absolute;
+		top:50%;
+		left: 50%;
+		transform: translateX(-50%);
+		border: 1px solid $mainBlack;
+		content: "";
+		&:nth-child(1) {
+			transform-origin: 50% 0;
+			transform: translateX(-50%) translateY(-1rem);
+		} 
+		&:nth-child(3) {
+			transform-origin: 50% 0;
+			transform: translateX(-50%) translateY(1rem);
+		}
+		transition: all .1s ease-out;
+	}
+
+
+	&__input:checked ~ &__button &__line {
+		&:nth-child(1) {
+			
+			/*transform: translateX(-32%) translateY(-1.1rem) rotate(45deg);*/
+			transform: translateX(-50%) translateY(0rem) rotate(135deg);
+		} 
+		&:nth-child(2) {
+			transform: scale(0);
+			transform-origin: 50% 0;
+		} 
+		&:nth-child(3) {
+			/*transform: translateX(-36%) translateY(1.1rem) rotate(-45deg);*/
+			transform: translateX(-53%) translateY(-0.0rem) rotate(-135deg);
+		}
+	}
+
+	&:hover > {
+		.modal-menu__line {
+			&:nth-child(1) {
+				transform: translateX(-50%) translateY(-1.2rem);
+			} 
+			&:nth-child(3) {
+				transform: translateX(-50%) translateY(1.2rem);
+			}	
+		}
+	}
+/* Animate the modal-menu__links*/
+	&__content { 
+		position: fixed;
+		top: 7.1rem;
+		right: 7.1rem;
+		border-radius: 50%;
+		width: calc($menuButtonRadious - .5rem);
+		height: calc($menuButtonRadious - .5rem);
+		background-image: radial-gradient($lightGreen, $mainGreen);
+	}
+
+	&__links {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		width: 0;
+		opacity: 0;
+		transform: translate(-50%, -50%);
+		h1 {
+			color: $mainWhite;
+			text-transform: uppercase;
+			font-weight: 300;
+			font-size: 3rem;
+			
+			text-align: center;
+			
+			a {
+				position: relative;
+				display: inline-block;
+				text-decoration: none;
+				color: inherit;
+				overflow: hidden;
+				padding:1rem 2rem;
+				&::after  {
+					position: absolute;
+					left:130%;
+					top:0%;
+					content: linear-gradient(#fff, #fff);
+					width: 230%;
+					height: 100%;
+					z-index:-1;
+					transform: skewX(-45deg);
+					transition: all .3s ease-out;
+				}
+				&:hover::after {
+					left: -35%;
+
+				}
+				&:hover {
+					color: $mainGreen;
+				}
+				transition: all .3s ease-out;
+			}
+		}
+	}
+
+	/* Close modal menu animations */
+	
+	
+	
+	/* Animate the whole modal menu */
+
+	/* Show effect */
+
+	&__input ~  &__links { 
+		transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
+	}
+
+	&__input ~  &__content { 
+		transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+	}
+
+
+	&__input:checked ~  &__links {
+		width: 100%;
+		opacity: 1;
+		top: 50%;
+		left: 50%;
+	}
+
+	&__input:checked ~ &__content {
+		transform: scale(80);
+	}
+}
+
+	

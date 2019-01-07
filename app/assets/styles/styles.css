@@ -20,6 +20,7 @@
 @import "./components/_radio-animated";
 @import "./components/_text-input";
 @import "./components/_responsive-menu";
+@import "./components/_modal-menu";
 @import "./layout/_large-hero";
 @import "./layout/_site-header";
 @import "./layout/_grid";
