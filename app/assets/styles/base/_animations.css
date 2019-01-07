@@ -1,0 +1,109 @@
+@keyframes slideInFromLeft {
+  0% {
+    transform: translate(-100px, 50px) scale(0);
+
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0,0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translate(100px, 50px) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0,0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100px) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom2 {
+  0% {
+    transform: translate(-50%, 100%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRightLeft {
+  0% {
+    transform: translateX(0%);
+    
+  }
+  80% {
+    transform: translateX(5%);
+  }
+
+  95% {
+    transform: translateX(-5%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideLeftRight {
+  0% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(-5%);
+
+  }
+  95% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0%);
+    opacity:1;
+  }
+}
+
+
+
+
+@keyframes hideEffect {
+    0% { 
+      transform: scale(100%);
+      border-radius: 0; 
+      width: 100%; 
+      top: 0; 
+      left: 0; 
+    }
+    50% {
+      top: 10%; 
+      left: 90%;
+    }
+    100% { 
+      transform: scale(0%);
+      border-radius: 50%; 
+      width: $menuButtonRadious; 
+      height: $menuButtonRadious; 
+     top: 9%; 
+      left: 90%; 
+    }
+    
+    
+}
+

@@ -1,0 +1,110 @@
+.tour-item {
+	background-color: #fff;
+	
+	&__header {
+		position: relative;
+		height: 26.6rem;
+		clip-path: polygon(0 0, 100% 0, 100% 80%, 0 95%);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 0px 0px,
+							-5px 0px;
+		background-blend-mode: screen;
+	}
+	&__title {
+		position: absolute;
+		display: inline-block;
+		color: #fff;
+		width: 75%;
+		text-align: right;
+		font-size: 3rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		right: 2.5rem;
+		top: 12rem;
+
+		&__text {
+			box-decoration-break: clone;
+			text-align: right;
+			padding: 0.5rem 1.5rem;
+			margin-top: 3rem;
+			line-height: 4rem;
+		}
+	}
+
+	&__features {
+		text-align: center;
+		list-style: none;
+		margin:0;
+		padding: 0;
+		
+		li {
+			font-size: 1.5rem;
+			padding: 1.4rem 0;
+			width: 65%;
+			margin: auto;
+			color: $darkGray;
+
+			&:not(:last-child) {
+				border-bottom: 1px solid $lightGray;
+				}
+		}
+	}
+	&--contact {
+		
+		padding-top: 3px;
+
+		&__container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+			text-align: center;
+			width: 100%;
+		}
+		&__title {
+			margin: auto;
+			text-transform: uppercase;
+		}
+		&__price {
+			font-size: 5rem;
+			font-weight: 100;
+		}
+		&--green {
+			background: linear-gradient(to right, $lightGreen, $darkGreen);	
+		}
+		&--orange {
+			background: linear-gradient(to right, $lightOrange, $darkOrange);	
+		}
+		&--blue {
+			background: linear-gradient(to right, $lightBlue, $darkBlue);	
+		}
+
+
+	}
+}
+
+.tour-bg-1 {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba($mainOrange, 0.9), 
+				   rgba($mainOrange, 0.9)),
+				url(assets/images/nat-5.jpg);
+}
+
+.tour-bg-2 {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba($lightGreen, 0.8), 
+				   rgba($darkGreen, 0.8)),
+				url(assets/images/nat-6.jpg);
+}
+
+.tour-bg-3 {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba($lightBlue, 0.5), 
+				   rgba($lightBlue, 0.5)),
+				url(assets/images/nat-7.jpg);
+}

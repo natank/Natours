@@ -1,0 +1,56 @@
+.footer {
+	background-image:  linear-gradient(to right, rgba($mainGray,0.25), rgba($mainGray,0.25)),
+	linear-gradient(to right, rgba($mainBlack,1), rgba($mainBlack,1));
+
+	width: 100%;
+
+	padding: 8rem 8rem;
+	color: $lightGray;
+	font-size: 1.4rem;
+	line-height: 2.5rem;
+
+	&__image {
+		background-image: url("assets/images/icons/logo-green-2x.png");
+		background-size: cover;
+		width:153px;
+		height: 118px;
+
+
+	}
+
+	&__side {
+		border-top: 1px solid $mainGray;
+		margin-top: 20rem;
+		padding-top: 2.5rem;
+		a {
+			text-decoration: none;
+			color: inherit;
+			display: inline-block;
+			background-image:  linear-gradient(to right, rgba($mainGray,0.25), rgba($mainGray,0.25)),
+								linear-gradient(to right, rgba($mainBlack,1), rgba($mainBlack,1));
+			transition: all 0.2s;
+			&:hover {
+				color: $mainGreen;
+				transform: rotate(5deg) scale(1.4);
+				box-shadow:  3px 9px 17px -4px rgba(0,0,0,0.75);
+
+			}
+		}
+	}
+
+
+
+	&__navbar {
+		list-style-type: none;
+		text-transform: uppercase;
+		padding-left: 0;
+
+		li {
+			display: inline-block;
+			&:not(:last-child){
+				margin-right: 1rem;
+			}
+			
+		}
+	}
+}

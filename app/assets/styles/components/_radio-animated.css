@@ -1,0 +1,75 @@
+.radio-animated {
+  /* Customize the label (the container) */
+  .container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    user-select: none;
+    margin-right: 5rem;
+    line-height: 2.5rem;
+
+    &__label-text {
+      display: inline-block;
+      margin-left: 1rem;
+    }
+
+    /* Hide the browser's default radio button */
+   & input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+  /* Show the indicator (dot/circle) when checked */
+  input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  
+}
+
+
+/* Style the indicator (dot/circle) */
+
+
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid $mainGreen;
+    border-radius: 50%;
+
+/* Style the indicator (dot/circle) */
+
+    &:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: $mainGreen;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  }
+
+  
+  
+
+  
+}

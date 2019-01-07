@@ -1,0 +1,107 @@
+.u-margin-bottom-small{
+	margin-bottom: 1.5rem;	
+}
+
+.u-margin-bottom-medium{
+	margin-bottom: 3.5rem;	
+}
+
+.u-no-margin-top {
+	margin-top: 0;
+}
+
+.u-bg-color-gray {
+	background-color: $lightGray;
+}
+
+.u-bg-color-orange {
+	background-color: $mainOrange;
+}
+
+
+.u-no-bg {
+	background-color: transparent;
+}
+
+.u-image-block {
+	display: block;
+}
+
+.u-p-relative {
+	position: relative;
+}
+
+.u-rotate-left-small {
+	transform: rotate(-5deg);
+}
+
+.skewed-left {
+	transform: skew(0deg,-6deg);
+}
+
+.u-bg-DarkGreen-Transparent {
+	background: rgba($darkGreen, 0.6);
+}
+
+.u-bg-MainGreen-Transparent {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba($mainGreen, 0.9), 
+				   rgba($mainGreen, 0.9));
+}
+
+.u-bg-DarkBlue-Transparent {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba($mainBlue, 0.9), 
+				   rgba($darkBlue, 0.9));
+}
+
+.u-bg-MainOrange-Transparent {
+	background-image: linear-gradient(
+				to right bottom, 
+				   rgba($mainOrange, 0.9), 
+				   rgba($mainOrange, 0.9));
+}
+
+.u-bg-DarkOrange-Transparent {
+	background: rgba($darkOrange, 0.6);
+}
+
+.u-margin-top-medium {
+	margin-top: 10rem;
+}
+
+.u-margin-top-smaller {
+	margin-top: 3rem;
+}
+
+.u-relative-z-3 {
+	position: relative;
+	z-index: 6;
+}
+
+.u-z-index-2 {
+	z-index: 2;
+}
+
+.u-text-align-centered {
+	display: block;
+	text-align: center;
+}
+
+.u-opaque {
+	opacity: 0;
+}
+
+.u-transition-1 {
+	transition: all 0.5s ease-out;
+}
+
+.u-col-black {
+	[class^="col-"] {
+
+		background-color: $lightRed;
+
+	}
+}

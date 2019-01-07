@@ -1,0 +1,29 @@
+.page-link {
+	&:link,
+	&:visited{
+		color:$mainGreen;
+		font-weight: 500;
+		font-size: 1.7rem; 
+		border-bottom: 1px solid $mainGreen;
+		display: inline-block;
+		padding: .6rem;
+		text-decoration: none;
+		margin-top: 2rem;	
+		transition: all .2s;
+	}
+	
+	&:hover {
+		cursor: pointer;
+		color: #fff;
+		background-color: $mainGreen;
+
+		box-shadow: 0 1rem 2rem rgba($lightBlack, .95);
+		transform: translateY(-2px);
+	}
+
+	&:active{
+		box-shadow: 0 .5rem 1rem rgba($lightBlack, .95); 
+		transform: translateY(2px);
+	}
+
+}

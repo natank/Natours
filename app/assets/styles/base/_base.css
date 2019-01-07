@@ -1,0 +1,19 @@
+* {
+	box-sizing: border-box;
+}
+
+
+html {
+	/* This Defines what what 1rem is*/
+	font-size: 62.5%;
+}
+
+body {
+	padding: 30px;
+} 
+
+.clearfix::after {
+	display:table;
+	content:"";
+	clear:both;
+}

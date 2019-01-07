@@ -1,0 +1,23 @@
+.booking {
+	width: 100%;
+	height: auto;
+
+	position: relative;
+	background: linear-gradient($mainGreen, $darkGreen);
+
+
+	&__row-1 {
+		background-image:linear-gradient(
+			105deg, rgba($mainWhite, 0.9) , rgba($mainWhite, 0.9) 50%,
+				transparent 50%),
+		url("assets/images/nat-10.jpg");
+		background-size: cover;
+		padding: 3rem 6rem;
+		padding-bottom: 5rem;
+		margin-top: 15rem;
+		margin-bottom: 15rem;
+
+	}
+
+
+}
