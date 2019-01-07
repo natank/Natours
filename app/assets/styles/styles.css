@@ -28,6 +28,7 @@
 @import "./layout/_stories";
 @import "./layout/_booking";
 @import "./layout/_footer";
+@import "./layout/_book-now";
 @import "./modules/_wrapper";
 @import "./modules/_feature-item";
 @import "./modules/_testimonial";

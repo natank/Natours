@@ -10,6 +10,7 @@
 	font-weight: 500;
 	font-size: 1.5rem;
 	border: none;
+
 	&--orange {
 		background-color: $mainOrange;
 	}
@@ -75,5 +76,37 @@
 
  	&::after{
  		background-color: inherit;
+ 	}
+
+
+ 	/* This selectors style the X shaped close button */
+ 	&--close {
+ 		position: relative;
+ 		width:2rem;
+ 		height: 2rem;
+ 		padding: 0;
+ 		border-radius: 0;
+ 		background-color: transparent;
+ 		&::after , &:before {
+ 			width: 2rem;
+ 			height: 2px;
+ 			background-color: $mainBlack;
+ 			display: block;
+ 			content:"";
+ 			position: absolute;
+ 			top:10px;
+ 		}
+ 		&::after {
+ 			transform: rotate(-45deg);
+ 		}
+ 		&::before {
+ 			transform: rotate(45deg);
+ 		}
+
+ 		&:active {
+ 			&::after, &::before {
+ 				width:2.7rem;
+ 			}
+ 		};
  	}
 } 

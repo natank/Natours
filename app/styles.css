@@ -1394,6 +1394,41 @@ body {
  		background-color: inherit;
  	}
 
+/* This selectors style the X shaped close button */
+
+.btn--close {
+ 		position: relative;
+ 		width:2rem;
+ 		height: 2rem;
+ 		padding: 0;
+ 		border-radius: 0;
+ 		background-color: transparent;
+ 	}
+
+.btn--close::after, .btn--close:before {
+ 			width: 2rem;
+ 			height: 2px;
+ 			background-color: #000000;
+ 			display: block;
+ 			content:"";
+ 			position: absolute;
+ 			top:10px;
+ 		}
+
+.btn--close::after {
+ 			-webkit-transform: rotate(-45deg);
+ 			        transform: rotate(-45deg);
+ 		}
+
+.btn--close::before {
+ 			-webkit-transform: rotate(45deg);
+ 			        transform: rotate(45deg);
+ 		}
+
+.btn--close:active::after, .btn--close:active::before {
+ 				width:2.7rem;
+ 			}
+
 .page-section {
 	position: relative;
 	padding:1.2rem 0;
@@ -2637,6 +2672,39 @@ body {
 .footer__navbar li:not(:last-child){
 				margin-right: 1rem;
 			}
+
+.book-now {
+	background-color: rgba(0,0,0, 0.80);
+	position: fixed;
+	height: 100vh;
+	width:100%;
+	top:0;
+	left:0;
+	z-index: 3000;
+}
+
+.book-now__close {
+		position: fixed;
+		z-index: 3020;
+		top: 17rem;
+		left: 119rem;
+		width: 5rem;
+		height: 5rem;
+
+	}
+
+.book-now__content {
+		z-index: 3010;
+		background-color: #ffffff;
+		width: 70%;
+		height: 60vh;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+		
+	}
 
 .wrapper {
 	padding-left: 1.8rem;
