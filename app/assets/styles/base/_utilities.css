@@ -90,6 +90,11 @@
 	text-align: center;
 }
 
+.u-text-align-left {
+	display: block;
+	text-align: left;
+}
+
 .u-opaque {
 	opacity: 0;
 }

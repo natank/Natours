@@ -1463,11 +1463,11 @@ body {
   			-webkit-transform: skew(3deg, 3deg);
   			        transform: skew(3deg, 3deg);
   			text-shadow: 3px 3px 10px rgba(86,57,73,0.26);
-
+  			
   		}
 
 .page-section__sub-title {
-		font-size: 1.8rem;
+		font-size: 1.4rem;
 		font-weight: 600;
 		margin-bottom: 2rem;
 		text-transform: uppercase;
@@ -1475,10 +1475,19 @@ body {
 	}
 
 .page-section__text {
-		font-size: 1.8rem;
+		font-size: 1.4rem;
 		font-weight: 400;
 		line-height: 2.5rem;
 	}
+
+.page-section__text--columns {
+			-webkit-column-count: 2;
+			        column-count: 2;
+			-webkit-column-rule: 1px solid #6f6f6f;
+			        column-rule: 1px solid #6f6f6f;
+			-webkit-column-gap: 4rem;
+			        column-gap: 4rem;
+		}
 
 .page-section--gray {
 		background-color: #f7f7f7;
@@ -2716,6 +2725,7 @@ body {
 		width: 66.6666667%;
 		display: table-cell;
 		vertical-align: middle;
+		padding:3rem;
 	}
 
 .book-now__close {
@@ -3238,6 +3248,11 @@ body {
 .u-text-align-centered {
 	display: block;
 	text-align: center;
+}
+
+.u-text-align-left {
+	display: block;
+	text-align: left;
 }
 
 .u-opaque {
