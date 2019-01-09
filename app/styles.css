@@ -1466,7 +1466,7 @@ body {
 
   		}
 
-.page-section__subtitle {
+.page-section__sub-title {
 		font-size: 1.8rem;
 		font-weight: 600;
 		margin-bottom: 2rem;
@@ -2673,6 +2673,10 @@ body {
 				margin-right: 1rem;
 			}
 
+/* book-now style is a popup that contains two columns: __img and __text*/
+
+/* It also contain a close button at the top right corner */
+
 .book-now {
 	background-color: rgba(0,0,0, 0.80);
 	position: fixed;
@@ -2681,17 +2685,8 @@ body {
 	top:0;
 	left:0;
 	z-index: 3000;
+	display: table;
 }
-
-.book-now__close {
-		position: fixed;
-		z-index: 3020;
-		top: 17rem;
-		left: 119rem;
-		width: 5rem;
-		height: 5rem;
-
-	}
 
 .book-now__content {
 		z-index: 3010;
@@ -2703,8 +2698,42 @@ body {
 		left: 50%;
 		-webkit-transform: translate(-50%, -50%);
 		        transform: translate(-50%, -50%);
+		display: table;
 		
 	}
+
+.book-now__img {
+		width: 33.3333%;
+		display: table-cell;
+
+	}
+
+.book-now__img img {
+			display: block;
+		}
+
+.book-now__text {
+		width: 66.6666667%;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+.book-now__close {
+		position: fixed;
+		z-index: 3020;
+		top: 17rem;
+		left: 119rem;
+		width: 5rem;
+		height: 5rem;
+
+	}
+
+/* Close the modal upon clicking the close button */
+
+.book-now__close:active ,.book-now__close:active ~ .book-now {
+			opacity: 0;
+			visibility: hidden;
+		}
 
 .wrapper {
 	padding-left: 1.8rem;
