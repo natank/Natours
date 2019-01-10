@@ -1306,6 +1306,7 @@ body {
 }
 
 .btn {
+	position: relative;
 	background-color: #ffffff;
 	color: #b79d9d;
 	display: inline-block;
@@ -3187,6 +3188,10 @@ body {
 	margin-top: 0;
 }
 
+.u-margin-top-small {
+	margin-top: 2.5rem;
+}
+
 .u-bg-color-gray {
 	background-color: #f7f7f7;
 }
@@ -3271,6 +3276,11 @@ body {
 .u-text-align-left {
 	display: block;
 	text-align: left;
+}
+
+.u-text-align-right {
+	display: block;
+	text-align: right;
 }
 
 .u-opaque {

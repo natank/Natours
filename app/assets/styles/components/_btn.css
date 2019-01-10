@@ -1,4 +1,5 @@
 .btn {
+	position: relative;
 	background-color: $mainWhite;
 	color: $lightBlack;
 	display: inline-block;

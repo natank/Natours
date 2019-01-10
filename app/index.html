@@ -25,7 +25,7 @@
      <span class="large-hero__sub-title"> IS WHERE LIFE Happens</span>
   </h1>
   <div class="btn--animated btn--animated-start">
-     <a href="#" class="btn">discover our tours</a>
+     <a href="#tours" class="btn">discover our tours</a>
   </div>
 </div>
 </div>
@@ -130,7 +130,7 @@
 </div>
 
 </section>
-<section class="page-section tours">
+<section class="page-section tours" id="tours">
  <h1 class="page-section__title">
   most popular tours
 </h1>
@@ -400,7 +400,9 @@
     </div>
   </section>
   <section class="modal-menu">
-    <input type="checkbox" class="modal-menu__input">
+    <!-- The modal-menu__button element must come immediately after 
+          the modal-menu__input element-->
+    <input type="checkbox" class="modal-menu__input"> 
     <div class="modal-menu__button">
         <div class="modal-menu__line"></div>
         <div class="modal-menu__line"></div>
@@ -440,7 +442,9 @@
           <p class="page-section__text page-section__text--columns">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit amet massa vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim enim sit. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet. Gravida neque convallis a cras semper. 
           </p>
-          <a class="btn btn--green btn--animated">book now</a>
+          <div class="btn--animated u-text-align-left u-margin-top-small">
+            <a class="btn btn--green">book now</a>
+          </div>
         </div>
       </main>
    </div>
