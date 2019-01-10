@@ -1098,6 +1098,148 @@ img {
   }
 }
 
+@-webkit-keyframes slideRightLeft {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    
+  }
+  80% {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+  }
+
+  95% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideRightLeft {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    
+  }
+  80% {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+  }
+
+  95% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideLeftRight {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 0;
+  }
+  30% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+
+  }
+  95% {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity:1;
+  }
+}
+
+@keyframes slideLeftRight {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 0;
+  }
+  30% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+
+  }
+  95% {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes hideEffect {
+    0% { 
+      -webkit-transform: scale(100%); 
+              transform: scale(100%);
+      border-radius: 0; 
+      width: 100%; 
+      top: 0; 
+      left: 0; 
+    }
+    50% {
+      top: 10%; 
+      left: 90%;
+    }
+    100% { 
+      -webkit-transform: scale(0%); 
+              transform: scale(0%);
+      border-radius: 50%; 
+      width: 72px; 
+      height: 72px; 
+     top: 9%; 
+      left: 90%; 
+    }
+    
+    
+}
+
+@keyframes hideEffect {
+    0% { 
+      -webkit-transform: scale(100%); 
+              transform: scale(100%);
+      border-radius: 0; 
+      width: 100%; 
+      top: 0; 
+      left: 0; 
+    }
+    50% {
+      top: 10%; 
+      left: 90%;
+    }
+    100% { 
+      -webkit-transform: scale(0%); 
+              transform: scale(0%);
+      border-radius: 50%; 
+      width: 72px; 
+      height: 72px; 
+     top: 9%; 
+      left: 90%; 
+    }
+    
+    
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -1252,6 +1394,41 @@ body {
  		background-color: inherit;
  	}
 
+/* This selectors style the X shaped close button */
+
+.btn--close {
+ 		position: relative;
+ 		width:2rem;
+ 		height: 2rem;
+ 		padding: 0;
+ 		border-radius: 0;
+ 		background-color: transparent;
+ 	}
+
+.btn--close::after, .btn--close:before {
+ 			width: 2rem;
+ 			height: 2px;
+ 			background-color: #000000;
+ 			display: block;
+ 			content:"";
+ 			position: absolute;
+ 			top:10px;
+ 		}
+
+.btn--close::after {
+ 			-webkit-transform: rotate(-45deg);
+ 			        transform: rotate(-45deg);
+ 		}
+
+.btn--close::before {
+ 			-webkit-transform: rotate(45deg);
+ 			        transform: rotate(45deg);
+ 		}
+
+.btn--close:active::after, .btn--close:active::before {
+ 				width:2.7rem;
+ 			}
+
 .page-section {
 	position: relative;
 	padding:1.2rem 0;
@@ -1286,11 +1463,11 @@ body {
   			-webkit-transform: skew(3deg, 3deg);
   			        transform: skew(3deg, 3deg);
   			text-shadow: 3px 3px 10px rgba(86,57,73,0.26);
-
+  			
   		}
 
-.page-section__subtitle {
-		font-size: 1.8rem;
+.page-section__sub-title {
+		font-size: 1.4rem;
 		font-weight: 600;
 		margin-bottom: 2rem;
 		text-transform: uppercase;
@@ -1298,10 +1475,19 @@ body {
 	}
 
 .page-section__text {
-		font-size: 1.8rem;
+		font-size: 1.4rem;
 		font-weight: 400;
 		line-height: 2.5rem;
 	}
+
+.page-section__text--columns {
+			-webkit-column-count: 2;
+			        column-count: 2;
+			-webkit-column-rule: 1px solid #6f6f6f;
+			        column-rule: 1px solid #6f6f6f;
+			-webkit-column-gap: 4rem;
+			        column-gap: 4rem;
+		}
 
 .page-section--gray {
 		background-color: #f7f7f7;
@@ -1807,6 +1993,187 @@ body {
 .text-input :focus{
 		outline: none;
 		box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
+	}
+
+/* Layering the elements */
+
+.modal-menu__input {z-index: 2100;}
+
+.modal-menu__button {z-index: 2000;}
+
+.modal-menu__links {z-index: 1900;}
+
+.modal-menu__content {z-index: 1800;}
+
+.modal-menu__input, .modal-menu__button {
+		position: fixed;
+		right: 7rem;
+		top:7rem;
+		width: 72px;
+		height: 72px;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+.modal-menu__input {
+		opacity: 0;
+	}
+
+.modal-menu__button {
+		background-color: #fff;
+	}
+
+/*Animate the modal-menu__line*/
+
+.modal-menu__input ~ .modal-menu__button .modal-menu__line{
+		width: 45%;
+		position:absolute;
+		top:50%;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		        transform: translateX(-50%);
+		border: 1px solid #000000;
+		content: "";
+		transition: all .1s ease-out;
+	}
+
+.modal-menu__input ~ .modal-menu__button .modal-menu__line:nth-child(1) {
+			-webkit-transform-origin: 50% 0;
+			        transform-origin: 50% 0;
+			-webkit-transform: translateX(-50%) translateY(-1rem);
+			        transform: translateX(-50%) translateY(-1rem);
+		}
+
+.modal-menu__input ~ .modal-menu__button .modal-menu__line:nth-child(3) {
+			-webkit-transform-origin: 50% 0;
+			        transform-origin: 50% 0;
+			-webkit-transform: translateX(-50%) translateY(1rem);
+			        transform: translateX(-50%) translateY(1rem);
+		}
+
+.modal-menu__input:checked ~ .modal-menu__button .modal-menu__line:nth-child(1) {
+			
+			/*transform: translateX(-32%) translateY(-1.1rem) rotate(45deg);*/
+			-webkit-transform: translateX(-50%) translateY(0rem) rotate(135deg);
+			        transform: translateX(-50%) translateY(0rem) rotate(135deg);
+		}
+
+.modal-menu__input:checked ~ .modal-menu__button .modal-menu__line:nth-child(2) {
+			-webkit-transform: scale(0);
+			        transform: scale(0);
+			-webkit-transform-origin: 50% 0;
+			        transform-origin: 50% 0;
+		}
+
+.modal-menu__input:checked ~ .modal-menu__button .modal-menu__line:nth-child(3) {
+			/*transform: translateX(-36%) translateY(1.1rem) rotate(-45deg);*/
+			-webkit-transform: translateX(-53%) translateY(-0.0rem) rotate(-135deg);
+			        transform: translateX(-53%) translateY(-0.0rem) rotate(-135deg);
+		}
+
+.modal-menu:hover > .modal-menu__line:nth-child(1) {
+				-webkit-transform: translateX(-50%) translateY(-1.2rem);
+				        transform: translateX(-50%) translateY(-1.2rem);
+			}
+
+.modal-menu:hover > .modal-menu__line:nth-child(3) {
+				-webkit-transform: translateX(-50%) translateY(1.2rem);
+				        transform: translateX(-50%) translateY(1.2rem);
+			}
+
+/* Animate the modal-menu__links*/
+
+.modal-menu__content { 
+		position: fixed;
+		top: 7.1rem;
+		right: 7.1rem;
+		border-radius: 50%;
+		width: calc(72px - .5rem);
+		height: calc(72px - .5rem);
+		background-image: radial-gradient(#7ed56f, #55c57a);
+	}
+
+.modal-menu__links {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		width: 0;
+		opacity: 0;
+		visibility: hidden;
+		-webkit-transform: translate(-60%, -50%);
+		        transform: translate(-60%, -50%);
+		transition: all .1s cubic-bezier(0.86, 0, 0.07, 1);
+	}
+
+.modal-menu__links h1 {
+			color: #ffffff;
+			text-transform: uppercase;
+			font-weight: 300;
+			font-size: 3rem;
+			
+			text-align: center;
+		}
+
+.modal-menu__links h1 a {
+				position: relative;
+				display: inline-block;
+				text-decoration: none;
+				color: inherit;
+				overflow: hidden;
+				padding:1rem 2rem;
+				transition: all .3s ease-out;
+			}
+
+.modal-menu__links h1 a::after  {
+					position: absolute;
+					left:130%;
+					top:0%;
+					content: linear-gradient(#fff, #fff);
+					width: 230%;
+					height: 100%;
+					z-index:-1;
+					-webkit-transform: skewX(-45deg);
+					        transform: skewX(-45deg);
+					transition: all .3s ease-out;
+				}
+
+.modal-menu__links h1 a:hover::after {
+					left: -35%;
+
+				}
+
+.modal-menu__links h1 a:hover {
+					color: #55c57a;
+				}
+
+/* Show effect */
+
+.modal-menu__input ~  .modal-menu__links { 
+		
+	}
+
+/* Animate the whole modal menu */
+
+.modal-menu__input ~  .modal-menu__content { 
+		transition: all .1s .2s cubic-bezier(0.86, 0, 0.07, 1);
+	}
+
+/* Close modal menu animations */
+
+.modal-menu__input:checked ~  .modal-menu__links {
+		width: 100%;
+		opacity: 1;
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+
+		transition: all .3s .7s cubic-bezier(0.86, 0, 0.07, 1);
+		visibility: visible;
+
+	}
+
+.modal-menu__input:checked ~ .modal-menu__content {
+		-webkit-transform: scale(80);
+		        transform: scale(80);
 	}
 
 .large-hero {
@@ -2319,6 +2686,73 @@ body {
 				margin-right: 1rem;
 			}
 
+/* book-now style is a popup that contains two columns: __img and __text*/
+
+/* It also contain a close button at the top right corner */
+
+.book-now {
+	background-color: rgba(0,0,0, 0.80);
+	position: fixed;
+	height: 100vh;
+	width:100%;
+	top:0;
+	left:0;
+	z-index: 3000;
+	display: table;
+	/* Initial conditions */
+	opacity: 0;
+	visibility: hidden;
+}
+
+.book-now:target {
+		opacity: 1;
+		visibility: visible;
+	}
+
+.book-now__content {
+		min-width: 1000px;
+		position: relative;
+		z-index: 3010;
+		background-color: #ffffff;
+		width: 75%;
+		height: 75%;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+		display: table;
+		
+	}
+
+.book-now__img {
+		width: 35.3333%;
+
+		display: table-cell;
+
+	}
+
+.book-now__img img {
+			display: block;
+		}
+
+.book-now__text {
+		width: 66.6666667%;
+		display: table-cell;
+		vertical-align: middle;
+		padding:5rem;
+
+	}
+
+.book-now__close {
+		position: absolute;
+		z-index: 3020;
+		top: 5%;
+		left: 96%;
+		width: 5rem;
+		height: 5rem;
+	}
+
 .wrapper {
 	padding-left: 1.8rem;
 	padding-right: 1.8rem;
@@ -2822,6 +3256,11 @@ body {
 .u-text-align-centered {
 	display: block;
 	text-align: center;
+}
+
+.u-text-align-left {
+	display: block;
+	text-align: left;
 }
 
 .u-opaque {
