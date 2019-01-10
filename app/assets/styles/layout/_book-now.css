@@ -9,13 +9,21 @@
 	left:0;
 	z-index: 3000;
 	display: table;
-
+	/* Initial conditions */
+	opacity: 0;
+	visibility: hidden;
+	&:target {
+		opacity: 1;
+		visibility: visible;
+	}
 
 	&__content {
+		min-width: 1000px;
+		position: relative;
 		z-index: 3010;
 		background-color: $mainWhite;
-		width: 70%;
-		height: 60vh;
+		width: 75%;
+		height: 75%;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -26,7 +34,8 @@
 
 
 	&__img {
-		width: 33.3333%;
+		width: 35.3333%;
+
 		display: table-cell;
 		img {
 			display: block;
@@ -38,26 +47,17 @@
 		width: 66.6666667%;
 		display: table-cell;
 		vertical-align: middle;
-		padding:3rem;
+		padding:5rem;
+
 	}
 
 
 	&__close {
-		position: fixed;
+		position: absolute;
 		z-index: 3020;
-		top: 17rem;
-		left: 119rem;
+		top: 5%;
+		left: 96%;
 		width: 5rem;
 		height: 5rem;
-
-	}
-	
-	/* Close the modal upon clicking the close button */
-	
-	&__close:active, &__close:active ~ & {
-		{
-			opacity: 0;
-			visibility: hidden;
-		}
 	}
 }
