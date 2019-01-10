@@ -87,7 +87,7 @@
  		padding: 0;
  		border-radius: 0;
  		background-color: transparent;
- 		&::after , &:before {
+ 		&::after , &::before {
  			width: 2rem;
  			height: 2px;
  			background-color: $mainBlack;
@@ -96,6 +96,11 @@
  			position: absolute;
  			top:10px;
  		}
+ 	   &:hover {
+ 	   	&::after, &::before {
+ 	   		background-color: $mainGreen;
+ 	   	}
+ 	   }
  		&::after {
  			transform: rotate(-45deg);
  		}

@@ -1405,7 +1405,7 @@ body {
  		background-color: transparent;
  	}
 
-.btn--close::after, .btn--close:before {
+.btn--close::after, .btn--close::before {
  			width: 2rem;
  			height: 2px;
  			background-color: #000000;
@@ -1414,6 +1414,10 @@ body {
  			position: absolute;
  			top:10px;
  		}
+
+.btn--close:hover::after, .btn--close:hover::before {
+ 	   		background-color: #55c57a;
+ 	   	}
 
 .btn--close::after {
  			-webkit-transform: rotate(-45deg);
@@ -2028,58 +2032,64 @@ body {
 .modal-menu__input ~ .modal-menu__button .modal-menu__line{
 		width: 45%;
 		position:absolute;
+		overflow: visible;
 		top:50%;
 		left: 50%;
 		-webkit-transform: translateX(-50%);
 		        transform: translateX(-50%);
 		border: 1px solid #000000;
-		content: "";
+		transition: all .2s ease-out;
 		transition: all .1s ease-out;
 	}
 
-.modal-menu__input ~ .modal-menu__button .modal-menu__line:nth-child(1) {
+.modal-menu__input ~ .modal-menu__button .modal-menu__line::before, .modal-menu__input ~ .modal-menu__button .modal-menu__line::after {
+			position: absolute;
+			width: 100%;
+			border: 1px solid #000000;
+			content: "";
+			left: -1px;
 			-webkit-transform-origin: 50% 0;
 			        transform-origin: 50% 0;
-			-webkit-transform: translateX(-50%) translateY(-1rem);
-			        transform: translateX(-50%) translateY(-1rem);
+			padding: 0;
+			margin: 0;
+			transition: all .2s ease-out;
 		}
 
-.modal-menu__input ~ .modal-menu__button .modal-menu__line:nth-child(3) {
-			-webkit-transform-origin: 50% 0;
-			        transform-origin: 50% 0;
-			-webkit-transform: translateX(-50%) translateY(1rem);
-			        transform: translateX(-50%) translateY(1rem);
+.modal-menu__input ~ .modal-menu__button .modal-menu__line::before {
+			top: 1rem;
 		}
 
-.modal-menu__input:checked ~ .modal-menu__button .modal-menu__line:nth-child(1) {
-			
-			/*transform: translateX(-32%) translateY(-1.1rem) rotate(45deg);*/
-			-webkit-transform: translateX(-50%) translateY(0rem) rotate(135deg);
-			        transform: translateX(-50%) translateY(0rem) rotate(135deg);
+.modal-menu__input ~ .modal-menu__button .modal-menu__line::after {
+			bottom: 1rem;
 		}
 
-.modal-menu__input:checked ~ .modal-menu__button .modal-menu__line:nth-child(2) {
-			-webkit-transform: scale(0);
-			        transform: scale(0);
-			-webkit-transform-origin: 50% 0;
-			        transform-origin: 50% 0;
-		}
-
-.modal-menu__input:checked ~ .modal-menu__button .modal-menu__line:nth-child(3) {
-			/*transform: translateX(-36%) translateY(1.1rem) rotate(-45deg);*/
-			-webkit-transform: translateX(-53%) translateY(-0.0rem) rotate(-135deg);
-			        transform: translateX(-53%) translateY(-0.0rem) rotate(-135deg);
-		}
-
-.modal-menu:hover > .modal-menu__line:nth-child(1) {
-				-webkit-transform: translateX(-50%) translateY(-1.2rem);
-				        transform: translateX(-50%) translateY(-1.2rem);
+.modal-menu__input:hover ~ .modal-menu__button .modal-menu__line::before {
+				top: 1.1rem;
 			}
 
-.modal-menu:hover > .modal-menu__line:nth-child(3) {
-				-webkit-transform: translateX(-50%) translateY(1.2rem);
-				        transform: translateX(-50%) translateY(1.2rem);
+.modal-menu__input:hover ~ .modal-menu__button .modal-menu__line::after {
+				bottom: 1.1rem;
 			}
+
+.modal-menu__input:checked ~ .modal-menu__button .modal-menu__line {
+		-webkit-transform-origin: 50% 0;
+		        transform-origin: 50% 0;
+		border: none;
+	}
+
+.modal-menu__input:checked ~ .modal-menu__button .modal-menu__line::before {
+			-webkit-transform: rotate(-135deg);
+			        transform: rotate(-135deg);
+			opacity:1;
+			top:0rem;
+		}
+
+.modal-menu__input:checked ~ .modal-menu__button .modal-menu__line::after {
+			bottom:-.2rem;
+			opacity:1;
+			-webkit-transform: rotate(135deg);
+			        transform: rotate(135deg);
+		}
 
 /* Animate the modal-menu__links*/
 
