@@ -2710,7 +2710,8 @@ body {
 	left:0;
 	z-index: 3000;
 	display: table;
-	/* Initial conditions */
+	transition: all .3s;
+	/* hide/show the modal according to the :target state */
 	opacity: 0;
 	visibility: hidden;
 }
@@ -2730,10 +2731,20 @@ body {
 		position: fixed;
 		top: 50%;
 		left: 50%;
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		-webkit-transform: scale(.5) translate(-50%, -50%);
+		        transform: scale(.5) translate(-50%, -50%);
+		-webkit-transform-origin: 50% 50%;
+		        transform-origin: 50% 50%;
 		display: table;
-		
+		opacity: 0;
+		transition: opacity .4s .2s;
+	}
+
+.book-now:target .book-now__content {
+		opacity: 1;
+		-webkit-transform: scale(1) translate(-50%, -50%);
+		        transform: scale(1) translate(-50%, -50%);
+		transition: opacity .4s .2s;
 	}
 
 .book-now__img {
