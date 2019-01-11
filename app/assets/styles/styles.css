@@ -29,11 +29,5 @@
 @import "./layout/_booking";
 @import "./layout/_footer";
 @import "./layout/_book-now";
-@import "./modules/_wrapper";
-@import "./modules/_feature-item";
-@import "./modules/_testimonial";
-@import "./modules/_site-footer";
-@import "./modules/_navbar";
-@import "./modules/_reveal-item";
 @import "./modules/_modal";
 @import "./base/_utilities";

@@ -61,9 +61,6 @@
 		padding: 2rem 3.5rem;
 		font-size: 1.25rem;
 		color: $darkGray;
-		@mixin atSmall {
-			font-size: 1.8rem;	
-		}
  	}
 
  	&--thin {

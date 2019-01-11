@@ -1,17 +1,23 @@
-@define-mixin atSmall {
-	@media (min-width: 530px) {
+@define-mixin atPhone {
+	@media (max-width: 37.5em) { /* 600px */
 		@mixin-content;
 	}
 }
 
-@define-mixin atMedium {
-	@media (min-width: 800px) {
+@define-mixin atTabPortr {
+	@media (max-width: 56.25em) { /* 900px */
 		@mixin-content
 	}
 }
 
-@define-mixin atLarge {
-	@media (min-width: 1010px) {
+@define-mixin atTabLands {
+	@media (max-width: 75em) {  /* 1200px */
+		@mixin-content
+	}
+}
+
+@define-mixin atBigDesktop {
+	@media (min-width: 112.5em) { /* 1800px */
 		@mixin-content
 	}
 }

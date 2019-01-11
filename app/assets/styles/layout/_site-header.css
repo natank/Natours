@@ -7,17 +7,13 @@
 		justify-content: space-between;
 	}
 
-	@mixin atMedium {
-		transition: all .5s ease-out;
-		&--darker {
-			background-color: rgba($darkBlue, .8);
-		}		
-	}
+
 
 	&__logo {
 		transition: all 1.5s ease-out;
 		position: absolute;
-		top: 0;
+		top: 4rem;
+		left: 4rem;
 		z-index: 5;
 		margin: auto;
 
@@ -26,29 +22,12 @@
 			width: 5.4rem;
 		}
 
-		@mixin atMedium {
-			margin-left: 3.4rem;
-			margin-top: 3.4rem;
-			left: 0;
-			transform-origin: 0 0;
-		}
-
 		&__graphic {
 			text-indent: -9999px;
 		} 
 
-		&--small {
-			@mixin atMedium {
-				transform: scale(1.124) translateX(0);				
-			}
-
-		}
-
 		&--transparent {
 			opacity: 0.5;
-			@mixin atMedium {
-				opacity: 1;
-			}
 		}
 	}
 
@@ -62,9 +41,6 @@
  		width: 19px;
  		height: 19px;
 
- 		@mixin atMedium {
- 			display: none;
- 		}
  		&::before {
  			content:"";
  			position: absolute;
