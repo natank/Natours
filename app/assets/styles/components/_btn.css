@@ -12,6 +12,10 @@
 	font-size: 1.5rem;
 	border: none;
 
+	@mixin atTabPortr {
+		font-size: 3rem;
+	}
+
 	&--orange {
 		background-color: $mainOrange;
 	}
@@ -61,6 +65,9 @@
 		padding: 2rem 3.5rem;
 		font-size: 1.25rem;
 		color: $darkGray;
+		@mixin atTabPortr {
+			font-size: 1.5rem;
+		}
  	}
 
  	&--thin {

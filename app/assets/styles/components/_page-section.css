@@ -15,7 +15,6 @@
   		background-clip: text;
   		color: rgba(0,0,0,0);
   		margin-top: 3rem;
-  		margin-bottom: 6rem;
   		transition: all .3s ease-out;
   		width: 100%;
   		letter-spacing: 0.2rem;
@@ -24,22 +23,32 @@
   			text-align: left;
   		}
 
+  		
   		&:hover{
   			transform: skew(3deg, 3deg);
   			text-shadow: 3px 3px 10px rgba(86,57,73,0.26);
   			
   		}
 
-  		@mixin atPhone {
-  			font-size: 6rem;
+  		@mixin atTabPortr {
+  			font-size: 3rem;
+  			margin-bottom: 2rem;
   		}
+
+  		@mixin atPhone {
+  			font-size: 5rem;
+  			margin-bottom: 2rem;
+  		}
+
+
 	}
 
-	&__sub-title {
+	&__subtitle {
 		font-size: 1.4rem;
 		font-weight: 600;
-		margin-bottom: 2rem;
+		margin-bottom: 3rem;
 		text-transform: uppercase;
+  		
 
 	}
 
@@ -53,8 +62,31 @@
 			column-gap: 4rem;
 		}
 	}
+	@mixin atTabPortr{
+		&__subtitle, &__text ,&__link{
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	}
+	@mixin atPhone{
+		&__subtitle, &__text ,&__link{
+			width: 75%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&__subtitle {
+			font-size: 3rem;
+		}
+
+		&__text {
+			font-size: 3rem;	
+		}
 
 
+	}
+	
 	&--gray {
 		background-color: $lightGray;
 	}

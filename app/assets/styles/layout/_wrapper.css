@@ -1,0 +1,6 @@
+.wrapper {
+	width: 100%;
+	@mixin atTabPortr {
+		width: 40%;
+	}
+}

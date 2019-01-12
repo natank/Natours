@@ -1,12 +1,25 @@
 .flip-card {
   background-color: transparent;
   width: auto;
-  height: 52rem;
-  overflow:hidden;
+  height: 77rem;
+
   border-radius: 5px;
 
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+
+  @mixin atTabPortr {
+    width: 50%;
+    min-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $mainWhite;
+    &:not(last-child){
+      margin-bottom: 4rem;
+    }
+  }
+
+
 }
 
 .flip-card-inner {
@@ -20,6 +33,9 @@
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(-180deg);
+  @mixin atTabPortr {
+    transform: none;
+  }
 }
 
 .flip-card-front, .flip-card-back {
@@ -27,10 +43,20 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  @mixin atTabPortr {
+    position: static;
+    height: auto;
+  }
 }
 
 .flip-card-back {
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
+  @mixin atTabPortr {
+    transform: none;
+    position:relative;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
+  
 }

@@ -2,10 +2,31 @@
 	padding-bottom: 10rem;
 	&__photos {
 		position: relative;
-		
-
 		@mixin clearfix;
+		height: 40rem;
+		
+		@mixin atTabPortr {
+			height: 15rem;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		@mixin atPhone {
+
+		}
 	}
+	&__wrapper {
+		@mixin atTabPortr {
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		@mixin atPhone {
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
 	&__image {
 		display:block;
 		position: absolute;
@@ -20,18 +41,18 @@
 
 
 		&__1 {
-			top: -2rem;
+			top: 2rem;
 			left: 0rem;
 			z-index: 1;
 		}
 		&__2 {
-			top: 2rem;
+			top: 6rem;
 			left: 24rem;
 			z-index: 2;
 		}
 		&__3 {
 			z-index: 3;
-			top: 10rem;
+			top: 14rem;
 			left: 10rem;
 		}
 		&:hover {
@@ -40,6 +61,48 @@
 			border: 1.5rem solid $mainGreen;
 			box-shadow: 0px 24px 71px -19px rgba(74,74,74,1);
 			transform: scale(1.05);
+		}
+
+		@mixin atTabPortr {
+			width: 20rem;
+			&__1 {
+				top: 2rem;
+				left: 0rem;
+				z-index: 1;
+			
+			}
+			&__2 {
+				top: 1rem;
+				left: 18rem;
+				z-index: 3;
+				
+			}
+			&__3 {
+				z-index: 2;
+				top: 2rem;
+				left: 36rem;
+			}
+		}
+
+		@mixin atPhone {
+			width: 30%;
+			&__1 {
+				top: 2rem;
+				left: 10%;
+				z-index: 1;
+			
+			}
+			&__2 {
+				top: 1rem;
+				left: 33%;
+				z-index: 3;
+				
+			}
+			&__3 {
+				z-index: 2;
+				top: 2rem;
+				left: 56%;
+			}
 		}
 	}
 }

@@ -8,7 +8,7 @@
 @import "./abstracts/_variables";
 @import "./base/_animations";
 @import "./base/_base";
-@import "./base/_flip-card";
+@import "./components/_flip-card";
 @import "./components/_btn";
 @import "./components/_page-section";
 @import "./components/_image-filter";
@@ -29,5 +29,7 @@
 @import "./layout/_booking";
 @import "./layout/_footer";
 @import "./layout/_book-now";
+@import "./layout/_wrapper";
+
 @import "./modules/_modal";
 @import "./base/_utilities";

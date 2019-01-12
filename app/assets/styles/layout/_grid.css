@@ -107,7 +107,27 @@
 	}
 
 
+	@mixin atTabPortr {
+		[class$="of-2"] {
+			float: none;
+			width: 100%;
+		}		
+		[class$="of-3"] {
+			float: none;
+			width: 100%;
+		}		
+		[class$="of-4"] {
+			float: none;
+			width: 100%;
+		}		
+	}
+
 
 	@mixin clearfix
+
+
+		
+
+
 
 }
