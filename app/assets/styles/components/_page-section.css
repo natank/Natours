@@ -29,6 +29,10 @@
   			text-shadow: 3px 3px 10px rgba(86,57,73,0.26);
   			
   		}
+
+  		@mixin atPhone {
+  			font-size: 6rem;
+  		}
 	}
 
 	&__sub-title {

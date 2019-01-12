@@ -5,24 +5,32 @@
 
 html {
 	/* This Defines what what 1rem is*/
-	font-size: 62.5%; /* 1 rem = 10px; 10/16 = 62.5% */
 
-	@mixin atPhone {
-		font-size: 50%; /* 1 rem = 8px; 8/16 = 50% */		
-	}
-	@mixin atTabPortr {
-		font-size: 50%; /* 1 rem = 8px; 8/16 = 50% */		
-	}
-	@mixin atTabLands {
-		font-size: 56.25%; /* 1 rem = 9px; 9/16 = 56.25% */		
-	}
 	@mixin atBigDesktop {
 		font-size: 75%; /* 1 rem = 12px; 12/16 = 75% */		
 	}
+
+	font-size: 62.5%; /* 1 rem = 10px; 10/16 = 62.5% */
+
+	@mixin atTabLands { 
+		font-size: 56.25%; /* 1 rem = 9px; 9/16 = 56.25% */		
+	}
+
+	@mixin atTabPortr {
+		font-size: 50%; /* 1 rem = 8px; 8/16 = 50% */		
+	}
+
+	@mixin atPhone {
+		font-size: 23%; /* 1 rem = 8px; 8/16 = 50% */		
+	}
+
 }
 
 body {
-	padding: 30px;
+	padding: 3rem;
+	@mixin atTabPortr {
+		padding: 0;
+	}
 } 
 
 .clearfix::after {

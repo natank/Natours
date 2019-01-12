@@ -1,11 +1,7 @@
-@define-mixin atPhone {
-	@media (max-width: 37.5em) { /* 600px */
-		@mixin-content;
-	}
-}
+/* Media queries - use Mobile last system */
 
-@define-mixin atTabPortr {
-	@media (max-width: 56.25em) { /* 900px */
+@define-mixin atBigDesktop {
+	@media (min-width: 112.5em) { /* 1800px */
 		@mixin-content
 	}
 }
@@ -16,12 +12,21 @@
 	}
 }
 
-@define-mixin atBigDesktop {
-	@media (min-width: 112.5em) { /* 1800px */
+@define-mixin atTabPortr {
+	@media (max-width: 56.25em) { /* 900px */
 		@mixin-content
 	}
 }
 
+@define-mixin atPhone {
+	@media (max-width: 37.5em) { /* 600px */
+		@mixin-content;
+	}
+}
+
+
+
+/* Clearfix */ 
 @define-mixin clearfix {
 	&::after
 	{

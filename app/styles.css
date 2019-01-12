@@ -988,6 +988,10 @@ img {
   content: "\e028";
 }
 
+/* Media queries - use Mobile last system */
+
+/* Clearfix */
+
 /* variables are defined in gulp/config library
  it is imported using the postcss-simple-vars plugin
  see "styles" task in gulp/styles.js */
@@ -1245,40 +1249,53 @@ img {
 }
 
 html {
-	/* This Defines what what 1rem is*/
+
 	font-size: 62.5%;
+
 }
 
-/* 1 rem = 10px; 10/16 = 62.5% */
-
-@media (max-width: 37.5em) {
-
-html { /* 600px */
-		font-size: 50% /* 1 rem = 8px; 8/16 = 50% */
-}
-	}
-
-@media (max-width: 56.25em) {
-
-html { /* 900px */
-		font-size: 50% /* 1 rem = 8px; 8/16 = 50% */
-}}
-
-@media (max-width: 75em) {
-
-html {  /* 1200px */
-		font-size: 56.25% /* 1 rem = 9px; 9/16 = 56.25% */
-}}
+/* This Defines what what 1rem is*/
 
 @media (min-width: 112.5em) {
 
 html { /* 1800px */
 		font-size: 75% /* 1 rem = 12px; 12/16 = 75% */
+
 }}
 
-body {
-	padding: 30px;
+/* 1 rem = 10px; 10/16 = 62.5% */
+
+@media (max-width: 75em) {
+
+html {  /* 1200px */ 
+		font-size: 56.25% /* 1 rem = 9px; 9/16 = 56.25% */
+
+}}
+
+@media (max-width: 56.25em) {
+
+html { /* 900px */
+		font-size: 50% /* 1 rem = 8px; 8/16 = 50% */
+
+}}
+
+@media (max-width: 37.5em) {
+
+html { /* 600px */
+		font-size: 23% /* 1 rem = 8px; 8/16 = 50% */
+
 }
+	}
+
+body {
+	padding: 3rem;
+}
+
+@media (max-width: 56.25em) {
+
+body { /* 900px */
+		padding: 0
+}}
 
 .clearfix::after {
 	display:table;
@@ -1490,6 +1507,13 @@ body {
   			text-shadow: 3px 3px 10px rgba(86,57,73,0.26);
   			
   		}
+
+@media (max-width: 37.5em) {
+
+.page-section__title { /* 600px */
+  			font-size: 6rem
+	}
+	}
 
 .page-section__sub-title {
 		font-size: 1.4rem;
@@ -2202,10 +2226,17 @@ body {
 	height: 95vh;
 	-webkit-clip-path: polygon(0 0, 100% 0,100% 85vh, 0 100%);
 	        clip-path: polygon(0 0, 100% 0,100% 85vh, 0 100%);
+	background-image: linear-gradient(0deg, rgba(85,197,122, .8), 
+										rgba(40,180,133, .8) 100%),
+				url(./assets/images/hero.jpg);
+	background-size: cover;
 }
 
-.large-hero__image {
-		display: block;
+@media (max-width: 37.5em) {
+
+.large-hero { /* 600px */
+		background-position: 0, -17rem
+}
 	}
 
 .large-hero__text {
@@ -2222,6 +2253,14 @@ body {
 
 	}
 
+@media (max-width: 37.5em) {
+
+.large-hero__text { /* 600px */
+			text-align: center
+
+	}
+	}
+
 .large-hero__title { 
 		font-weight: 400;
 		display: block;
@@ -2231,16 +2270,43 @@ body {
 		margin-bottom: 2rem;
 	}
 
+@media (max-width: 37.5em) {
+
+.large-hero__title { /* 600px */
+			font-size:  13.0rem;
+			letter-spacing: 1rem;
+			text-align: center
+	}
+	}
+
 .large-hero__sub-title { 
 		font-weight: 700;
 		display: block;
-		font-size: 1.5rem;
+		font-size: 2.4rem;
 		margin: 0;
 		letter-spacing: 1.50rem;
 		width: 100%;
 		margin-bottom: 4rem;
 		
+	}
+
+@media (max-width: 56.25em) {
+
+.large-hero__sub-title { /* 900px */
+			letter-spacing: 1.55rem
 		
+	}}
+
+@media (max-width: 37.5em) {
+
+.large-hero__sub-title { /* 600px */
+			letter-spacing: .8rem;
+			font-size: 4rem;
+			text-align: center;
+			-webkit-transform: translate(0rem);
+			        transform: translate(0rem)
+		
+	}
 	}
 
 .large-hero__description { 
