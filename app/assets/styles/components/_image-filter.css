@@ -15,8 +15,8 @@
 			&--gray {
 				background-image: linear-gradient(
 				to right bottom, 
-				   rgba($lightGray, 0.8), 
-				   rgba($lightGray, 0.8)); 	
+				   rgba($lightGray, 0.9), 
+				   rgba($lightGray, 0.9)); 	
 			}
 
 			&--clipped {

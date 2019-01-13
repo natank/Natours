@@ -10,6 +10,10 @@
 		background-position: 0px 0px,
 							-5px 0px;
 		background-blend-mode: screen;
+		@mixin atTabPortr {
+			background-position: 0px 0px;
+								 
+		}
 	}
 	&__title {
 		position: absolute;
@@ -22,6 +26,13 @@
 		text-transform: uppercase;
 		right: 2.5rem;
 		top: 12rem;
+
+		@mixin atTabPortr {
+			font-size: 4rem;
+		}
+		@mixin atPhone {
+			font-size: 6rem;
+		}
 
 		&__text {
 			box-decoration-break: clone;
@@ -48,6 +59,10 @@
 			&:not(:last-child) {
 				border-bottom: 1px solid $lightGray;
 				}
+
+			@mixin atPhone {
+				font-size: 3rem;
+			}
 		}
 	}
 	&--contact {
@@ -75,10 +90,21 @@
 		&__title {
 			margin: auto;
 			text-transform: uppercase;
+			@mixin atTabPortr {
+				font-size: 2.5rem;
+			}
+			@mixin atPhone {
+				font-size: 4rem;
+			}
+
 		}
 		&__price {
 			font-size: 5rem;
 			font-weight: 100;
+
+			@mixin atPhone {
+				font-size: 7rem;
+			}
 		}
 		&--green {
 			background: linear-gradient(to right, $lightGreen, $darkGreen);	

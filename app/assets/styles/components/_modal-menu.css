@@ -15,6 +15,12 @@
 		height: $menuButtonRadious;
 		border-radius: 50%;
 		cursor: pointer;
+		@mixin atTabPortr {
+			right:3rem;
+			top:3rem;
+			width: calc($menuButtonRadious/1.5);
+			height: calc($menuButtonRadious/1.5);
+		}
 	}
 
 	&__input {
@@ -90,6 +96,13 @@
 		width: calc($menuButtonRadious - .5rem);
 		height: calc($menuButtonRadious - .5rem);
 		background-image: radial-gradient($lightGreen, $mainGreen);
+		@mixin atTabPortr {
+			width: calc($menuButtonRadious/1.5 - .3rem);
+			height: calc($menuButtonRadious/1.5 - .3rem);
+			top: 3.1rem;
+			right: 3.1rem;
+
+		}
 	}
 
 	&__links {
@@ -106,8 +119,11 @@
 			text-transform: uppercase;
 			font-weight: 300;
 			font-size: 3rem;
-			
 			text-align: center;
+
+			@mixin atPhone {
+				font-size: 6rem;
+			}
 			
 			a {
 				position: relative;

@@ -1,7 +1,7 @@
 .flip-card {
   background-color: transparent;
   width: auto;
-  height: 77rem;
+  height: 51rem;
 
   border-radius: 5px;
 
@@ -9,13 +9,13 @@
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 
   @mixin atTabPortr {
-    width: 50%;
     min-width: 40rem;
+    height: 77rem;
     margin-left: auto;
     margin-right: auto;
     background-color: $mainWhite;
     &:not(last-child){
-      margin-bottom: 4rem;
+      margin-bottom: 7rem;
     }
   }
 

@@ -13,7 +13,7 @@
 	border: none;
 
 	@mixin atTabPortr {
-		font-size: 3rem;
+		font-size: 1.5rem;
 	}
 
 	&--orange {
@@ -67,6 +67,9 @@
 		color: $darkGray;
 		@mixin atTabPortr {
 			font-size: 1.5rem;
+		}
+		@mixin atPhone {
+			font-size: 3rem;
 		}
  	}
 

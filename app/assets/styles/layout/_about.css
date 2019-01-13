@@ -64,7 +64,7 @@
 		}
 
 		@mixin atTabPortr {
-			width: 20rem;
+			width: 15rem;
 			&__1 {
 				top: 2rem;
 				left: 0rem;
@@ -73,14 +73,14 @@
 			}
 			&__2 {
 				top: 1rem;
-				left: 18rem;
+				left: 13rem;
 				z-index: 3;
 				
 			}
 			&__3 {
 				z-index: 2;
 				top: 2rem;
-				left: 36rem;
+				left: 26rem;
 			}
 		}
 

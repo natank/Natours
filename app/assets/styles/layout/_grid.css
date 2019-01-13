@@ -16,7 +16,10 @@
 		/*background-color: $lightRed;*/
 		float: left;
 		&:not(:last-child){
-			margin-right: $gutterHorizontal;	
+			margin-right: $gutterHorizontal;
+			@mixin atTabPortr {
+				margin-right: 0;
+			}	
 		}
 	}
 
@@ -108,15 +111,10 @@
 
 
 	@mixin atTabPortr {
-		[class$="of-2"] {
-			float: none;
-			width: 100%;
-		}		
-		[class$="of-3"] {
-			float: none;
-			width: 100%;
-		}		
-		[class$="of-4"] {
+		[class$="of-2"],
+		[class$="of-3"],
+		[class$="of-4"],
+		[class$="of-12"] {
 			float: none;
 			width: 100%;
 		}		

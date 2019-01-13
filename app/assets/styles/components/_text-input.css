@@ -3,6 +3,9 @@
 	position: relative;
 	width: 85%; 
 	margin-bottom: 3rem;
+	@mixin atTabPortr {
+		width: 100%;
+	}
 	input[type="text"], input[type="email"]{
 		font: 15px/24px 'Muli', sans-serif; 
 		color: inherit;
@@ -12,6 +15,9 @@
 		padding: 1.5rem;
 		&::placeholder{
 			color: $mediumGray; 
+		}
+		@mixin atTabPortr {
+			padding: 1rem;
 		}
 		 + label {
 			position: absolute;

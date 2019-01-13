@@ -1,20 +1,22 @@
 .page-section {
 	position: relative;
-	padding:1.2rem 0;
+	padding:7.2rem 0;
 	overflow-x: hidden;
 	margin-top: 5rem;
 	color: $darkGray;
+
+
 
 	&__title {
 		font-size: 3.7rem;
 		width: 100%;
   		margin: auto;
+  		margin-bottom: 2rem;
 		text-align: center;
 		text-transform: uppercase;
   		background: linear-gradient(to right, $lightGreen, $darkGreen);
   		background-clip: text;
   		color: rgba(0,0,0,0);
-  		margin-top: 3rem;
   		transition: all .3s ease-out;
   		width: 100%;
   		letter-spacing: 0.2rem;
@@ -32,12 +34,12 @@
 
   		@mixin atTabPortr {
   			font-size: 3rem;
-  			margin-bottom: 2rem;
+  			margin-bottom: 4rem;
   		}
 
   		@mixin atPhone {
   			font-size: 5rem;
-  			margin-bottom: 2rem;
+  			margin-bottom: 8rem;
   		}
 
 
@@ -48,45 +50,42 @@
 		font-weight: 600;
 		margin-bottom: 3rem;
 		text-transform: uppercase;
-  		
-
+		@mixin atPhone {
+			font-size: 2.5rem;
+			&--wide-at-phone {
+				width: 90%;
+			}
+		}
+		&--left {
+			margin-left: 0;
+		}
 	}
 
 	&__text {
 		font-size: 1.4rem;
 		font-weight: 400;
 		line-height: 2.5rem;
+		width: 80%;
 		&--columns {
 			column-count: 2;
 			column-rule: 1px solid $darkGray;
 			column-gap: 4rem;
 		}
+		@mixin atPhone{
+			line-height: 2.7rem;
+			font-size: 3.3rem;
+			&__wide-at-phone {
+				width: 90%;
+			}
+		}
+		
+		&--wide-at-phone {
+			width: 90%;
+		}
 	}
-	@mixin atTabPortr{
-		&__subtitle, &__text ,&__link{
-			margin-left: auto;
-			margin-right: auto;
-		}
 
-	}
-	@mixin atPhone{
-		&__subtitle, &__text ,&__link{
-			width: 75%;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		&__subtitle {
-			font-size: 3rem;
-		}
-
-		&__text {
-			font-size: 3rem;	
-		}
-
-
-	}
 	
+
 	&--gray {
 		background-color: $lightGray;
 	}

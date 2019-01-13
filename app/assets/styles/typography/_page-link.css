@@ -10,6 +10,13 @@
 		text-decoration: none;
 		margin-top: 2rem;	
 		transition: all .2s;
+
+		@mixin atTabPortr {
+			font-size: 2.3rem;
+		}
+		@mixin atPhone {
+			font-size: 3.5rem;
+		}
 	}
 	
 	&:hover {

@@ -2,6 +2,10 @@
 		background-color: rgba($lightOrange, 0.5);
 		position: relative;
 		margin-top: 15rem;
+
+		@mixin atTabPortr {
+			margin-top: 2.5rem;
+		}
 		video {
 		  position: absolute;
 		  right: 0;
@@ -9,5 +13,10 @@
 		  min-width: 100%; 
 		  min-height: 100%;
 		  z-index: 0;
+		}
+
+		&__story-items {
+			padding: 0;
+			margin-bottom: 4rem;	
 		}
 }

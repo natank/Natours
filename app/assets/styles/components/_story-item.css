@@ -1,10 +1,15 @@
 .story-item {
 	background-color: rgba($mainWhite, 0.6);
-	width: 60%;
+	width: 50%;
 	margin: 0 auto;
 	padding: 5rem;
 	transform: skewX(-15deg);
-	
+	@mixin atTabPortr {
+		width: 100%;
+	}
+	@mixin atPhone {
+		transform: none;
+	}
 	&:not(:last-child) {
 		margin-bottom: 8rem;
 	}
@@ -12,9 +17,12 @@
 	/* this class is used to skew back the content */
 	&__container { 
 		transform: skewX(15deg);
+		@mixin atPhone {
+			transform: none;
+		}
 	}
 	&__picture {
-		width:160px; height: 160px;
+		width:16rem; height: 16rem;
 		position: relative;
 		float: left;
 		border-radius: 50%;
@@ -27,7 +35,10 @@
 	  width: 100%; 
 	  height: 100%;
 	  background-size: 200%;
-	  background-position: -80px -30px;
+	  background-position: -8rem -3rem;
+	  @mixin atTabPortr {
+
+	  }
 	  transition: all 0.5s ease-out;
 	  &--bg1 {
 	  	background-image: linear-gradient(
@@ -63,7 +74,7 @@
 	&:hover {
 		.story-item__img {
 			background-size: 160%;
-			background-position: -50px -10px;
+			background-position: -5rem -1rem;
 			
 			&--bg {
 				filter: blur(2px);
