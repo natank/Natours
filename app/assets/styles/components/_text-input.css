@@ -25,6 +25,13 @@
 			transform: translateY(-150%) translateX(1.5rem);
 			font-size: 1.6rem;
 			transition: all 0.3s ease-out;
+			@mixin atTabPortr{
+				font-size: 1.6rem	
+			}
+
+			@mixin atPhone{
+				font-size: 2.6rem	
+			}
 		 }
 
 		&:placeholder-shown + label{
@@ -33,6 +40,8 @@
 			transform: translateY(-50%) translateX(1.5rem);
 			opacity: 0;
 			visibility: hidden;
+
+			
 		}
 
 

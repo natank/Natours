@@ -9,6 +9,11 @@ img {
 	height: auto;
 }
 
+::selection {
+  color: $mainWhite; 
+  background: $mainGreen;
+}
+
 
 
 

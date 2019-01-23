@@ -19,6 +19,12 @@
     }
   }
 
+  @mixin atPhone {
+   &:not(last-child){
+      margin-bottom: 15rem;
+    } 
+  }
+
 
 }
 
@@ -43,7 +49,8 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  @mixin atTabPortr {
+  /* Media query used to9 Disable flip on mobile devices */
+  @mixin atNonHoverDevice {
     position: static;
     height: auto;
   }
@@ -53,7 +60,8 @@
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
-  @mixin atTabPortr {
+  /* Media query used to Disable flip on mobile devices */
+  @mixin atNonHoverDevice {
     transform: none;
     position:relative;
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);

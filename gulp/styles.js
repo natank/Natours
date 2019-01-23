@@ -30,6 +30,7 @@ gulp.task('styles',['clean'], function(){
 		})
 		.pipe(gulp.dest('app/temp'))
 		.on('finish', function(){
+			console.log('finish!!!!!!!!!!');
 			return gulp.src('app/temp/styles.css')
 			.pipe(gulp.dest('app'))
 			.pipe(browserSync.reload({ stream: true}));		

@@ -1,10 +1,12 @@
 @import "normalize.css";
+@import "./abstracts/_mixins";
 @import "./typography/_global";
+
 @import "./typography/_page-link";
 @import "./typography/_paragraph";
 @import "./typography/_icons";
 @import "./typography/_fonts";
-@import "./abstracts/_mixins";
+
 @import "./abstracts/_variables";
 @import "./base/_animations";
 @import "./base/_base";

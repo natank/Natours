@@ -33,30 +33,32 @@
 /*Animate the modal-menu__line*/
 	&__input ~ &__button &__line{
 		width: 45%;
+		height:.1rem;
 		position:absolute;
 		overflow: visible;
 		top:50%;
 		left: 50%;
 		transform: translateX(-50%);
-		border: 1px solid $mainBlack;
+		background-color : $mainBlack;
 		transition: all .2s ease-out;
 		&::before, &::after {
 			position: absolute;
 			width: 100%;
-			border: 1px solid $mainBlack;
+			height: 100%;
+			background-color: $mainBlack;
 			content: "";
-			left: -1px;
 			transform-origin: 50% 0;
-			padding: 0;
+			
 			margin: 0;
 			transition: all .2s ease-out;
+			z-index: 200000;
 		}
 
 		&::before {
-			top: 1rem;
+			top: -1rem;
 		} 
 		&::after {
-			bottom: 1rem;
+			bottom: -1rem;
 		}
 		transition: all .1s ease-out;
 	}
@@ -64,23 +66,24 @@
     &__input:hover ~ &__button &__line {
 
 			&::before {
-				top: 1.1rem;
+				top: -1.1rem;
 			} 
 			&::after {
-				bottom: 1.1rem;
+				bottom: -1.1rem;
 			}	
 	}
 
 	&__input:checked ~ &__button &__line {
 		transform-origin: 50% 0;
 		border: none;
+		background-color: transparent;
 		&::before {
 			transform: rotate(-135deg);
 			opacity:1;
-			top:0rem;
+			top:0; bottom:0;
 		} 
 		&::after {
-			bottom:-.2rem;
+			bottom:0; top:0;
 			opacity:1;
 			transform: rotate(135deg);
 		}
