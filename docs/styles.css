@@ -351,6 +351,8 @@ template {
 
 /* Media queries - use Mobile last system */
 
+/* Media query used to Disable flip on mobile devices */
+
 /* Clearfix */
 
 body {
@@ -361,6 +363,16 @@ body {
 img {
 	max-width: 100%;
 	height: auto;
+}
+
+::-moz-selection {
+  color: #ffffff; 
+  background: #55c57a;
+}
+
+::selection {
+  color: #ffffff; 
+  background: #55c57a;
 }
 
 .page-link:link,
@@ -376,7 +388,7 @@ img {
 		transition: all .2s;
 	}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .page-link:link,
 	.page-link:visited{ /* 900px */
@@ -1271,7 +1283,7 @@ html {
 
 /* This Defines what what 1rem is*/
 
-@media (min-width: 112.5em) {
+@media only screen and (min-width: 112.5em) {
 
 html { /* 1800px */
 		font-size: 75% /* 1 rem = 12px; 12/16 = 75% */
@@ -1280,14 +1292,14 @@ html { /* 1800px */
 
 /* 1 rem = 10px; 10/16 = 62.5% */
 
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
 
 html {  /* 1200px */ 
 		font-size: 56.25% /* 1 rem = 9px; 9/16 = 56.25% */
 
 }}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 html { /* 900px */
 		font-size: 50% /* 1 rem = 8px; 8/16 = 50% */
@@ -1306,7 +1318,7 @@ body {
 	padding: 3rem;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 body { /* 900px */
 		padding: 0
@@ -1334,7 +1346,7 @@ body { /* 900px */
 
 /* Remove this if you don't want the 3D effect */
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .flip-card { /* 900px */
     min-width: 40rem;
@@ -1348,6 +1360,17 @@ body { /* 900px */
     .flip-card:not(last-child){
       margin-bottom: 7rem;
     }}
+
+@media (max-width: 37.5em) {
+
+.flip-card { /* 600px */
+
+
+}
+   .flip-card:not(last-child){
+      margin-bottom: 15rem;
+    }
+	}
 
 .flip-card-inner {
   position: relative;
@@ -1368,7 +1391,7 @@ body { /* 900px */
           transform: rotateY(-180deg);
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .flip-card:hover .flip-card-inner { /* 900px */
     -webkit-transform: none;
@@ -1383,9 +1406,11 @@ body { /* 900px */
           backface-visibility: hidden;
 }
 
-@media (max-width: 56.25em) {
+/* Media query used to9 Disable flip on mobile devices */
 
-.flip-card-front, .flip-card-back { /* 900px */
+@media only screen and (hover: none) {
+
+.flip-card-front, .flip-card-back {
     position: static;
     height: auto
 }}
@@ -1398,9 +1423,11 @@ body { /* 900px */
   
 }
 
-@media (max-width: 56.25em) {
+/* Media query used to Disable flip on mobile devices */
 
-.flip-card-back { /* 900px */
+@media only screen and (hover: none) {
+
+.flip-card-back {
     -webkit-transform: none;
             transform: none;
     position:relative;
@@ -1424,7 +1451,7 @@ body { /* 900px */
 	border: none;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .btn { /* 900px */
 		font-size: 1.5rem
@@ -1485,7 +1512,7 @@ body { /* 900px */
 		color: #6f6f6f;
  	}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .btn--large { /* 900px */
 			font-size: 1.5rem
@@ -1588,7 +1615,7 @@ body { /* 900px */
   			
   		}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .page-section__title { /* 900px */
   			font-size: 3rem;
@@ -1723,7 +1750,7 @@ body { /* 900px */
 
 	}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .service-item__icon { /* 900px */
 			font-size: 6rem
@@ -1759,7 +1786,7 @@ body { /* 900px */
 		background-blend-mode: screen;
 	}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .tour-item__header { /* 900px */
 			background-position: 0px 0px
@@ -1778,7 +1805,7 @@ body { /* 900px */
 		top: 12rem;
 	}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .tour-item__title { /* 900px */
 			font-size: 4rem
@@ -1837,7 +1864,7 @@ body { /* 900px */
 			width: 100%;
 		}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .tour-item--contact__container { /* 900px */
 				position: relative;
@@ -1855,7 +1882,7 @@ body { /* 900px */
 
 		}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .tour-item--contact__title { /* 900px */
 				font-size: 2.5rem
@@ -1929,7 +1956,7 @@ body { /* 900px */
 
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .story-item { /* 900px */
 		width: 100%
@@ -1984,7 +2011,7 @@ body { /* 900px */
 	  transition: all 0.5s ease-out;
 	}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .story-item__img { /* 900px */
 	}}
@@ -2177,7 +2204,7 @@ body { /* 900px */
 
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .text-input { /* 900px */
 		width: 100%
@@ -2217,7 +2244,7 @@ body { /* 900px */
 			color: #a0a0a0; 
 		}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .text-input input[type="text"], .text-input input[type="email"]{ /* 900px */
 			padding: 1rem
@@ -2232,7 +2259,7 @@ body { /* 900px */
 			transition: all 0.3s ease-out;
 		 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .text-input input[type="text"] + label, .text-input input[type="email"] + label { /* 900px */
 				font-size: 1.6rem
@@ -2310,7 +2337,7 @@ body { /* 900px */
 		cursor: pointer;
 	}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .modal-menu__input, .modal-menu__button { /* 900px */
 			right:3rem;
@@ -2406,7 +2433,7 @@ body { /* 900px */
 		background-image: radial-gradient(#7ed56f, #55c57a);
 	}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .modal-menu__content { /* 900px */
 			width: calc(72px/1.5 - .3rem);
@@ -2574,7 +2601,7 @@ body { /* 900px */
 		
 	}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .large-hero__sub-title { /* 900px */
 			letter-spacing: 1.55rem
@@ -2738,7 +2765,7 @@ body { /* 900px */
 			margin-right: 6rem;	
 		}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .row [class^="col-"]:not(:last-child){ /* 900px */
 				margin-right: 0	
@@ -2836,7 +2863,7 @@ body { /* 900px */
 		width: calc((100% - 11*6rem)/2 + 5*(100% - 11*6rem)/12 + 10*6rem ); 	
 	}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .row { /* 900px */}
 		.row [class$="of-2"],
@@ -2870,7 +2897,7 @@ body { /* 900px */
 		clear:both;
 	}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .about__photos { /* 900px */
 			height: 15rem;
@@ -2884,7 +2911,7 @@ body { /* 900px */
 	}
 	}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .about__wrapper { /* 900px */
 			width: 50%;
@@ -2942,7 +2969,7 @@ body { /* 900px */
 			        transform: scale(1.05);
 		}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .about__image { /* 900px */
 			width: 15rem
@@ -3008,7 +3035,7 @@ body { /* 900px */
 		        transform: SkewY(8deg);
 	}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .services__container { /* 900px */
 			width: 40%;
@@ -3031,7 +3058,7 @@ body { /* 900px */
 		margin-top: 15rem;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .stories { /* 900px */
 			margin-top: 2.5rem
@@ -3075,7 +3102,7 @@ body { /* 900px */
 
 	}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .booking__row-1 { /* 900px */
 			background-image: linear-gradient(
@@ -3116,7 +3143,7 @@ body { /* 900px */
 
 	}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .footer__image { /* 900px */
 			position: absolute;
@@ -3166,20 +3193,20 @@ body { /* 900px */
 				margin-right: 1rem;
 			}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .footer__navbar { /* 900px */
 			text-align: center
 	}}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .footer__terms { /* 900px */
 			margin-top: -1rem
 
 	}}
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .footer__terms { /* 900px */
 			margin-top: -4rem
@@ -3269,7 +3296,7 @@ body { /* 900px */
 	margin: auto;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
 
 .wrapper { /* 900px */
 		width: 57%;
