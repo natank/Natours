@@ -1,6 +1,6 @@
 @keyframes slideInFromLeft {
   0% {
-    transform: translate(-100px, 50px) scale(0);
+    transform: translate(-1000px, 500px) scale(0);
 
     opacity: 0;
   }
@@ -12,7 +12,7 @@
 
 @keyframes slideInFromRight {
   0% {
-    transform: translate(100px, 50px) scale(0);
+    transform: translate(1000px, 500px) scale(0);
     opacity: 0;
   }
   100% {

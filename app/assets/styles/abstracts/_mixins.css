@@ -28,12 +28,8 @@
 
 }
 
-
-
-
-
-@define-mixin only screen and atPhone {
-	@media (max-width: 37.5em) { /* 600px */
+@define-mixin atPhone {
+	@media only screen and (max-width: 37.5em) { /* 600px */
 		@mixin-content;
 	}
 }
@@ -41,7 +37,7 @@
 
 
 /* Clearfix */ 
-@define-mixin only screen and clearfix {
+@define-mixin clearfix {
 	&::after
 	{
 		display:table;

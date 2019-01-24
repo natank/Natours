@@ -20,10 +20,6 @@
 		background-color: $mainOrange;
 	}
 
-	&--animated-start {
-		animation: 1.25s easeOutBack .75s 1 slideInFromBottom backwards;
-	}
-
 	&--animated {
 		text-align: center;
 		
@@ -59,6 +55,10 @@
 			transform: scaleX(1.4) scaleY(1.6);
 			opacity: 0;
 		}
+	}
+
+	&--animated-start {
+		animation: 1.25s easeOutBack .75s 1 slideInFromBottom backwards;
 	}
 
 	&--large {

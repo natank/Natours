@@ -35,6 +35,7 @@
 		font-size:  6.0rem;
 		letter-spacing: 3.6rem;
 		margin-bottom: 2rem;
+		animation: 1.25s easeOutBack .75s 1 slideInFromLeft backwards;
 		@mixin atPhone {
 			font-size:  13.0rem;
 			letter-spacing: 1rem;
@@ -49,7 +50,7 @@
 		letter-spacing: 1.50rem;
 		width: 100%;
 		margin-bottom: 4rem;
-
+		animation: 1.25s easeOutBack .75s 1 slideInFromRight backwards;
 		@mixin atTabPortr {
 			letter-spacing: 1.55rem;
 		}

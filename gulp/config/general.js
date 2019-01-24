@@ -1,3 +1,3 @@
 module.exports = {
-	menuButtonRadious: '72px'
+	menuButtonRadious: '50px'
 }
